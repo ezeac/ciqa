@@ -1,3 +1,64 @@
-<h1>
-  {{title}}
-</h1>
+<header class="navigation-menu">
+	<div class="navlogo">
+		<a [routerLink]="['/home']" [routerLinkActive]="['claseLinkActivo']"><img src="../assets/media/logo.png" alt="CIQA HOME"></a>
+	</div>
+	<div class="nav-links">
+		<a [routerLink]="['/servicios']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'servicios' | translate }}</a>
+		<a [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'quienes somos' | translate }}</a>
+		<a [routerLink]="['/contacto']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'contacto' | translate }}</a>
+		<a [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 bcolor-1 button">{{ 'ingresar' | translate }}</a>
+		<select class="font1 t14 tcolor-1" name="translate" id="translate-selector" (change)="actualizar_idioma()">
+			<option *ngFor="let item of translate.getLangs(); let i = index" value="{{item}}">{{item}}</option>
+		</select>
+	</div>
+</header>
+
+<router-outlet class="clearfix"></router-outlet>	
+
+<footer class="container">
+	<div class="footer-cont col-xs-12 col-sm-3">
+		<img src="../assets/media/logo2.png" alt="">
+	</div>
+	<div class="footer-cont col-xs-12 col-sm-9">
+		<div class="footer-cont-cont2 col-xs-12 col-sm-5">
+			<ul class="footer-cont-cont2-links">
+				<li><a [routerLink]="['/home']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1 capitalize">{{ 'home' | translate }}</a></li>
+				<li><a [routerLink]="['/servicios']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1 capitalize">{{ 'servicios' | translate }}</a></li>
+				<li><a [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1 capitalize">{{ 'quienes somos' | translate }}</a></li>
+				<li><a [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1 capitalize">{{ 'autogestión' | translate }}</a></li>
+				<li><a [routerLink]="['/contacto']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1 capitalize">{{ 'contacto' | translate }}</a></li>
+				<li>
+					<select class="font1 t14 tcolor-1" name="translate" id="translate-selector2" (change)="actualizar_idioma('#translate-selector2')">
+						<option *ngFor="let item of translate.getLangs(); let i = index" value="{{item}}">{{item}}</option>
+					</select>
+				</li>
+			</ul>
+			<ul class="footer-cont-cont2-redes">
+				<li class="footer-cont-cont2-redes-face">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.28 20.86"><defs><style>.cls-1{fill:#fff;}</style></defs><title>facebook1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M10.85,0H8.15a4.75,4.75,0,0,0-5,5.13V7.5H.42A.42.42,0,0,0,0,7.93v3.43a.42.42,0,0,0,.42.42H3.14v8.65a.43.43,0,0,0,.43.43H7.12a.42.42,0,0,0,.42-.43V11.78h3.18a.42.42,0,0,0,.43-.42V7.93a.41.41,0,0,0-.12-.3.44.44,0,0,0-.31-.13H7.54v-2C7.54,4.53,7.77,4,9,4h1.82a.43.43,0,0,0,.43-.43V.43A.43.43,0,0,0,10.85,0Z"/></g></g></svg>
+				</li>
+				<li class="footer-cont-cont2-redes-instagram">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.5 21.51"><defs><style>.cls-1{fill:#fff;}</style></defs><title>instagram1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M4.16,21.51H17.35a4.16,4.16,0,0,0,4.15-4.16V4.16A4.15,4.15,0,0,0,17.35,0H4.16A4.16,4.16,0,0,0,0,4.16V17.35A4.16,4.16,0,0,0,4.16,21.51Zm14.38-19H19V6.12H15.38V2.49ZM7.68,8.54a3.78,3.78,0,0,1,6.14,0,3.74,3.74,0,0,1,.72,2.2,3.79,3.79,0,1,1-7.57,0A3.85,3.85,0,0,1,7.68,8.54Zm-5.59,0H5.3a5.87,5.87,0,0,0,5.45,8.08,5.88,5.88,0,0,0,5.88-5.88,5.75,5.75,0,0,0-.43-2.2h3.21v8.8a2.06,2.06,0,0,1-2.06,2.06H4.15a2.06,2.06,0,0,1-2.06-2.06Z"/></g></g></svg>
+				</li>
+				<li class="footer-cont-cont2-redes-twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.93 17.82"><defs><style>.cls-1{fill:#fff;}</style></defs><title>twitter1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M21.93,2.11a8.88,8.88,0,0,1-2.58.71,4.54,4.54,0,0,0,2-2.49,9.17,9.17,0,0,1-2.86,1.09A4.5,4.5,0,0,0,10.69,4.5a4.25,4.25,0,0,0,.11,1A12.71,12.71,0,0,1,1.53.82a4.51,4.51,0,0,0,1.39,6,4.55,4.55,0,0,1-2-.57v.06a4.5,4.5,0,0,0,3.61,4.41,4.2,4.2,0,0,1-1.18.16,4.63,4.63,0,0,1-.85-.08,4.48,4.48,0,0,0,4.2,3.12,9,9,0,0,1-5.59,1.93A9.45,9.45,0,0,1,0,15.79a12.72,12.72,0,0,0,6.9,2A12.72,12.72,0,0,0,19.7,5l0-.59A8.86,8.86,0,0,0,21.93,2.11Z"/></g></g></svg>
+				</li>
+			</ul>
+		</div>
+		<div class="hidden-xs col-sm-1">&nbsp;</div>
+		<div class="footer-cont-cont2 col-xs-12 col-sm-6 tcolor-1">
+			<div class="footer-cont-cont2-cont3 t14">
+				<div class="footer-cont-cont2-cont3-logo">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.32 50.32"><defs><style>.cls-1{fill:#fff;}</style></defs><title>utnlogo1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M25.69,21.26C42.75,16.27,42.14,0,42.14,0h-8a11.32,11.32,0,0,1-2.35,7.68A16.5,16.5,0,0,1,25,12.79V.12H17.3V12.79a16.5,16.5,0,0,1-6.73-5.11A11.32,11.32,0,0,1,8.22,0h-8s-.6,16.27,16.45,21.26H0v7.8H16.63C-.42,34.06.18,50.32.18,50.32h8a11.33,11.33,0,0,1,2.35-7.68,16.5,16.5,0,0,1,6.73-5.11V50.2H25V37.53a16.5,16.5,0,0,1,6.73,5.11,11.33,11.33,0,0,1,2.35,7.68h8s.61-16.26-16.45-21.26H42.32v-7.8Z"/></g></g></svg>
+					<div class="footer-cont-cont2-cont3-logo-texto"><b>Maestro López esq. Cruz Roja Argentina</b><br>Ciudad Universitaria<br>Córdoba, Argentina</div>
+				</div>
+				<div class="footer-cont-cont2-cont3-contacto">
+					<b>{{"Teléfono" | translate}}:</b> +54 - (0)351– 5986022<br><b>{{"Fax" | translate}}:</b> +54 - (0)351– 4681823<br><b>{{"Correo" | translate}}:</b> ciqa@ciqa.com.ar
+				</div>
+				<div class="footer-cont-cont2-cont3-info t10">
+					{{"Inscriptos en el Registro de de Empresas proveedoras de Tecnología, Procesos y Servicios Ambientales, y de Profesionales e Instituciones afines. Reg. Nº 0371/06 de la Secretaría de Ambiente y Desarrollo Sustentable de la Nación." | translate}}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

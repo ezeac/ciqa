@@ -1,0 +1,108 @@
+* { font-family: 'Nunito Sans'; text-decoration: none !important; list-style: none; }
+@media (max-width:767px) {
+    * { flex-direction: column; }
+}
+footer .footer-cont-cont2-redes svg { height: 25px; width: 25px; margin: 0px 15px; }
+footer .footer-cont-cont2-redes li:first-child svg { margin-left: 0px; }
+footer .footer-cont-cont2-redes li { }
+.font1 { font-family: 'Nunito Sans'; }
+.t1 { font-size: 1px; }
+.t2 { font-size: 2px; }
+.t3 { font-size: 3px; }
+.t4 { font-size: 4px; }
+.t5 { font-size: 5px; }
+.t6 { font-size: 6px; }
+.t7 { font-size: 7px; }
+.t8 { font-size: 8px; }
+.t9 { font-size: 9px; }
+.t10 { font-size: 10px; }
+.t11 { font-size: 11px; }
+.t12 { font-size: 12px; }
+.t13 { font-size: 13px; }
+.t14 { font-size: 14px; }
+.t15 { font-size: 15px; }
+.t16 { font-size: 16px; }
+.t17 { font-size: 17px; }
+.t18 { font-size: 18px; }
+.t19 { font-size: 19px; }
+.t20 { font-size: 20px; }
+.t21 { font-size: 21px; }
+.t22 { font-size: 22px; }
+.t23 { font-size: 23px; }
+.t24 { font-size: 24px; }
+.t25 { font-size: 25px; }
+.t26 { font-size: 26px; }
+.t27 { font-size: 27px; }
+.t28 { font-size: 28px; }
+.t29 { font-size: 29px; }
+.t30 { font-size: 30px; }
+.t31 { font-size: 31px; }
+.t32 { font-size: 32px; }
+.t33 { font-size: 33px; }
+.t34 { font-size: 34px; }
+.t35 { font-size: 35px; }
+.tcolor-1 { color: white; /*white*/ }
+.tcolor-2 { color: #969696; /*grey*/ }
+.tcolor-3 { color: #19289B; /*darkBlue*/ }
+.tcolor-4 { color: #09A5E4; /*lightBlue*/ }
+.bcolor-1 { background: #09A5E4; /*lightBlue*/ color: white; }
+.bcolor-2 { background: #19289B;/*darkBlue*/ color: white; }
+.button { padding: 5px 15px; }
+.button-big { padding: 15px 30px; }
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+.no-padding,
+.no-padding-childs > div { padding-left: 0px; padding-right: 0px; }
+::selection { background: none; }
+::-moz-selection { background: none; }
+::-webkit-selection { background: none; }
+.claseLinkActivo { font-weight: bold; }
+.component-container { float: left; width: 100%; color: #969696; margin-top: -80px; position: relative; }
+.background-outer { width: 100%; background: #00A5E6; float: left; height: calc(100% + 450px); position: absolute; }
+.background-outer .background-imagen-top { max-height: 100vh; overflow: hidden; height: 50vh; background: #00183E; }
+.background-outer .background-color { }
+.background-outer .background-imagen-top,
+.background-outer .background-color { z-index: 0; width: 100%; position: relative; }
+.navigation-menu a,
+.navigation-menu select { position: relative; z-index: 9; }
+.navigation-menu .navlogo { }
+.navigation-menu .nav-links { width: 100%; text-align: right; }
+.navigation-menu .nav-links a { margin-right: 5%; }
+.navigation-menu select,footer .footer-cont-cont2-links li select { background: none; border: none; outline: none; text-transform: uppercase; }
+.navigation-menu select option,footer .footer-cont-cont2-links li select option { color: black; background: white; }
+.navigation-menu .nav-links a:last-child { margin-right: 0px; }
+.navigation-menu { display: flex; align-items: center; margin: 30px 5% 0px; }
+.content-outer {margin-top: 300px;background: white;min-height: 500px;position: relative;box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);}
+.content-outer .tituloOffset { font-family: "Nunito Sans"; font-weight: 600; font-size: 32px; color: white; position: relative; margin-top: -100px; padding-bottom: 70px; line-height: 0px; text-transform: uppercase; }
+footer.container { float: left; background: #00132B; position: relative; display: flex; align-items: flex-start; justify-content: center; margin-left: 50%; transform: translateX(-50%); padding: 50px 0px 30px; }
+footer .footer-cont-cont2-redes { display: flex; justify-content: flex-start; }
+footer .footer-cont-cont2-links { margin-bottom: 50px; }
+footer .footer-cont-cont2-links li { margin: 10px 0px; }
+footer .footer-cont-cont2-links li:first-child { margin-top: 0px; }
+footer .footer-cont { display: flex; justify-content: center; }
+footer .footer-cont-cont2-cont3-logo svg { width: 45px; float: left; margin-right: 10px; padding-top: 3px; }
+footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
+
+/* nav-tabs */
+.content-outer-bloques-nav .content-outer-bloques-nav-item {float: left;padding: 20px;color: white;cursor: pointer;transition: all .2s ease;}
+.content-outer-bloques-nav .content-outer-bloques-nav-item.active-tab-nav {background: white;color: #19289B;box-shadow: 0px -15px 15px 0px black;}
+.content-outer-bloques-nav .content-outer-bloques-nav-item:hover {color: #868fc7;}
+.content-outer-bloques-nav {clear: both;float: left;width: 100%;background: linear-gradient(#19289B 90%, #000000 120%);overflow: hidden;}
+/* nav-slide-down */
+.content-outer-bloques-content .content-outer-bloques-content-item {height: auto;overflow: hidden;transition: max-height 2s ease;max-height: 0px;float: left;font-size: 16px;width: 100%;}
+.content-outer-bloques-content .content-outer-bloques-content-item.active-tab-content { max-height: 4000px; }
+.content-outer-bloques-content {float: left;position: relative;width: 100%;padding: 5% 10%;}
+.content-outer-bloques-content-item-item1-content {display: none;width: 100%;overflow: hidden;}
+.content-outer-bloques-content-item-item1-title {padding-top: 20px;border-top: 1px solid;position: relative;color: black;cursor: pointer;font-weight: 600;padding-bottom: 20px;}
+.content-outer-bloques-content-item-item1-content > div { display: flex; align-items: center; padding-bottom: 20px; }
+.content-outer-bloques-content-item-img img { width: auto; max-width: 100%; display: inline-block; }
+.content-outer-bloques-content-item-item1-content-info-texto i { line-height: 10px; transform: translateY(80%); margin-right: 10px; }
+.content-outer-bloques-content-item-item1-content-info-texto { padding: 5px 0px; }
+.content-outer-bloques-content-item-item1-content-info-titulo { padding: 5px 0px; }
+.content-outer-bloques-content-item-item1-title-remove:before { content: 'remove_circle_outline'; }
+.content-outer-bloques-content-item-item1-title:before { content: 'add_circle_outline'; font-family: 'Material Icons'; position: absolute; right: 0px; top: 50%; transform: translateY(-50%); font-size: 25px; line-height: 25px; }
+
+/*quienes somos*/
+.content-outer-bloques-content-item-img {
+    margin: 50px 0px;
+}

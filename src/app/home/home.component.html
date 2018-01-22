@@ -1,0 +1,95 @@
+<div class="component-container">
+	<div class="background-outer">
+		<div class="background-imagen-top">
+			<div id="particles-js">
+				<div class="texto-inicial tcolor-1">
+					<div class="cont-textos col-xs-12 col-sm-5 col-xs-3">
+						<div class="titulo t33" [innerHTML]="'Centro de Investigación & Transferencia en Ingeniería Química Ambiental' | translate"></div>
+						<div class="texto t15" [innerHTML]='"El CIQA nace como consecuencia de compromiso social asumido por el Departamento de Ingeniería Química de la UTN, Facultad Regional Córdoba, a fines de la década del 90." | translate'></div>
+						<div class="arrow-down"><i class="material-icons" (click)="peticionesService.animate_scroll('.content-outer')">keyboard_arrow_down</i></div>
+					</div>
+				</div>	
+			</div>	
+		</div>
+		<div class="background-color"></div>
+	</div>
+	<div class="content-outer container no-padding">
+		<div class="ultimas-noticias bcolor-2 col-xs-12 no-padding">
+			<div class="col-xs-12">
+				<div class="titulo t21 uppercase"><b>{{"ultimas noticias" | translate}}</b></div>
+			</div>
+
+			<div id="sliderHome3">
+				<div class="sliderMarco">
+					<div class="sliderContainer">
+						<div class="sliderItem noticia-item no-padding" *ngFor="let noticia of noticias; let i = index">
+							<div class="col-xs-12 col-sm-5">
+								<div class="titulo1 t25"><b>{{noticia.title.rendered}}</b></div>
+								<div class="texto1 t15">{{noticia.resumen}} [...]</div>
+								<div class="button-big t12">› LEER MÁS</div>
+							</div>
+							<div class="hidden-xs col-sm-1">&nbsp;</div>
+							<div class="col-xs-12 col-sm-6">
+								<div class="thumb-img"><img src="{{noticia.imagen.guid}}" alt=""></div>
+							</div>
+						</div>
+						<div class="noticia-item" *ngIf="noticias == ''"><div class="texto1 t15"><b>No hay noticias por el momento...</b></div></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="scroll-nav navigation-items">
+				<div class="next" (click)="moverSliderHome3(sliderHome3Actual+1)" style="cursor: pointer"><span class="glyphicon glyphicon-menu-right"></span></div>
+				<div class="prev" (click)="moverSliderHome3(sliderHome3Actual-1)" style="cursor: pointer"><span class="glyphicon glyphicon-menu-left"></span></div>
+			</div>
+
+		</div>
+		<div class="content-outer-bloques col-xs-12 no-padding">
+			<div class="content-outer-bloques-cont col-xs-12 no-padding">
+				<div class="slider col-xs-12 col-sm-6" id="sliderHome">
+					<div class="navigation-items">
+						<div class="next" style="cursor: pointer" (click)="moverSlider(sliderHome1Actual+1)"><span class="glyphicon glyphicon-menu-right"></span></div>
+						<div class="prev" style="cursor: pointer" (click)="moverSlider(sliderHome1Actual-1)"><span class="glyphicon glyphicon-menu-left"></span></div>
+					</div>
+					<div class="sliderMarco">
+						<div class="sliderContainer">
+							<div class="sliderItem" style="background: url('../assets/media/example1.jpg') no-repeat; background-size: cover; background-position: center"></div>
+							<div class="sliderItem" style="background: url('../assets/media/example1.jpg') no-repeat; background-size: cover; background-position: center"></div>
+							<div class="sliderItem" style="background: url('../assets/media/example1.jpg') no-repeat; background-size: cover; background-position: center"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content-outer-bloques-cont-info col-xs-12 col-sm-5 col-lg-4">
+					<div class="content-outer-bloques-cont-info-titulo t30 tcolor-3"><b>{{'Buscamos ofrecer un servicio de excelencia' | translate}}</b></div>
+					<div class="content-outer-bloques-cont-info-texto t12 t-color-2">{{'Lo que se busca en CIQA es brindar un servicio con la responsabilidad y ética que nuestra Universidad y la comunidad nos exige, pero con la misma eficiencia que las más importantes empresas privadas del rubro poseen.' | translate}}</div>
+					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><b>› {{'leer más' | translate}}</b></div>
+				</div>
+				<div class="hidden-xs col-sm-1 col-lg-2">&nbsp;</div>
+			</div>
+
+			<div class="content-outer-bloques-cont content-outer-bloques-cont-inversed col-xs-12 no-padding">
+				<div class="hidden-xs col-sm-1 col-lg-2">&nbsp;</div>
+				<div class="content-outer-bloques-cont-info col-xs-12 col-sm-5 col-lg-4">
+					<div class="content-outer-bloques-cont-info-titulo t30 tcolor-3"><b>{{'Contamos con equipos de última generación' | translate}}</b></div>
+					<div class="content-outer-bloques-cont-info-texto t12 t-color-2">{{'Lo que se busca en CIQA es brindar un servicio con la responsabilidad y ética que nuestra Universidad y la comunidad nos exige, pero con la misma eficiencia que las más importantes empresas privadas del rubro poseen.' | translate}}</div>
+					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><b>› {{'leer más' | translate}}</b></div>
+				</div>
+				<div class="slider col-xs-12 col-sm-6" id="sliderHome2">
+					<div class="navigation-items">
+						<div class="next" style="cursor: pointer" (click)="moverSliderHome2(sliderHome2Actual+1)"><span class="glyphicon glyphicon-menu-right"></span></div>
+						<div class="prev" style="cursor: pointer" (click)="moverSliderHome2(sliderHome2Actual-1)"><span class="glyphicon glyphicon-menu-left"></span></div>
+					</div>
+					<div class="sliderMarco">
+						<div class="sliderContainer">
+							<div class="sliderItem" style="background: url('../assets/media/example1.jpg') no-repeat; background-size: cover; background-position: center"></div>
+							<div class="sliderItem" style="background: url('../assets/media/example1.jpg') no-repeat; background-size: cover; background-position: center"></div>
+							<div class="sliderItem" style="background: url('../assets/media/example1.jpg') no-repeat; background-size: cover; background-position: center"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- <footer></footer> -->
+	</div>
+</div>

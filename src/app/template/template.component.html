@@ -1,0 +1,51 @@
+<div class="component-container">
+	<div class="background-outer">
+		<div class="background-imagen-top">
+			<img src="" alt="">	
+		</div>
+		<div class="background-color"></div>
+	</div>
+	<div class="content-outer container no-padding">
+		<div class="tituloOffset">{{titulo}}</div>
+		<div class="content-outer-bloques col-xs-12 no-padding">
+
+			<!-- routerChild -->
+			<div class=""><a [routerLink]="['investigacion']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 t-color-2">{{"investigacion" | translate}}</a></div>
+			<router-outlet class="clearfix asd"></router-outlet>
+
+			<div class="content-outer-bloques-nav">
+				<!-- navTabs -->
+				<div class="content-outer-bloques-nav-item uppercase active-tab-nav" (click)="peticionesService.show_animated_tab('content1', $event)">tab1</div>
+				<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('content2', $event)">tab2</div>
+			</div>
+			<div class="content-outer-bloques-content">
+				
+				<!-- tab1 -->
+				<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
+					<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+					<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+				</div>
+
+				<!-- tab2 -->
+				<div class="content-outer-bloques-content-item" data-content="content2">
+					
+					<!-- slidedown -->
+					<div class="content-outer-bloques-content-item-item1 col-sm-12">
+						<div class="content-outer-bloques-content-item-item1-title col-xs-12 t12" (click)="peticionesService.show_animated_slide($event)">Prof. Ing. Esp. Héctor R. Macaño - Director</div>
+						<div class="content-outer-bloques-content-item-item1-content">
+							<div>
+								<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+								<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+									<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+									<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+									<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
