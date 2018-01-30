@@ -7,7 +7,10 @@ import { QuienesSomosComponent } from './quienesSomos/quienesSomos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
-	import { InvestigacionComponent } from './servicios/investigacion/investigacion.component';
+	import { IngenieriaAmbientalComponent } from './servicios/ingenieriaAmbiental/ingenieriaAmbiental.component';
+	import { IngenieriaDeProcesosComponent } from './servicios/ingenieriaDeProcesos/ingenieriaDeProcesos.component';
+	import { CapacitacionesComponent } from './servicios/capacitaciones/capacitaciones.component';
+	import { AuditoriaDeTanquesComponent } from './servicios/auditoriaDeTanques/auditoriaDeTanques.component';
 
 //Crear rutas
 const appRoutes: Routes = [
@@ -18,7 +21,10 @@ const appRoutes: Routes = [
 	{path: 'servicios', component:ServiciosComponent,
 		children: [
 			{ path: '', redirectTo: '', pathMatch: 'full' },
-			{ path: 'investigacion', component: InvestigacionComponent }
+			{ path: 'ingenieriaAmbiental', component: IngenieriaAmbientalComponent },
+			{ path: 'ingenieriaDeProcesos', component: IngenieriaDeProcesosComponent },
+			{ path: 'capacitaciones', component: CapacitacionesComponent },
+			{ path: 'auditoriaDeTanques', component: AuditoriaDeTanquesComponent }
 		]
 	},
 	{path: 'contacto', component:ContactoComponent},

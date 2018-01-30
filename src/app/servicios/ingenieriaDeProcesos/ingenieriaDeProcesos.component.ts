@@ -6,17 +6,17 @@ declare var jquery:any;
 declare var $:any;
 
 @Component({
-	selector: "investigacion",
-	templateUrl: "./investigacion.component.html",
+	selector: "ingenieriaDeProcesos",
+	templateUrl: "./ingenieriaDeProcesos.component.html",
 	// styleUrls: ['./style.css'],
 	providers: [PeticionesService]
 })
 
 
-export class InvestigacionComponent{
-	public titulo = "Página investigacion";
+export class IngenieriaDeProcesosComponent{
+	public titulo = "Página ingenieriaDeProcesos";
 	public parametro;
-	//Luego se llama al parametro1 desde el html: <investigacion [parametro1]="valor"></investigacion>
+	//Luego se llama al parametro1 desde el html: <ingenieriaDeProcesos [parametro1]="valor"></ingenieriaDeProcesos>
 	@Input() parametro1:string;
 
 	constructor(
@@ -32,7 +32,7 @@ export class InvestigacionComponent{
 	}
 
 	redirigir(){
-		this._router.navigate(['/investigacion','valorPage']);
+		this._router.navigate(['/ingenieriaDeProcesos','valorPage']);
 	}
 
 }

@@ -12,7 +12,10 @@ import { QuienesSomosComponent } from './quienesSomos/quienesSomos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
-	import { InvestigacionComponent } from './servicios/investigacion/investigacion.component';
+	import { IngenieriaAmbientalComponent } from './servicios/ingenieriaAmbiental/ingenieriaAmbiental.component';
+	import { IngenieriaDeProcesosComponent } from './servicios/ingenieriaDeProcesos/ingenieriaDeProcesos.component';
+	import { CapacitacionesComponent } from './servicios/capacitaciones/capacitaciones.component';
+	import { AuditoriaDeTanquesComponent } from './servicios/auditoriaDeTanques/auditoriaDeTanques.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +25,10 @@ import { ServiciosComponent } from './servicios/servicios.component';
 		ContactoComponent,
 		ClientesComponent,
 		ServiciosComponent,
-			InvestigacionComponent,
+			IngenieriaAmbientalComponent,
+			IngenieriaDeProcesosComponent,
+			CapacitacionesComponent,
+			AuditoriaDeTanquesComponent,
 	],
 	imports: [
 		BrowserModule,
