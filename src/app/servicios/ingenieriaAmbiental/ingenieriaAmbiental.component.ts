@@ -9,7 +9,7 @@ declare var TweenMax:any; declare var Power3:any; declare var animIn:any;
 @Component({
 	selector: "ingenieriaAmbiental",
 	templateUrl: "./ingenieriaAmbiental.component.html",
-	// styleUrls: ['./style.css'],
+	styleUrls: ['./ingenieriaAmbiental.component.css'],
 	providers: [PeticionesService]
 })
 
@@ -37,7 +37,6 @@ export class IngenieriaAmbientalComponent{
 	}
 
 	actualizarImgNav(event, nombre){
-		console.log(event);
 		function animIn(){
 			$(".content-outer-bloques-nav-img > img").attr("src","../assets/media/ingAmbientalNav/"+nombre);
 			$(".content-outer-bloques-nav-img-text").html(event.target.innerHTML);

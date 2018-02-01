@@ -41,6 +41,8 @@ footer .footer-cont-cont2-redes li { }
 .t33 { font-size: 33px; }
 .t34 { font-size: 34px; }
 .t35 { font-size: 35px; }
+.semibold { font-weight: 600; }
+.bold { font-weight: 700; }
 .tcolor-1 { color: white; /*white*/ }
 .tcolor-2 { color: #969696; /*grey*/ }
 .tcolor-3 { color: #19289B; /*darkBlue*/ }
@@ -99,66 +101,38 @@ footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
 .content-outer-bloques-content-item-item1-content-info-texto i { line-height: 10px; transform: translateY(80%); margin-right: 10px; }
 .content-outer-bloques-content-item-item1-content-info-texto { padding: 5px 0px; }
 .content-outer-bloques-content-item-item1-content-info-titulo { padding: 5px 0px; }
-.content-outer-bloques-content-item-item1-title-remove:before { content: 'remove_circle_outline'; }
 .content-outer-bloques-content-item-item1-title:before { content: 'add_circle_outline'; font-family: 'Material Icons'; position: absolute; right: 0px; top: 50%; transform: translateY(-50%); font-size: 25px; line-height: 25px; }
+.content-outer-bloques-content-item-item1-title-remove:before { content: 'remove_circle_outline'; }
 
 /*quienes somos*/
 .content-outer-bloques-content-item-img {
     margin: 50px 0px;
 }
 
- /*ingeniería ambiental*/
+ /*ingeniería de procesos*/
 
-.nav-style-2 .content-outer-bloques-nav .content-outer-bloques-nav-item {
-    padding: 0px;
-    width: 100%;
-    background: none;
-    padding: 3px 0px;
-    opacity: .7;
-    font-weight: 800;
-    font-size: 14px;
-    transition: all .2s;
+.content-outer-bloques-content-titulo {
+    color: #19289B;
+    margin: 0px 0px 50px
 }
 
-.nav-style-2 .content-outer-bloques-nav .content-outer-bloques-nav-item:hover {
-    opacity: 1;
+/* contacto */
+
+
+.content-outer-bloques-content {
+    background: #19289B;
 }
 
-.nav-style-2 .content-outer-bloques-nav .content-outer-bloques-nav-item.active-tab-nav {
-    background: none;
-    color: white;
-    box-shadow: none;
-    opacity: 1;
+.content-outer-bloques-content-item-cont-redes-svg svg {
+    height: 30px;
+    width: 30px;
 }
 
-.nav-style-2.content-outer-bloques-nav. {
-    display: flex;
-    align-items: center;
-    background: #16A5E2;
+.content-outer-bloques-content-item-cont-redes-svg {
+    float: left;
+    margin-right: 30px;
 }
 
-.nav-style-2 .content-outer-bloques-nav-img img {
-    width: 100%;
-}
-
-.nav-style-2.content-outer-bloques-nav > div:nth-child(2) {
-    padding-left: 5%;
-}
-
-.nav-style-2 .content-outer-bloques-nav-img {
-    box-shadow: 0px 0px 20px #0000009c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-style-2 .content-outer-bloques-nav-img-text {
-    font-weight: 700;
-    color: white;
-    font-size: 26px;
-    position: absolute;
-}
-
-.content-outer-bloques-nav .content-outer-bloques-nav-item:hover {
+.content-outer-bloques-content-item-cont-info-text {
     color: white;
 }

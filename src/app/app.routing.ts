@@ -20,7 +20,7 @@ const appRoutes: Routes = [
 	{path: 'quienesSomos', component:QuienesSomosComponent},
 	{path: 'servicios', component:ServiciosComponent,
 		children: [
-			{ path: '', redirectTo: '', pathMatch: 'full' },
+			{ path: '', redirectTo: 'ingenieriaAmbiental', pathMatch: 'full' },
 			{ path: 'ingenieriaAmbiental', component: IngenieriaAmbientalComponent },
 			{ path: 'ingenieriaDeProcesos', component: IngenieriaDeProcesosComponent },
 			{ path: 'capacitaciones', component: CapacitacionesComponent },

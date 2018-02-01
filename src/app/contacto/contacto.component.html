@@ -1,9 +1,54 @@
 <div class="component-container">
 	<div class="background-outer">
 		<div class="background-imagen-top">
-			<img src="" alt="">
+			<img src="" alt="">	
 		</div>
 		<div class="background-color"></div>
 	</div>
-	<div class="content-outer"></div>
+	<div class="content-outer container no-padding">
+		<div class="tituloOffset">{{'Contáctenos' | translate}}</div>
+		<div class="content-outer-bloques col-xs-12 no-padding">
+			<div class="content-outer-bloques-content">
+				<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
+					<div class="content-outer-bloques-content-item-cont">
+						<div class="content-outer-bloques-content-item-cont-redes col-xs-12 col-sm-4">
+							<div class="content-outer-bloques-content-item-cont-redes-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.5 21.51"><defs><style>.cls-1{fill:#fff;}</style></defs><title>instagram1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M4.16,21.51H17.35a4.16,4.16,0,0,0,4.15-4.16V4.16A4.15,4.15,0,0,0,17.35,0H4.16A4.16,4.16,0,0,0,0,4.16V17.35A4.16,4.16,0,0,0,4.16,21.51Zm14.38-19H19V6.12H15.38V2.49ZM7.68,8.54a3.78,3.78,0,0,1,6.14,0,3.74,3.74,0,0,1,.72,2.2,3.79,3.79,0,1,1-7.57,0A3.85,3.85,0,0,1,7.68,8.54Zm-5.59,0H5.3a5.87,5.87,0,0,0,5.45,8.08,5.88,5.88,0,0,0,5.88-5.88,5.75,5.75,0,0,0-.43-2.2h3.21v8.8a2.06,2.06,0,0,1-2.06,2.06H4.15a2.06,2.06,0,0,1-2.06-2.06Z"/></g></g></svg></div>
+							<div class="content-outer-bloques-content-item-cont-redes-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.28 20.86"><defs><style>.cls-1{fill:#fff;}</style></defs><title>facebook1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M10.85,0H8.15a4.75,4.75,0,0,0-5,5.13V7.5H.42A.42.42,0,0,0,0,7.93v3.43a.42.42,0,0,0,.42.42H3.14v8.65a.43.43,0,0,0,.43.43H7.12a.42.42,0,0,0,.42-.43V11.78h3.18a.42.42,0,0,0,.43-.42V7.93a.41.41,0,0,0-.12-.3.44.44,0,0,0-.31-.13H7.54v-2C7.54,4.53,7.77,4,9,4h1.82a.43.43,0,0,0,.43-.43V.43A.43.43,0,0,0,10.85,0Z"/></g></g></svg></div>
+							<div class="content-outer-bloques-content-item-cont-redes-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.93 17.82"><defs><style>.cls-1{fill:#fff;}</style></defs><title>twitter1</title><g id="Capa_2" data-name="Capa 2"><g id="V2"><path class="cls-1" d="M21.93,2.11a8.88,8.88,0,0,1-2.58.71,4.54,4.54,0,0,0,2-2.49,9.17,9.17,0,0,1-2.86,1.09A4.5,4.5,0,0,0,10.69,4.5a4.25,4.25,0,0,0,.11,1A12.71,12.71,0,0,1,1.53.82a4.51,4.51,0,0,0,1.39,6,4.55,4.55,0,0,1-2-.57v.06a4.5,4.5,0,0,0,3.61,4.41,4.2,4.2,0,0,1-1.18.16,4.63,4.63,0,0,1-.85-.08,4.48,4.48,0,0,0,4.2,3.12,9,9,0,0,1-5.59,1.93A9.45,9.45,0,0,1,0,15.79a12.72,12.72,0,0,0,6.9,2A12.72,12.72,0,0,0,19.7,5l0-.59A8.86,8.86,0,0,0,21.93,2.11Z"/></g></g></svg></div>
+						</div>
+						<div class="content-outer-bloques-content-item-cont-info col-xs-12 col-sm-8">
+							<div class="content-outer-bloques-content-item-cont-info-text t14">
+								<b>Maestro López esq. Cruz Roja Argentina</b><br>
+								Ciudad Universitaria<br>
+								Córdoba, Argentina<br>
+								<br>
+								Teléfono: +54 - (0)351– 5986022<br>
+								Fax: +54 - (0)351– 4681823<br>
+								Correo: ciqa@ciqa.com.ar<br>
+							</div>
+						</div>
+					</div>
+					<div class="content-outer-bloques-content-item-cont">
+						<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+							<label for="nombre">NOMBRE Y APELLIDO</label>
+							<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="nombreForm" required pattern="[a-z]+" placeholder="Ingrese su nombre y apellido">
+							<span *ngIf="nombre.touched && !nombre.valid">Formato de nombre incorrecto</span>
+						
+							<label for="dni">DNI</label>
+							<input type="text" name="dni" #dni="ngModel" [(ngModel)]="dniForm" required pattern="[0-9]+" placeholder="Ingrese su dni">
+							<span *ngIf="dni.touched && !dni.valid">Formato de dni incorrecto</span>
+						
+							<label for="email">E-MAIL</label>
+							<input type="text" name="email" #email="ngModel" [(ngModel)]="emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ingrese su e-mail">
+							<span *ngIf="email.touched && !email.valid">Formato de email incorrecto</span>
+						
+							<label for="mensaje">MENSAJE</label>
+							<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="mensajeForm" placeholder="Escriba su consulta"></textarea>
+							<span *ngIf="mensaje.touched && !mensaje.valid">Formato de email incorrecto</span>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
