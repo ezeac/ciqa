@@ -9,8 +9,10 @@
 		<div class="tituloOffset uppercase">{{'sobre ciqa' | translate}}</div>
 		<div class="content-outer-bloques col-xs-12 no-padding">
 			<div class="content-outer-bloques-nav">
-				<div class="content-outer-bloques-nav-item uppercase active-tab-nav" (click)="peticionesService.show_animated_tab('content1', $event)">{{'institucional' | translate}}</div>
-				<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('content2', $event)">{{'integrantes' | translate}}</div>
+				<div>
+					<div class="content-outer-bloques-nav-item uppercase active-tab-nav" (click)="peticionesService.show_animated_tab('content1', $event)">{{'institucional' | translate}}</div>
+					<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('content2', $event)">{{'integrantes' | translate}}</div>
+				</div>
 			</div>
 			<div class="content-outer-bloques-content">
 				<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">

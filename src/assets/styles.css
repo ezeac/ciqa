@@ -59,7 +59,7 @@ footer .footer-cont-cont2-redes li { }
 .claseLinkActivo { font-weight: bold; }
 .component-container { float: left; width: 100%; color: #969696; margin-top: -80px; position: relative; }
 .background-outer { width: 100%; background: #00A5E6; float: left; height: calc(100% + 450px); position: absolute; }
-.background-outer .background-imagen-top { max-height: 100vh; overflow: hidden; height: 50vh; background: #00183E; }
+.background-outer .background-imagen-top {max-height: 100vh;overflow: hidden;height: 60vh;background: #00183E;}
 .background-outer .background-color { }
 .background-outer .background-imagen-top,
 .background-outer .background-color { z-index: 0; width: 100%; position: relative; }
@@ -91,7 +91,7 @@ footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
 /* nav-slide-down */
 .content-outer-bloques-content .content-outer-bloques-content-item {height: auto;overflow: hidden;transition: max-height 2s ease;max-height: 0px;float: left;font-size: 16px;width: 100%;}
 .content-outer-bloques-content .content-outer-bloques-content-item.active-tab-content { max-height: 4000px; }
-.content-outer-bloques-content {float: left;position: relative;width: 100%;padding: 5% 10%;}
+.content-outer-bloques-content {float: left;position: relative;width: 100%;padding: 5% 10%;min-height: 500px;}
 .content-outer-bloques-content-item-item1-content {display: none;width: 100%;overflow: hidden;}
 .content-outer-bloques-content-item-item1-title {padding-top: 20px;border-top: 1px solid;position: relative;color: black;cursor: pointer;font-weight: 600;padding-bottom: 20px;}
 .content-outer-bloques-content-item-item1-content > div { display: flex; align-items: center; padding-bottom: 20px; }
@@ -105,4 +105,60 @@ footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
 /*quienes somos*/
 .content-outer-bloques-content-item-img {
     margin: 50px 0px;
+}
+
+ /*ingeniería ambiental*/
+
+.nav-style-2 .content-outer-bloques-nav .content-outer-bloques-nav-item {
+    padding: 0px;
+    width: 100%;
+    background: none;
+    padding: 3px 0px;
+    opacity: .7;
+    font-weight: 800;
+    font-size: 14px;
+    transition: all .2s;
+}
+
+.nav-style-2 .content-outer-bloques-nav .content-outer-bloques-nav-item:hover {
+    opacity: 1;
+}
+
+.nav-style-2 .content-outer-bloques-nav .content-outer-bloques-nav-item.active-tab-nav {
+    background: none;
+    color: white;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.nav-style-2.content-outer-bloques-nav. {
+    display: flex;
+    align-items: center;
+    background: #16A5E2;
+}
+
+.nav-style-2 .content-outer-bloques-nav-img img {
+    width: 100%;
+}
+
+.nav-style-2.content-outer-bloques-nav > div:nth-child(2) {
+    padding-left: 5%;
+}
+
+.nav-style-2 .content-outer-bloques-nav-img {
+    box-shadow: 0px 0px 20px #0000009c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-style-2 .content-outer-bloques-nav-img-text {
+    font-weight: 700;
+    color: white;
+    font-size: 26px;
+    position: absolute;
+}
+
+.content-outer-bloques-nav .content-outer-bloques-nav-item:hover {
+    color: white;
 }

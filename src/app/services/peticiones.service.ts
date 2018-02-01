@@ -26,7 +26,7 @@ export class PeticionesService{
 	}
 
 	show_animated_tab(selector, event) {
-		$(event.target).parent().parent().children("div").each(function(index, element){
+		$(event.target).parent().parent().next().children("div").each(function(index, element){
 			$(element).fadeOut(0).removeClass("active-tab-content");
 			if ($(element).data("content") == selector) {
 				$(element).fadeIn(0).addClass("active-tab-content");

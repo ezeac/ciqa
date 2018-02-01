@@ -1,19 +1,26 @@
-{{titulo}}
-<div class="content-outer-bloques-nav">
-	<!-- navTabs -->
-	<div class="content-outer-bloques-nav-item uppercase active-tab-nav" (click)="peticionesService.show_animated_tab('content1', $event)">tab1</div>
-	<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('content2', $event)">tab2</div>
+<div class="content-outer-bloques-nav nav-style-2">
+	<div class="content-outer-bloques-nav-img no-padding col-xs-12 col-sm-7">
+		<div class="content-outer-bloques-nav-img-text">Calidad del aire</div>
+		<img src="../assets/media/ingAmbientalNav/aire.jpg" alt="aire.jpg">
+	</div><!-- navTabs -->
+	<div class="col-xs-12 col-sm-5 no-padding">
+		<div class="content-outer-bloques-nav-item active-tab-nav" (click)="peticionesService.show_animated_tab('aire', $event); actualizarImgNav($event, 'aire.jpg');">Calidad del aire</div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('agua', $event); actualizarImgNav($event, 'agua.jpg');">Calidad de aguas y afluentes</div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('suelos', $event); actualizarImgNav($event, 'suelos.jpg');">Calidad de suelos y residuos peligrosos</div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('equipamiento', $event); actualizarImgNav($event, 'equipamiento.jpg');">Equipamiento</div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('impacto', $event); actualizarImgNav($event, 'impacto.jpg');">Impacto Ambiental</div>
+	</div>
 </div>
 <div class="content-outer-bloques-content">
 	
 	<!-- tab1 -->
-	<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
+	<div class="content-outer-bloques-content-item active-tab-content" data-content="aire">
 		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
 		<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
 	</div>
 
 	<!-- tab2 -->
-	<div class="content-outer-bloques-content-item" data-content="content2">
+	<div class="content-outer-bloques-content-item" data-content="agua">
 		
 		<!-- slidedown -->
 		<div class="content-outer-bloques-content-item-item1 col-sm-12">
@@ -30,5 +37,39 @@
 			</div>
 		</div>
 
+	</div>
+
+
+	<!-- tab3 -->
+	<div class="content-outer-bloques-content-item" data-content="suelos">
+		
+		<!-- slidedown -->
+		<div class="content-outer-bloques-content-item-item1 col-sm-12">
+			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t12" (click)="peticionesService.show_animated_slide($event)">Prof. Ing. Esp. Héctor R. Macaño - Director</div>
+			<div class="content-outer-bloques-content-item-item1-content">
+				<div>
+					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- tab4 -->
+	<div class="content-outer-bloques-content-item active-tab-content" data-content="equipamiento">
+		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+		<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+	</div>
+
+	<!-- tab5 -->
+	<div class="content-outer-bloques-content-item active-tab-content" data-content="impacto">
+		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+		<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
 	</div>
 </div>

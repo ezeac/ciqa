@@ -1,0 +1,37 @@
+.content-outer-bloques-cont-item-link-svg svg * {
+    fill: #5AD7FF;
+    transition: all .3s;
+}
+
+.content-outer-bloques-cont-item {
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.content-outer-bloques-cont-item-link {
+    display: flex;
+    align-items: center;
+    opacity: .6;
+    transition: all .2s;
+}
+
+.content-outer-bloques-cont-item-link:hover,.link-activo-servicios {
+    opacity: 1;
+}
+
+.content-outer-bloques-cont-item-link-svg {
+    width: 100px;
+    float: left;
+}
+
+.content-outer-bloques-cont-item-link-text {
+    font-size: 20px;
+    color: white;
+}
+
+.content-outer-bloques-cont {
+    background: #19289B;
+    width: 100%;
+    float: left;
+}
