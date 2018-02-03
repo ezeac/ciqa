@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 declare var jquery:any; declare var $:any; declare var particlesJS:any; declare var TweenMax:any; declare var Power2:any; declare var TweenMax:any;	declare var Power2:any;
 
@@ -19,6 +20,166 @@ export class HomeComponent{
 	public sliderHome2Slides = [{margin: 0}]; public sliderHome2Actual = 0;
 	public sliderHome3Slides = [{margin: 0}]; public sliderHome3Actual = 0;
 	public noticias:string = "";
+	public mapStyles = [
+		{
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#f5f5f5'
+				}
+			]
+		},
+		{
+			'elementType': 'labels.icon',
+			'stylers': [
+				{
+					'visibility': 'off'
+				}
+			]
+		},
+		{
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#616161'
+				}
+			]
+		},
+		{
+			'elementType': 'labels.text.stroke',
+			'stylers': [
+				{
+					'color': '#f5f5f5'
+				}
+			]
+		},
+		{
+			'featureType': 'administrative.land_parcel',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#bdbdbd'
+				}
+			]
+		},
+		{
+			'featureType': 'poi',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#eeeeee'
+				}
+			]
+		},
+		{
+			'featureType': 'poi',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#757575'
+				}
+			]
+		},
+		{
+			'featureType': 'poi.park',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#e5e5e5'
+				}
+			]
+		},
+		{
+			'featureType': 'poi.park',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#9e9e9e'
+				}
+			]
+		},
+		{
+			'featureType': 'road',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#ffffff'
+				}
+			]
+		},
+		{
+			'featureType': 'road.arterial',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#757575'
+				}
+			]
+		},
+		{
+			'featureType': 'road.highway',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#dadada'
+				}
+			]
+		},
+		{
+			'featureType': 'road.highway',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#616161'
+				}
+			]
+		},
+		{
+			'featureType': 'road.local',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#9e9e9e'
+				}
+			]
+		},
+		{
+			'featureType': 'transit.line',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#e5e5e5'
+				}
+			]
+		},
+		{
+			'featureType': 'transit.station',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#eeeeee'
+				}
+			]
+		},
+		{
+			'featureType': 'water',
+			'elementType': 'geometry',
+			'stylers': [
+				{
+					'color': '#c9c9c9'
+				}
+			]
+		},
+		{
+			'featureType': 'water',
+			'elementType': 'labels.text.fill',
+			'stylers': [
+				{
+					'color': '#9e9e9e'
+				}
+			]
+		}
+	];
 
 	//Luego se llama al parametro1 desde el html: <home [parametro1]="valor"></home>
 	@Input() parametro1:string;
