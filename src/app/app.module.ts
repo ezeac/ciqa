@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
 
 import {TranslateModule} from 'ng2-translate';
+import { AgmCoreModule } from '@agm/core';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -35,7 +37,11 @@ import { ServiciosComponent } from './servicios/servicios.component';
 		FormsModule,
 		HttpModule,
 		routing,
-		TranslateModule.forRoot()
+		TranslateModule.forRoot(),
+		AgmCoreModule.forRoot({
+			apiKey: 'AIzaSyBWKWRmLRQoiBdclOgMQVMIxij2x2lE4f8'
+		}),
+    	AgmSnazzyInfoWindowModule
 	],
 	providers: [appRoutingProviders],
 	bootstrap: [AppComponent]
