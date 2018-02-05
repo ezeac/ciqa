@@ -49,7 +49,7 @@ footer .footer-cont-cont2-redes li { }
 .tcolor-4 { color: #09A5E4; /*lightBlue*/ }
 .bcolor-1 { background: #09A5E4; /*lightBlue*/ color: white; }
 .bcolor-2 { background: #19289B;/*darkBlue*/ color: white; }
-.button { padding: 5px 15px; cursor: pointer; }
+.button { padding: 5px 25px; cursor: pointer; background: #00a5e6; border: none; color: white;}
 .button-big { padding: 15px 30px; cursor: pointer; }
 .uppercase { text-transform: uppercase; }
 .capitalize { text-transform: capitalize; }
@@ -167,6 +167,69 @@ footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
 
 /* contacto */
 
-.container-fluid-fix {
+.content-outer-bloques-content-item-cont-item > *:not(.button):first-child {
+    width: 100%;
+    background: rgba(17, 26, 99, .9);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+    height: 100%;
 }
 
+.content-outer-bloques-content-item-cont-item > *:not(.button):first-child::selection {
+    color: #00a5e6;
+    background: black;
+}
+
+.content-outer-bloques-content-item-cont-item > span:last-child {
+    color: #d84f4f;
+    font-size: 13px;
+    position: absolute;
+    text-align: center;
+    width: 85%;
+    border-top: 1px solid #d84f4f;
+    margin-left: 2.5%;
+    margin-top: 2px;
+}
+
+.content-outer-bloques-content-item-cont-item > *::placeholder {
+    color: #bbb;
+}
+
+.content-outer-bloques-content-item-cont-item > .button:first-child {
+    width: auto;
+    font-size: 11px;
+    height: 100%;
+}
+
+.content-outer-bloques-content-item-cont-item > .button:first-child:disabled {
+    background: grey;
+    opacity: .7;
+}
+
+.content-outer-bloques-content-item-cont-item > textarea:first-child {
+    height: 100%;
+}
+
+.content-outer-bloques-content-item-cont-item {
+    margin: 20px 0px;
+    height: 40px;
+}
+
+.content-outer-bloques-content-item-cont-item.textarea {
+    height: 160px;
+    margin-bottom: 0px;
+}
+
+.content-outer-bloques-content-item-cont form {
+    display: flex;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content-outer-bloques-content-item-cont-cont2:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}

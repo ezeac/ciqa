@@ -29,22 +29,35 @@
 						</div>
 					</div>
 					<div class="content-outer-bloques-content-item-cont">
-						<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
-							<label for="nombre">NOMBRE Y APELLIDO</label>
-							<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="nombreForm" required pattern="[a-z]+" placeholder="Ingrese su nombre y apellido">
-							<span *ngIf="nombre.touched && !nombre.valid">Formato de nombre incorrecto</span>
-						
-							<label for="dni">DNI</label>
-							<input type="text" name="dni" #dni="ngModel" [(ngModel)]="dniForm" required pattern="[0-9]+" placeholder="Ingrese su dni">
-							<span *ngIf="dni.touched && !dni.valid">Formato de dni incorrecto</span>
-						
-							<label for="email">E-MAIL</label>
-							<input type="text" name="email" #email="ngModel" [(ngModel)]="emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ingrese su e-mail">
-							<span *ngIf="email.touched && !email.valid">Formato de email incorrecto</span>
-						
-							<label for="mensaje">MENSAJE</label>
-							<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="mensajeForm" placeholder="Escriba su consulta"></textarea>
-							<span *ngIf="mensaje.touched && !mensaje.valid">Formato de email incorrecto</span>
+						<form #formContacto1="ngForm" (ngSubmit)="onSubmit($event)">
+							<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-4">
+								<div class="content-outer-bloques-content-item-cont-item">	
+									<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto1.nombreForm" required pattern="[a-z]+" placeholder="Nombre">
+									<span *ngIf="nombre.touched && !nombre.valid">Formato de nombre incorrecto</span>
+								</div>
+								<div class="content-outer-bloques-content-item-cont-item">
+									<input type="text" name="dni" #dni="ngModel" [(ngModel)]="contacto1.dniForm" required pattern="[0-9]+" placeholder="Cuil/Cuit">
+									<span *ngIf="dni.touched && !dni.valid">Formato de dni incorrecto</span>
+								</div>
+								<div class="content-outer-bloques-content-item-cont-item">
+									<input type="text" name="email" #email="ngModel" [(ngModel)]="contacto1.emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-Mail">
+									<span *ngIf="email.touched && !email.valid">Formato de email incorrecto</span>
+								</div>
+								<div class="content-outer-bloques-content-item-cont-item">
+									<input type="text" name="empresa" #empresa="ngModel" [(ngModel)]="contacto1.empresaForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Empresa">
+									<span *ngIf="empresa.touched && !empresa.valid">Ingrese el nombre de su empresa</span>
+								</div>
+							</div>
+							<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-5">
+								<div class="content-outer-bloques-content-item-cont-item textarea">
+									<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto1.mensajeForm" placeholder="Consultas, quejas, sugerencias, agradecimientos"></textarea>
+									<span *ngIf="mensaje.touched && !mensaje.valid">Formato de email incorrecto</span>
+								</div>
+								<div class="content-outer-bloques-content-item-cont-item input">
+									<input [disabled]="!formContacto1.valid" class="button pull-left" type="submit" value="ENVIAR">
+								</div>
+							</div>
+							<div class="hidden-xs col-sm-3">&nbsp;</div>
 						</form>
 					</div>
 				</div>

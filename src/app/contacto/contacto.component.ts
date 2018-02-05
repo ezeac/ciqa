@@ -2,6 +2,8 @@ import { Component, Input } from "@angular/core";
 import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+import { Contacto1 } from './contactoModel';
+
 declare var jquery:any;
 declare var $:any;
 
@@ -15,7 +17,8 @@ declare var $:any;
 
 export class ContactoComponent{
 	public titulo = "Página contacto";
-	public parametro;
+	public parametro; 
+	public contacto1:Contacto1 = new Contacto1();
 	//Luego se llama al parametro1 desde el html: <contacto [parametro1]="valor"></contacto>
 	@Input() parametro1:string;
 
@@ -33,6 +36,10 @@ export class ContactoComponent{
 
 	redirigir(){
 		this._router.navigate(['/contacto','valorPage']);
+	}
+
+	onSubmit(event){
+		console.log(this.contacto1);
 	}
 
 }
