@@ -11,6 +11,7 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { QuienesSomosComponent } from './quienesSomos/quienesSomos.component';
+import { InvestigacionComponent } from './investigacion/investigacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -24,6 +25,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 		AppComponent,
 		HomeComponent,
 		QuienesSomosComponent,
+		InvestigacionComponent,
 		ContactoComponent,
 		ClientesComponent,
 		ServiciosComponent,

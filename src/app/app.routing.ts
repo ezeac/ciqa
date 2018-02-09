@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 //Importar componentes
 import { HomeComponent } from './home/home.component';
 import { QuienesSomosComponent } from './quienesSomos/quienesSomos.component';
+import { InvestigacionComponent } from './investigacion/investigacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
 	{path: 'home', component:HomeComponent},
 	// {path: 'home/:page', component:HomeComponent},
 	{path: 'quienesSomos', component:QuienesSomosComponent},
+	{path: 'investigacion', component:InvestigacionComponent},
 	{path: 'servicios', component:ServiciosComponent,
 		children: [
 			{ path: '', redirectTo: 'ingenieriaAmbiental', pathMatch: 'full' },

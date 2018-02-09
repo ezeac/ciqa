@@ -1,0 +1,126 @@
+<div class="component-container">
+	<div class="background-outer">
+		<div class="background-imagen-top">
+			<img src="../assets/media/servicios.jpg" alt="">	
+		</div>
+		<div class="background-color"></div>
+	</div>
+	<div class="content-outer container no-padding">
+		<div class="content-outer-bloques col-xs-12 no-padding">
+
+			<div class="content-outer-bloques-nav">
+				<div>
+					<!-- navTabs -->
+					<div class="content-outer-bloques-nav-item uppercase active-tab-nav" (click)="peticionesService.show_animated_tab('investigadores', $event)">{{"investigadores" | translate}}</div>
+					<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('areas_de_interes', $event)">{{"areas de interes" | translate}}</div>
+					<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('proyectos_y_cooperación', $event)">{{"proyectos y cooperación" | translate}}</div>
+					<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('docencia', $event)">{{"docencia" | translate}}</div>
+					<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('cursos', $event)">{{"cursos" | translate}}</div>
+				</div>
+			</div>
+			<div class="content-outer-bloques-content">
+				
+				<!-- tab investigadores -->
+				<div class="content-outer-bloques-content-item active-tab-content" data-content="investigadores">
+					<div class="col-xs-12 no-padding">
+
+						<!-- Info FullPage -->
+						<div class="content-outer-bloques-content-item-fullpage" style="display: none">
+							<div class="content-outer-bloques-content-item-fullpage-nav col-xs-12 t16"><a href="javascript:0 capitalize" (click)="toggleFullContent(0)">{{'investigadores' | translate}}</a> › Prof. Ing. Esp. Roberto Pepino Minetti</div>
+							<div class="content-outer-bloques-content-item-cont col-xs-12" style="cursor: pointer">
+								<div class="content-outer-bloques-content-item-cont-img col-xs-4" style="background: url('../assets/media/servicios.jpg') no-repeat center center / cover"></div>
+								<div class="content-outer-bloques-content-item-cont-info col-xs-8">
+									<div class="content-outer-bloques-content-item-cont-tit1 bold t14 tcolor-3 capitalize">titulo1</div>
+									<div class="content-outer-bloques-content-item-cont-tit2 semibold t9 tcolor-5 uppercase">titulo2</div>
+									<div class="content-outer-bloques-content-item-cont-cont2">
+										<div class="content-outer-bloques-content-item-cont-info-cont2-row clearfix">
+											<div class="content-outer-bloques-content-item-cont-info-row-logo pull-left"><i class="material-icons tcolor-4">mail_outline</i></div>
+											<div class="content-outer-bloques-content-item-cont-info-row-text pull-left t10">email</div>
+										</div>
+										<div class="content-outer-bloques-content-item-cont-info-cont2-row clearfix">
+											<div class="content-outer-bloques-content-item-cont-info-row-logo pull-left"><i class="material-icons tcolor-4">phone</i></div>
+											<div class="content-outer-bloques-content-item-cont-info-row-text pull-left t10">tel</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content-outer-bloques-content-item-fullpage-cont col-xs-12">	
+								<div class="content-outer-bloques-content-item-fullpage-cont-titulo uppercase bold t18">Titulo3</div>
+								<div class="content-outer-bloques-content-item-fullpage-cont-content t16">contenido</div>
+							</div>
+						</div>
+
+						<div class="extra-content-investigadores-cont">
+
+							<!-- Item Investigador -->
+							<div class="content-outer-bloques-content-item-cont col-xs-12 col-sm-6" style="cursor: pointer" (click)="toggleFullContent(1, $event)">
+								<div class="content-outer-bloques-content-item-cont-img col-xs-4" style="background: url('../assets/media/servicios.jpg') no-repeat center center / cover"></div>
+								<div class="content-outer-bloques-content-item-cont-info col-xs-8">
+									<div class="content-outer-bloques-content-item-cont-tit1 bold t14 tcolor-3 capitalize">Prof. Ing. Esp. Roberto Pepino Minetti</div>
+									<div class="content-outer-bloques-content-item-cont-tit2 semibold t9 tcolor-5 uppercase">director procesos ambientales</div>
+									<div class="content-outer-bloques-content-item-cont-cont2">
+										<div class="content-outer-bloques-content-item-cont-info-cont2-row clearfix">
+											<div class="content-outer-bloques-content-item-cont-info-row-logo pull-left"><i class="material-icons tcolor-4">mail_outline</i></div>
+											<div class="content-outer-bloques-content-item-cont-info-row-text pull-left t10">rpm@ciqa.com.ar</div>
+										</div>
+										<div class="content-outer-bloques-content-item-cont-info-cont2-row clearfix">
+											<div class="content-outer-bloques-content-item-cont-info-row-logo pull-left"><i class="material-icons tcolor-4">phone</i></div>
+											<div class="content-outer-bloques-content-item-cont-info-row-text pull-left t10">351 659 8999</div>
+										</div>
+									</div>
+								</div>
+								<div class="content-outer-bloques-content-item-cont-info" style="display: none">
+									<div class="content-outer-bloques-content-item-cont-info-titulo uppercase bold t18">temas de investigación de Roberto</div>
+									<div class="content-outer-bloques-content-item-cont-info-content t16">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- tab areas_de_interes -->
+				<div class="content-outer-bloques-content-item" data-content="areas_de_interes">
+					<!-- slidedown -->
+					<div class="content-outer-bloques-content-item-item1 col-sm-12">
+						<div class="content-outer-bloques-content-item-item1-title col-xs-12 t12" (click)="peticionesService.show_animated_slide($event)">Prof. Ing. Esp. Héctor R. Macaño - Director</div>
+						<div class="content-outer-bloques-content-item-item1-content">
+							<div>
+								<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+								<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+									<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+									<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+									<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- tab proyectos_y_cooperación -->
+				<div class="content-outer-bloques-content-item" data-content="proyectos_y_cooperación">
+					<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+					<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+				</div>
+
+
+				<!-- tab docencia -->
+				<div class="content-outer-bloques-content-item" data-content="docencia">
+					<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+					<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+				</div>
+
+
+				<!-- tab cursos -->
+				<div class="content-outer-bloques-content-item" data-content="cursos">
+					<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+					<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

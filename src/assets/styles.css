@@ -47,6 +47,7 @@ footer .footer-cont-cont2-redes li { }
 .tcolor-2 { color: #969696; /*grey*/ }
 .tcolor-3 { color: #19289B; /*darkBlue*/ }
 .tcolor-4 { color: #09A5E4; /*lightBlue*/ }
+.tcolor-5 { color: #000; /*black*/ }
 .bcolor-1 { background: #09A5E4; /*lightBlue*/ color: white; }
 .bcolor-2 { background: #19289B;/*darkBlue*/ color: white; }
 .button { padding: 5px 25px; cursor: pointer; background: #00a5e6; border: none; color: white;}
@@ -233,3 +234,5 @@ footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
     display: flex;
     flex-direction: column;
 }
+
+/* investigación y docencia */
