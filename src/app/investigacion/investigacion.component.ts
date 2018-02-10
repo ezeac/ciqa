@@ -15,7 +15,7 @@ declare var $:any;
 
 export class InvestigacionComponent{
 	public titulo = "Página investigacion";
-	public parametro;
+	public parametro; public investigador; public img_areas_de_interes = "";
 	//Luego se llama al parametro1 desde el html: <investigacion [parametro1]="valor"></investigacion>
 	@Input() parametro1:string;
 
@@ -30,6 +30,15 @@ export class InvestigacionComponent{
 			this.parametro = params['page'];
 		})
 		this.animate_scroll("html");
+
+		this.peticionesService.get_investigadores().subscribe(
+			data => this.investigador = data.filter(String), 
+			(err) => console.log(err), 
+			() => setTimeout(()=>{
+				console.log("ok");
+				console.log(this.investigador);
+			},100)
+		);
 	}
 
 	animate_scroll(element) {
@@ -43,24 +52,15 @@ export class InvestigacionComponent{
 	toggleFullContent(action, event = null){
 		if (action == 1) {
 			var parent = $(event.target).closest(".content-outer-bloques-content-item-cont");
-			console.log(parent);
-			var titulo1 = parent.find(".content-outer-bloques-content-item-cont-tit1").html();
-			var titulo2 = parent.find(".content-outer-bloques-content-item-cont-tit2").html();
-
+			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-fullpage-nav-tit").html(parent.find(".content-outer-bloques-content-item-cont-tit1").html());
+			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-img").html(parent.find(".content-outer-bloques-content-item-cont-img").html());
+			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit1").html(parent.find(".content-outer-bloques-content-item-cont-tit1").html());
+			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit2").html(parent.find(".content-outer-bloques-content-item-cont-tit2").html());
 			var contactInfo = parent.find(".content-outer-bloques-content-item-cont-info-row-text");
-
-			var titulo3 = parent.find(".content-outer-bloques-content-item-cont-info-titulo").html();
-			var texto = parent.find(".content-outer-bloques-content-item-cont-info-content").html();
-
-			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit1").html(titulo1);
-			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit2").html(titulo2);
-			console.log(contactInfo);
-			console.log($(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-info-row-text"));
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-info-row-text").eq(0).html(contactInfo.eq(0).html());
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-info-row-text").eq(1).html(contactInfo.eq(1).html());
-		
-			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-fullpage-cont-titulo").html(titulo3);
-			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-fullpage-cont-content").html(texto);
+			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-fullpage-cont-content").html(parent.find(".content-outer-bloques-content-item-cont-info-content").html());
+
 
 			$(".extra-content-investigadores-cont").stop().fadeOut(0);
 			$(".content-outer-bloques-content-item-fullpage").stop().fadeIn();

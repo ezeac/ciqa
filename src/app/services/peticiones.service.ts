@@ -38,9 +38,15 @@ export class PeticionesService{
 		$(event.target).addClass("active-tab-nav");
 	}
 
-	//apis
+
 	get_noticias(){
-		this.url = "http://localhost/wp-json/wp/v2/noticia";
+		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/noticia?fields=id,title.rendered,content.rendered,resumen,imagen.guid";
+		this.respuesta = this._http.get(this.url).map(res => res.json());
+		return this.respuesta;
+	}
+
+	get_investigadores(){
+		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,nombre_completo,cargo,email,telefono,foto.guid,contenido_investigador&filter=es_investigador:1";
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}
