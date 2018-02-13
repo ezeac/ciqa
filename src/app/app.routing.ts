@@ -7,6 +7,12 @@ import { QuienesSomosComponent } from './quienesSomos/quienesSomos.component';
 import { InvestigacionComponent } from './investigacion/investigacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ClientesComponent } from './clientes/clientes.component';
+	import { ClientesInformacionComponent } from './clientes/clientesInformacion/clientesInformacion.component';
+	import { ClientesEnvioDeMuestrasComponent } from './clientes/clientesEnvioDeMuestras/clientesEnvioDeMuestras.component';
+	import { ClientesPresupuestosComponent } from './clientes/clientesPresupuestos/clientesPresupuestos.component';
+	import { ClientesHistorialComponent } from './clientes/clientesHistorial/clientesHistorial.component';
+	import { ClientesMensajesComponent } from './clientes/clientesMensajes/clientesMensajes.component';
+	import { ClientesComprobantesComponent } from './clientes/clientesComprobantes/clientesComprobantes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 	import { IngenieriaAmbientalComponent } from './servicios/ingenieriaAmbiental/ingenieriaAmbiental.component';
 	import { IngenieriaDeProcesosComponent } from './servicios/ingenieriaDeProcesos/ingenieriaDeProcesos.component';
@@ -30,7 +36,17 @@ const appRoutes: Routes = [
 		]
 	},
 	{path: 'contacto', component:ContactoComponent},
-	{path: 'clientes', component:ClientesComponent},
+	{path: 'clientes', component:ClientesComponent,
+		children: [
+			{ path: '', redirectTo: 'clientesInformacion', pathMatch: 'full' },
+			{ path: 'clientesInformacion', component: ClientesInformacionComponent },
+			{ path: 'clientesEnvioDeMuestras', component: ClientesEnvioDeMuestrasComponent },
+			{ path: 'clientesPresupuestos', component: ClientesPresupuestosComponent },
+			{ path: 'clientesHistorial', component: ClientesHistorialComponent },
+			{ path: 'clientesMensajes', component: ClientesMensajesComponent },
+			{ path: 'clientesComprobantes', component: ClientesComprobantesComponent }
+		]
+	},
 	{path: '**', component:HomeComponent},
 ];
 

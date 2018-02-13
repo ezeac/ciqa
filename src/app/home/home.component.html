@@ -26,7 +26,7 @@
 							<div class="col-xs-12 col-sm-5">
 								<div class="titulo1 t25"><b>{{noticia.title.rendered}}</b></div>
 								<div class="texto1 t15">{{noticia.resumen}} [...]</div>
-								<div class="button-big t12">› LEER MÁS</div>
+								<div class="button-big t12"><!-- › LEER MÁS --></div>
 							</div>
 							<div class="hidden-xs col-sm-1">&nbsp;</div>
 							<div class="col-xs-12 col-sm-6">
@@ -62,7 +62,7 @@
 				<div class="content-outer-bloques-cont-info col-xs-12 col-sm-5 col-lg-4">
 					<div class="content-outer-bloques-cont-info-titulo t30 tcolor-3"><b>{{'Buscamos ofrecer un servicio de excelencia' | translate}}</b></div>
 					<div class="content-outer-bloques-cont-info-texto t12 t-color-2">{{'Lo que se busca en CIQA es brindar un servicio con la responsabilidad y ética que nuestra Universidad y la comunidad nos exige, pero con la misma eficiencia que las más importantes empresas privadas del rubro poseen.' | translate}}</div>
-					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><b>› {{'leer más' | translate}}</b></div>
+					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><a [routerLink]="['/quienesSomos']"><b>› {{'leer más' | translate}}</b></a></div>
 				</div>
 				<div class="hidden-xs col-sm-1 col-lg-2">&nbsp;</div>
 			</div>
@@ -72,7 +72,7 @@
 				<div class="content-outer-bloques-cont-info col-xs-12 col-sm-5 col-lg-4">
 					<div class="content-outer-bloques-cont-info-titulo t30 tcolor-3"><b>{{'Contamos con equipos de última generación' | translate}}</b></div>
 					<div class="content-outer-bloques-cont-info-texto t12 t-color-2">{{'Lo que se busca en CIQA es brindar un servicio con la responsabilidad y ética que nuestra Universidad y la comunidad nos exige, pero con la misma eficiencia que las más importantes empresas privadas del rubro poseen.' | translate}}</div>
-					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><b>› {{'leer más' | translate}}</b></div>
+					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><a [routerLink]="['/servicios']"><b>› {{'leer más' | translate}}</b></a></div>
 				</div>
 				<div class="slider col-xs-12 col-sm-6" id="sliderHome2">
 					<div class="navigation-items">
@@ -94,7 +94,7 @@
 					<div class="sliderMarco">
 						<div class="sliderContainer">
 							<div class="sliderItem" style="width: 100%;">
-								<agm-map [zoom]="13" [latitude]="51.678418" [longitude]="7.809007" [styles]=mapStyles style="height: 100%">
+								<agm-map [zoom]="13" [latitude]="51.678418" [longitude]="7.809007" [styles]=peticionesService.mapStyles style="height: 100%">
 									<agm-marker [iconUrl]="'../assets/media/mapIcon.png'" [latitude]="51.678418" [longitude]="7.809007">
 										<agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
 											<ng-template><b>Cliente 1</b><br><br>Texto informativo número 1</ng-template>
@@ -113,7 +113,7 @@
 				<div class="content-outer-bloques-cont-info col-xs-12 col-sm-5 col-lg-4">
 					<div class="content-outer-bloques-cont-info-titulo t30 tcolor-3"><b>{{'Clientes que confían en nosotros' | translate}}</b></div>
 					<div class="content-outer-bloques-cont-info-texto t12 t-color-2">{{'Lo que se busca en CIQA es brindar un servicio con la responsabilidad y ética que nuestra Universidad y la comunidad nos exige, pero con la misma eficiencia que las más importantes empresas privadas del rubro poseen.' | translate}}</div>
-					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><b>› {{'leer más' | translate}}</b></div>
+					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><a [routerLink]="['/contacto']"><b>› {{'leer más' | translate}}</b></a></div>
 				</div>
 				<div class="hidden-xs col-sm-1 col-lg-2">&nbsp;</div>
 			</div>

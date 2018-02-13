@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import {TranslateService} from 'ng2-translate';
+import { PeticionesService } from './services/peticiones.service';
 
 declare var jquery:any; declare var $:any;
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
+	styleUrls: ['./app.component.css'],
+	providers: [PeticionesService]
 })
 export class AppComponent {
 	title = 'app works!';
 	
-	constructor(private translate: TranslateService) {
+	constructor(private translate: TranslateService,private peticionesService:PeticionesService) {
 		translate.addLangs(["es","en"])
 		translate.setDefaultLang('es');
 		translate.use('es');
@@ -23,4 +25,5 @@ export class AppComponent {
 		this.translate.use($(select).val());
 		console.log("se cambio el idioma a " + this.translate.currentLang );
 	}
+
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import {Http, Response, Headers} from '@angular/http';
+import { Login } from '../clientes/loginModel';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 
@@ -7,11 +9,50 @@ declare var jquery:any;
 declare var $:any;
 
 @Injectable()
-export class PeticionesService{
+export class PeticionesService {
 	public url: string;
 	public respuesta: any;
+	public inicio_sesion:any = false;
+	public mapStyles = [{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}];
 
-	constructor(private _http:Http){}
+	constructor(private _http:Http, private _router: Router){}
+
+
+	//cookies
+	setCookie(cname, cvalue, exdays) {
+	    var d = new Date();
+	    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	    var expires = "expires="+d.toUTCString();
+	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	getCookie(cname) {
+	    var name = cname + "=";
+	    var ca = document.cookie.split(';');
+	    for(var i = 0; i < ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}
+
+
+	logout(){
+		this.setCookie('inicio_sesion','',0);
+		this._router.navigate(['/','valorPage']);
+	}
+
+
+	login(loginModel:Login){
+		this.inicio_sesion = loginModel.usuario;
+		this.setCookie("inicio_sesion", loginModel.usuario, 2);
+	}
+
 
 
 	//funciones generales
@@ -21,7 +62,7 @@ export class PeticionesService{
 	}
 
 
-	animate_scroll(element, duration = 1000) {
+	animate_scroll(element, duration = 0) {
 		$('html, body').animate({'scrollTop':$(element).offset().top-100},1000);
 	}
 

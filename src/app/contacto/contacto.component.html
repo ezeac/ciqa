@@ -62,6 +62,17 @@
 					</div>
 				</div>
 			</div>
+			<div class="content-outer-bloques-content-item-cont container-fluid no-padding">
+				<div class="content-outer-bloques-content-item-cont-map col-xs-12 no-padding">
+					<agm-map [zoom]="13" [latitude]="51.678418" [longitude]="7.809007" [styles]=peticionesService.mapStyles style="height: 100%;">
+						<agm-marker [iconUrl]="'../assets/media/mapIcon.png'" [latitude]="51.678418" [longitude]="7.809007">
+							<agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+								<ng-template><b>Cliente 1</b><br><br>Texto informativo número 1</ng-template>
+							</agm-snazzy-info-window>
+						</agm-marker>
+					</agm-map>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

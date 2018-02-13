@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 import { Contacto1 } from './contactoModel';
 
@@ -19,6 +20,7 @@ export class ContactoComponent{
 	public titulo = "Página contacto";
 	public parametro; 
 	public contacto1:Contacto1 = new Contacto1();
+
 	//Luego se llama al parametro1 desde el html: <contacto [parametro1]="valor"></contacto>
 	@Input() parametro1:string;
 

@@ -34,10 +34,7 @@ export class InvestigacionComponent{
 		this.peticionesService.get_investigadores().subscribe(
 			data => this.investigador = data.filter(String), 
 			(err) => console.log(err), 
-			() => setTimeout(()=>{
-				console.log("ok");
-				console.log(this.investigador);
-			},100)
+			() => {},
 		);
 	}
 

@@ -1,9 +1,69 @@
 <div class="component-container">
 	<div class="background-outer">
 		<div class="background-imagen-top">
-			<img src="" alt="">
+			<img src="../assets/media/servicios.jpg" alt="">	
 		</div>
 		<div class="background-color"></div>
 	</div>
-	<div class="content-outer"></div>
+	<div class="content-outer container no-padding">
+		<div class="tituloOffset uppercase">{{titulo}}</div>
+		<div class="content-outer-bloques col-xs-12 no-padding">
+
+			
+
+			<div *ngIf="peticionesService.getCookie('inicio_sesion') == false">
+				<form #formLogin="ngForm" (ngSubmit)="onSubmit($event)">
+					<label class="tcolor-3 bold t18" for="usuario">{{"Ingresar a autogestión" | translate}}</label>
+					<div>
+						<input class="input-box" type="text" name="usuario" #usuario="ngModel" [(ngModel)]="formLoginModel.usuario" required pattern="[a-z|A-Z|0-9]{4,}" placeholder="{{'Ingrese su usuario' | translate}}">
+						<span class="input-span" *ngIf="usuario.touched && !usuario.valid">Formato de usuario incorrecto</span>
+					</div>
+					<div>
+						<input class="input-box" type="password" name="password" #password="ngModel" [(ngModel)]="formLoginModel.password" required pattern="(.){4,}" placeholder="{{'Ingrese su password' | translate}}">
+						<span class="input-span" *ngIf="password.touched && !password.valid">Formato de password incorrecto</span>
+					</div>
+					<input class="button" [disabled]="!formLogin.valid" type="submit" value="{{'Iniciar Sesión' | translate}}">
+				</form>
+			</div>
+
+
+			<div *ngIf="peticionesService.getCookie('inicio_sesion') != false">
+				<div class="content-outer-bloques-logout" (click)="peticionesService.logout()">{{'Bienvenido' | translate}} <b>{{peticionesService.getCookie('inicio_sesion')}}</b><a href="javascript:0"> Cerrar Sesión</a></div>
+				
+				<div class="cont-clientes">
+					<div class="content-outer-bloques-nav1 col-xs-12 col-sm-3 no-padding">
+						<a [routerLink]="['clientesInformacion']" [routerLinkActive]="['claseLinkActivoClientes']" skipLocationChange class="font1 t14 t-color-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.38 18.72"><defs><style>.cls-1{fill:#fff;}</style></defs><title>informacion</title><g id="Capa_2" data-name="Capa 2"><g id="Diseño"><g id="_3" data-name="3"><path class="cls-1" d="M12.29,0l-7,0A2.45,2.45,0,0,0,2.92,2.34l-.67,0A2.34,2.34,0,0,0,0,4.68v11.7a2.44,2.44,0,0,0,2.34,2.34h8.78a2.44,2.44,0,0,0,2.33-2.34H14A2.44,2.44,0,0,0,16.38,14V4.69ZM11.12,17.55H2.34a1.23,1.23,0,0,1-1.17-1.17V4.68c0-.87.71-1.17,1.75-1.17V14a2.45,2.45,0,0,0,2.34,2.34h7A1.11,1.11,0,0,1,11.12,17.55Zm1.17-5.26H7a.59.59,0,1,1,0-1.17h5.27a.59.59,0,0,1,0,1.17Zm0-2.92H7A.59.59,0,1,1,7,8.2h5.27a.59.59,0,0,1,0,1.17Zm1.16-4.69a1.2,1.2,0,0,1-1.16-1.17V1.19h0l2.92,3.49Z"/></g></g></g></svg>
+							{{"Informacion" | translate}}
+						</a>
+						<a [routerLink]="['clientesEnvioDeMuestras']" [routerLinkActive]="['claseLinkActivoClientes']" skipLocationChange class="font1 t14 t-color-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.84 20.45"><defs><style>.cls-1{fill:#fff;}</style></defs><title>muestras</title><g id="Capa_2" data-name="Capa 2"><g id="Diseño"><path class="cls-1" d="M18.54,16.84,13.18,6.91V1a1,1,0,0,0-1-1H6.68a1,1,0,0,0-1,1V6.91L.29,16.84a2.44,2.44,0,0,0,2.15,3.61h14a2.44,2.44,0,0,0,2.15-3.61ZM10.3,12.69a.87.87,0,1,1-.87.87A.86.86,0,0,1,10.3,12.69ZM7.86,7.46A.87.87,0,1,1,7,8.33.87.87,0,0,1,7.86,7.46Zm0,3A1.41,1.41,0,1,1,6.45,11.9,1.41,1.41,0,0,1,7.86,10.49ZM16,17.73a1,1,0,0,1-.87.49H3.74a1,1,0,0,1-.86-.49,1,1,0,0,1,0-1l1.37-2.45a1,1,0,0,1,1-.51c1.82.17,3.85,1.72,5.67,1.65a6.17,6.17,0,0,0,2.74-.87A1,1,0,0,1,15,15l1,1.78A1,1,0,0,1,16,17.73Z"/></g></g></svg>
+							{{"EnvioDeMuestras" | translate}}
+						</a>
+						<a [routerLink]="['clientesPresupuestos']" [routerLinkActive]="['claseLinkActivoClientes']" skipLocationChange class="font1 t14 t-color-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.18 23.48"><defs><style>.cls-1{fill:#fff;}</style></defs><title>presupuestos</title><g id="Capa_2" data-name="Capa 2"><g id="Diseño"><path class="cls-1" d="M10.88,2.29a2.29,2.29,0,0,0-4.58,0H4V4.58h9.16V2.29Z"/><path class="cls-1" d="M14.89,4.58V6.3H2.29V4.58H0v18.9H17.18V4.58Zm-4.58,14.6H9.45v1.44H7.73V19.18H6.87a5.88,5.88,0,0,1-2-.34l.57-1.62a4.35,4.35,0,0,0,1.43.25h.86V15.75H6.87a2.58,2.58,0,0,1,0-5.16h.86V9.16H9.45v1.43h.86a5.93,5.93,0,0,1,2,.35l-.57,1.62a4.1,4.1,0,0,0-1.43-.25H9.45V14h.86a2.58,2.58,0,0,1,0,5.15Z"/></g></g></svg>
+							{{"Presupuestos" | translate}}
+						</a>
+						<a [routerLink]="['clientesHistorial']" [routerLinkActive]="['claseLinkActivoClientes']" skipLocationChange class="font1 t14 t-color-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.45 17.53"><defs><style>.cls-1{fill:#fff;}</style></defs><title>historial</title><g id="Capa_2" data-name="Capa 2"><g id="Diseño"><path class="cls-1" d="M11.68,0A8.76,8.76,0,0,0,2.92,8.76H0l3.8,3.8.06.14L7.79,8.76H4.87a6.83,6.83,0,1,1,2,4.82L5.49,15A8.76,8.76,0,1,0,11.68,0Z"/><polygon class="cls-1" points="10.71 4.87 10.71 9.74 14.88 12.21 15.58 11.03 12.17 9.01 12.17 4.87 10.71 4.87"/></g></g></svg>
+							{{"Historial" | translate}}
+						</a>
+						<a [routerLink]="['clientesMensajes']" [routerLinkActive]="['claseLinkActivoClientes']" skipLocationChange class="font1 t14 t-color-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.98 16.88"><defs><style>.cls-1{fill:#fff;}</style></defs><title>mensajes</title><g id="Capa_2" data-name="Capa 2"><g id="Diseño"><polygon class="cls-1" points="9.49 0 18.86 5.85 0.12 5.85 9.49 0"/><path class="cls-1" d="M19,15.18h0a1.7,1.7,0,0,1-1.7,1.7H1.7A1.7,1.7,0,0,1,0,15.18v-9a1.36,1.36,0,0,1,0-.29l9,5.58,0,0,0,0,.2.08h0a.83.83,0,0,0,.22,0h0a.78.78,0,0,0,.22,0h0l.2-.08,0,0,0,0,9-5.58a2.64,2.64,0,0,1,0,.29v9Z"/></g></g></svg>
+							{{"Mensajes" | translate}}
+						</a>
+						<a [routerLink]="['clientesComprobantes']" [routerLinkActive]="['claseLinkActivoClientes']" skipLocationChange class="font1 t14 t-color-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.68 18.68"><defs><style>.cls-1{fill:#fff;}</style></defs><title>comprobantes</title><g id="Capa_2" data-name="Capa 2"><g id="Diseño"><path class="cls-1" d="M9.34,0a9.34,9.34,0,1,0,9.34,9.34A9.34,9.34,0,0,0,9.34,0ZM12,13a3,3,0,0,1-1.56,1,.45.45,0,0,0-.38.5c0,.28,0,.55,0,.84a.33.33,0,0,1-.37.37,6.61,6.61,0,0,1-.89,0,.35.35,0,0,1-.38-.4v-.6c0-.44,0-.47-.45-.54a5.4,5.4,0,0,1-1.58-.45C6,13.55,6,13.45,6.1,13s.17-.62.26-.92.2-.39.53-.22a5.25,5.25,0,0,0,1.76.52,2.11,2.11,0,0,0,1.16-.16A.89.89,0,0,0,10,10.7a2.26,2.26,0,0,0-.65-.38,15.41,15.41,0,0,1-1.8-.81A2.53,2.53,0,0,1,6.13,7.07a2.68,2.68,0,0,1,2-2.48c.47-.18.48-.17.48-.67V3.41C8.59,3,8.65,3,9,3h.35c.81,0,.81,0,.81.81,0,.57,0,.57.56.65A5.19,5.19,0,0,1,12,4.79a.36.36,0,0,1,.23.49c-.09.34-.19.7-.31,1s-.21.37-.52.23a3.85,3.85,0,0,0-2-.39,1.61,1.61,0,0,0-.53.1.75.75,0,0,0-.19,1.33,3.67,3.67,0,0,0,.86.49,13.75,13.75,0,0,1,1.57.71A2.8,2.8,0,0,1,12,13Z"/></g></g></svg>
+							{{"Comprobantes" | translate}}
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-9 no-padding">
+						<router-outlet class="col-xs-12"></router-outlet>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
 </div>

@@ -14,6 +14,12 @@ import { QuienesSomosComponent } from './quienesSomos/quienesSomos.component';
 import { InvestigacionComponent } from './investigacion/investigacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ClientesComponent } from './clientes/clientes.component';
+	import { ClientesInformacionComponent } from './clientes/clientesInformacion/clientesInformacion.component';
+	import { ClientesEnvioDeMuestrasComponent } from './clientes/clientesEnvioDeMuestras/clientesEnvioDeMuestras.component';
+	import { ClientesPresupuestosComponent } from './clientes/clientesPresupuestos/clientesPresupuestos.component';
+	import { ClientesHistorialComponent } from './clientes/clientesHistorial/clientesHistorial.component';
+	import { ClientesMensajesComponent } from './clientes/clientesMensajes/clientesMensajes.component';
+	import { ClientesComprobantesComponent } from './clientes/clientesComprobantes/clientesComprobantes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 	import { IngenieriaAmbientalComponent } from './servicios/ingenieriaAmbiental/ingenieriaAmbiental.component';
 	import { IngenieriaDeProcesosComponent } from './servicios/ingenieriaDeProcesos/ingenieriaDeProcesos.component';
@@ -28,6 +34,12 @@ import { ServiciosComponent } from './servicios/servicios.component';
 		InvestigacionComponent,
 		ContactoComponent,
 		ClientesComponent,
+			ClientesInformacionComponent,
+			ClientesEnvioDeMuestrasComponent,
+			ClientesPresupuestosComponent,
+			ClientesHistorialComponent,
+			ClientesMensajesComponent,
+			ClientesComprobantesComponent,
 		ServiciosComponent,
 			IngenieriaAmbientalComponent,
 			IngenieriaDeProcesosComponent,
