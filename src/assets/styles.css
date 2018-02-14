@@ -50,7 +50,7 @@ footer .footer-cont-cont2-redes li { }
 .tcolor-5 { color: #000; /*black*/ }
 .bcolor-1 { background: #09A5E4; /*lightBlue*/ color: white; }
 .bcolor-2 { background: #19289B;/*darkBlue*/ color: white; }
-.button { padding: 5px 25px; cursor: pointer; background: #00a5e6; border: none; color: white; }
+.button {padding: 10px 20px;cursor: pointer;background: #00a5e6;border: none;color: white;}
 .button-big { padding: 15px 30px; cursor: pointer; }
 .uppercase { text-transform: uppercase; }
 .capitalize { text-transform: capitalize; }
@@ -68,7 +68,7 @@ footer .footer-cont-cont2-redes li { }
 .background-outer .background-imagen-top,
 .background-outer .background-color { z-index: 0; width: 100%; position: relative; }
 .input-box { margin: 20px 0px; height: 40px; padding: 5px; width: 200px; }
-.input-span { position: absolute; margin-top: -17px; font-size: 12px; color: red; }
+.input-span {position: absolute;font-size: 12px;color: red;left: 0px;bottom: 2px;}
 .navigation-menu a,
 .navigation-menu select { position: relative; z-index: 9; }
 .navigation-menu a:before { content: ''; position: absolute; width: 0px; height: 3px; bottom: -7px; left: 50%; transform: translateX(-50%); background: #01a5e7; transition: all .2s; }
@@ -300,4 +300,61 @@ clientes .content-outer-bloques-content-item-item1-content {
     border: none;
     background: #EBF0F5;
     padding: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 60vw;
+    min-width: 300px;
+    margin-left: 20vw;
+    margin-top: 15vh;
+    min-height: 30vh;
+    background: white;
+    z-index: 999;
+    box-shadow: 0px 0px 0px 10000px #0000006b;
+    display: none;
+    padding: 3% 4%;
+}
+
+.popup-close i {float: right;padding: 0px;cursor: pointer;font-weight: bold;color: lightgrey;font-size: 25px;transition: all .3s;}
+
+.popup-close i:hover {
+    color: black;
+}
+
+.popup-close {
+    float: left;
+    width: 100%;
+}
+
+.popup-content {
+    float: left;
+    width: 100%;
+}
+
+.popup .input-box {
+    width: 100%;
+    border: none;
+    margin-top: 0px;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 20px;
+}
+
+.popup input[type=submit] {
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.popup form > div {
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
+.popup label {
+    margin-top: 10px;
+    margin-bottom: 0p;
 }

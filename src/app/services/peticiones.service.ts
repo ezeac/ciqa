@@ -51,11 +51,17 @@ export class PeticionesService {
 	login(loginModel:Login){
 		this.inicio_sesion = loginModel.usuario;
 		this.setCookie("inicio_sesion", loginModel.usuario, 2);
+		this._router.navigate(['/clientes']);
+		$(".popup").fadeOut();
 	}
 
 
-
 	//funciones generales
+	show_popup(html_content = ""){
+		if (html_content != "") { $(".popup-content").html(html_content) };
+		$(".popup").fadeIn();
+	}
+
 	show_animated_slide(event) {
 		$(event.target).next().slideToggle();
 		$(event.target).toggleClass("content-outer-bloques-content-item-item1-title-remove");

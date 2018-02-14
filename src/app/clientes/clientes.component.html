@@ -12,7 +12,7 @@
 			
 
 			<div *ngIf="peticionesService.getCookie('inicio_sesion') == false">
-				<form #formLogin="ngForm" (ngSubmit)="onSubmit($event)">
+				<form #formLogin="ngForm" (ngSubmit)="peticionesService.login(formLoginModel);">
 					<label class="tcolor-3 bold t18" for="usuario">{{"Ingresar a autogestión" | translate}}</label>
 					<div>
 						<input class="input-box" type="text" name="usuario" #usuario="ngModel" [(ngModel)]="formLoginModel.usuario" required pattern="[a-z|A-Z|0-9]{4,}" placeholder="{{'Ingrese su usuario' | translate}}">

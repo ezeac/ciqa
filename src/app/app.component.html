@@ -8,7 +8,7 @@
 		<a [routerLink]="['/investigacion']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'investigación y docencia' | translate }}</a>
 		<a [routerLink]="['/contacto']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'contacto' | translate }}</a>
 		
-		<a *ngIf="peticionesService.getCookie('inicio_sesion') == false" [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 bcolor-1 button">{{ 'ingresar' | translate }}</a>
+		<a *ngIf="peticionesService.getCookie('inicio_sesion') == false" (click)="peticionesService.show_popup()" class="font1 t14 bcolor-1 button">{{ 'ingresar' | translate }}</a>
 		<a *ngIf="peticionesService.getCookie('inicio_sesion') != false" [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 capitalize">{{ peticionesService.getCookie('inicio_sesion') }}</a>
 		
 		<select class="font1 t14 tcolor-1" name="translate" id="translate-selector" (change)="actualizar_idioma()">
@@ -67,3 +67,23 @@
 		</div>
 	</div>
 </footer>
+
+
+<div class="popup">
+	<div class="popup-close"><i class="material-icons" onclick="$('.popup').fadeOut()">close</i></div>
+	<div class="popup-content">		
+		<form #formLogin="ngForm" (ngSubmit)="peticionesService.login(formLoginModel);">
+			<div>
+				<label for="usuario">Usuario:</label><br>
+				<input class="input-box col-xs-12" type="text" name="usuario" #usuario="ngModel" [(ngModel)]="formLoginModel.usuario" required pattern="[a-z|A-Z|0-9]{4,}" placeholder="{{'Ingrese su usuario' | translate}}">
+				<span class="input-span" *ngIf="usuario.touched && !usuario.valid">Formato de usuario incorrecto</span>
+			</div>
+			<div>
+				<label for="password">Password:</label><br>
+				<input class="input-box col-xs-12" type="password" name="password" #password="ngModel" [(ngModel)]="formLoginModel.password" required pattern="(.){4,}" placeholder="{{'Ingrese su password' | translate}}">
+				<span class="input-span" *ngIf="password.touched && !password.valid">Formato de password incorrecto</span>
+			</div>
+			<input class="button" [disabled]="!formLogin.valid" type="submit" value="{{'Iniciar Sesión' | translate}}">
+		</form>
+	</div>
+</div>

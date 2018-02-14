@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {TranslateService} from 'ng2-translate';
 import { PeticionesService } from './services/peticiones.service';
+import { Login } from './clientes/loginModel';
 
 declare var jquery:any; declare var $:any;
 
@@ -11,7 +12,7 @@ declare var jquery:any; declare var $:any;
 	providers: [PeticionesService]
 })
 export class AppComponent {
-	title = 'app works!';
+	public formLoginModel:Login = new Login();
 	
 	constructor(private translate: TranslateService,private peticionesService:PeticionesService) {
 		translate.addLangs(["es","en"])

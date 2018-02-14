@@ -41,8 +41,4 @@ export class ClientesComponent{
 		this._router.navigate(['/clientes','valorPage']);
 	}
 
-	onSubmit(event){
-		this.peticionesService.login(this.formLoginModel);
-	}
-
 }
