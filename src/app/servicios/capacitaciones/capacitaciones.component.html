@@ -1,34 +1,95 @@
-<div class="content-outer-bloques-nav">
-	<div>
-		<!-- navTabs -->
-		<div class="content-outer-bloques-nav-item uppercase active-tab-nav" (click)="peticionesService.show_animated_tab('content1', $event)">Capacitaciones 1</div>
-		<div class="content-outer-bloques-nav-item uppercase" (click)="peticionesService.show_animated_tab('content2', $event)">Capacitaciones 2</div>
-	</div>
-</div>
 <div class="content-outer-bloques-content">
 	
-	<!-- tab1 -->
-	<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
-		<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
-	</div>
+	<div class="col-sm-1 hidden-xs">&nbsp;</div>
 
-	<!-- tab2 -->
-	<div class="content-outer-bloques-content-item" data-content="content2">
-		
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t12" (click)="peticionesService.show_animated_slide($event)">Prof. Ing. Esp. Héctor R. Macaño - Director</div>
-			<div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+	<div class="col-xs-12 col-sm-11">
+
+		<div class="content-outer-bloques-content-item active-tab-content" data-content="content2">
+			
+			<div class="content-outer-bloques-content-item-tit t28 bold tcolor-3">{{'Capacitaciones' | translate}}</div>
+			<div class="content-outer-bloques-content-item-tit2 t18 bold tcolor-3 uppercase">{{'cursos especiales' | translate}}</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t16">{{'Simulación de procesos químicos' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div>
+				<!-- <div class="content-outer-bloques-content-item-item1-title col-xs-12 t16" (click)="peticionesService.show_animated_slide($event)">{{'Simulación de procesos químicos' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div> -->
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<!-- <div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div> -->
 					</div>
 				</div>
 			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t16">{{'Seguridad en procesos industriales' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div>
+				<!-- <div class="content-outer-bloques-content-item-item1-title col-xs-12 t16" (click)="peticionesService.show_animated_slide($event)">{{'Seguridad en procesos industriales' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div> -->
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<!-- <div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t16">{{'Management ambiental' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div>
+				<!-- <div class="content-outer-bloques-content-item-item1-title col-xs-12 t16" (click)="peticionesService.show_animated_slide($event)">{{'Management ambiental' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div> -->
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<!-- <div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t16">{{'Emisión de contaminantes atmosféricos' | translate}} <i class="material-icons">mail</i><span class="capitalize">{{'solicitar información' | translate}}</span> </div>
+				<!-- <div class="content-outer-bloques-content-item-item1-title col-xs-12 t16" (click)="peticionesService.show_animated_slide($event)">{{'Emisión de contaminantes atmosféricos' | translate}} <i class="material-icons">mail</i><span class="capitalize">{{'solicitar información' | translate}}</span> </div> -->
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<!-- <div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t16">{{'Seguridad en instalaciones de almacenamiento y manejo de sustancias líquidas inflamables y combustibles' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div>
+				<!-- <div class="content-outer-bloques-content-item-item1-title col-xs-12 t16" (click)="peticionesService.show_animated_slide($event)">{{'Seguridad en instalaciones de almacenamiento y manejo de sustancias líquidas inflamables y combustibles' | translate}} <i class="material-icons">mail</i><span>{{'Solicitar Información' | translate}}</span> </div> -->
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<!-- <div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+
+
 		</div>
 
 	</div>

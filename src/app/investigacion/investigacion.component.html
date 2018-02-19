@@ -58,7 +58,7 @@
 							<div class="hidden-xs col-sm-1">&nbsp;</div>
 							<div class="col-xs-12 col-sm-11">
 								<!-- Items Investigadores -->
-								<div *ngFor="let item of investigador; let i = index" class="content-outer-bloques-content-item-cont col-xs-12 col-sm-6" style="cursor: pointer" (click)="toggleFullContent(1, $event)">
+								<div *ngFor="let item of investigador" class="content-outer-bloques-content-item-cont col-xs-12 col-sm-6" style="cursor: pointer" (click)="toggleFullContent(1, $event)">
 									<div class="content-outer-bloques-content-item-cont-img col-xs-4"><img src="{{item.foto.guid}}" alt="{{item.title.rendered}}"></div>
 									<div class="content-outer-bloques-content-item-cont-info col-xs-8">
 										<div class="content-outer-bloques-content-item-cont-tit1 bold t14 tcolor-3 capitalize">{{item.title.rendered}}</div>
@@ -172,8 +172,9 @@
 
 				<!-- tab cursos -->
 				<div class="content-outer-bloques-content-item" data-content="cursos">
-					<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
-					<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+					<div class="content-outer-bloques-content-item-item1">No hay información sobre los cursos actualmente.</div>
+					<!-- <div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div> -->
+					<!-- <div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div> -->
 				</div>
 
 

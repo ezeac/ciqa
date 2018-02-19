@@ -14,7 +14,7 @@ declare var $:any;
 
 
 export class QuienesSomosComponent{
-	public parametro;
+	public parametro; public investigador;
 	//Luego se llama al parametro1 desde el html: <quienesSomos [parametro1]="valor"></quienesSomos>
 	@Input() parametro1:string;
 
@@ -29,6 +29,12 @@ export class QuienesSomosComponent{
 			this.parametro = params['page'];
 		})
 		this.peticionesService.animate_scroll("html", 0);
+
+		this.peticionesService.get_integrantes().subscribe(
+			data => this.investigador = data.filter(String), 
+			(err) => console.log(err), 
+			() => {},
+		);
 	}
 
 	animate_scroll(element, duration = 1000) {

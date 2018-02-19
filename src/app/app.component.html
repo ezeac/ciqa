@@ -70,7 +70,7 @@
 
 
 <div class="popup">
-	<div class="popup-close"><i class="material-icons" onclick="$('.popup').fadeOut()">close</i></div>
+	<div class="popup-close"><i class="material-icons" onclick="$('.popup').fadeOut(); $('app-root > *:not(.popup):not(header)').removeClass('blur');">close</i></div>
 	<div class="popup-content">		
 		<form #formLogin="ngForm" (ngSubmit)="peticionesService.login(formLoginModel);">
 			<div>
