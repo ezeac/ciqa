@@ -28,7 +28,7 @@
 
 
 			<div *ngIf="peticionesService.getCookie('inicio_sesion') != false">
-				<div class="content-outer-bloques-logout" (click)="peticionesService.logout()">{{'Bienvenido' | translate}} <b>{{peticionesService.getCookie('inicio_sesion')}}</b><a href="javascript:0"> Cerrar Sesión</a></div>
+				<div class="content-outer-bloques-logout" (click)="peticionesService.logout()">{{'Bienvenido' | translate}} <b>{{peticionesService.getCookie('inicio_sesion')}}</b> <a href="javascript:0"> Cerrar Sesión</a></div>
 				
 				<div class="cont-clientes">
 					<div class="content-outer-bloques-nav1 col-xs-12 col-sm-3 no-padding">

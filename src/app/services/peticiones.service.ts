@@ -53,6 +53,7 @@ export class PeticionesService {
 		this.setCookie("inicio_sesion", loginModel.usuario, 2);
 		this._router.navigate(['/clientes']);
 		$(".popup").fadeOut();
+		$("app-root > *:not(.popup):not(header)").removeClass("blur");
 	}
 
 
