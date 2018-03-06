@@ -15,7 +15,6 @@ declare var $:any;
 
 
 export class ClientesComponent{
-	public titulo = "Autogestión Clientes";
 	public parametro; public formLoginModel:Login = new Login();
 	//Luego se llama al parametro1 desde el html: <template [parametro1]="valor"></template>
 	@Input() parametro1:string;

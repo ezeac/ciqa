@@ -51,9 +51,15 @@ export class PeticionesService {
 	login(loginModel:Login){
 		this.inicio_sesion = loginModel.usuario;
 		this.setCookie("inicio_sesion", loginModel.usuario, 2);
+		$("app-root > *:not(.popup,.popup2):not(header)").removeClass("blur");
+		$(".popup,.popup2").fadeOut();
+		if (loginModel.password.substr(0, 1) == "#") {
+			loginModel.password = "";
+			$(".popup2").fadeIn();
+			return;
+		}
 		this._router.navigate(['/clientes']);
-		$(".popup").fadeOut();
-		$("app-root > *:not(.popup):not(header)").removeClass("blur");
+
 	}
 
 
@@ -61,7 +67,7 @@ export class PeticionesService {
 	show_popup(html_content = ""){
 		if (html_content != "") { $(".popup-content").html(html_content) };
 		$(".popup").fadeIn();
-		$("app-root > *:not(.popup):not(header)").addClass("blur");
+		$("app-root > *:not(.popup,.popup2):not(header)").addClass("blur");
 	}
 
 	show_animated_slide(event) {

@@ -1,67 +1,67 @@
 <div class="content-outer-clientes col-xs-12">
 
-	<div class="info-tit bold tcolor-3 t24 capitalize">envío de muestras</div>
+	<div class="info-tit bold tcolor-3 t24 capitalize">{{'envío de muestras' | translate}}</div>
 
 	<form #formMuestras="ngForm" (ngSubmit)="onSubmit()" class="col-xs-12 no-padding">
 		
 		<div class="content-outer-clientes-form form-cont1 col-xs-12 col-sm-6">
 			<div class="content-outer-clientes-form-tit uppercase bold t17 tcolor-3">{{'datos personales' | translate}}</div>
 			<div>
-				<input class="input-box" type="text" name="empresa" #empresa="ngModel" [(ngModel)]="muestrasFormModel.empresaForm" required pattern="[a-z]+" placeholder="Empresa">
-				<span class="input-span" *ngIf="empresa.touched && !empresa.valid">Formato de empresa incorrecto</span>
+				<input class="input-box" type="text" name="empresa" #empresa="ngModel" [(ngModel)]="muestrasFormModel.empresaForm" required pattern="[a-z]+" placeholder="{{'Empresa' | translate}}">
+				<span class="input-span" *ngIf="empresa.touched && !empresa.valid">{{'Formato de empresa incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="muestrasFormModel.nombreForm" required pattern="[0-9]+" placeholder="Nombre">
-				<span class="input-span" *ngIf="nombre.touched && !nombre.valid">Formato de nombre incorrecto</span>
+				<input class="input-box" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="muestrasFormModel.nombreForm" required pattern="[0-9]+" placeholder="{{'Nombre' | translate}}">
+				<span class="input-span" *ngIf="nombre.touched && !nombre.valid">{{'Formato de nombre incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="apellido" #apellido="ngModel" [(ngModel)]="muestrasFormModel.apellidoForm" placeholder="Apellido">
-				<span class="input-span" *ngIf="apellido.touched && !apellido.valid">Formato de apellido incorrecto</span>
+				<input class="input-box" type="text" name="apellido" #apellido="ngModel" [(ngModel)]="muestrasFormModel.apellidoForm" placeholder="{{'Apellido' | translate}}">
+				<span class="input-span" *ngIf="apellido.touched && !apellido.valid">{{'Formato de apellido incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="telefono" #telefono="ngModel" [(ngModel)]="muestrasFormModel.telefonoForm" placeholder="Teléfono">
-				<span class="input-span" *ngIf="telefono.touched && !telefono.valid">Formato de teléfono incorrecto</span>
+				<input class="input-box" type="text" name="telefono" #telefono="ngModel" [(ngModel)]="muestrasFormModel.telefonoForm" placeholder="{{'Teléfono' | translate}}">
+				<span class="input-span" *ngIf="telefono.touched && !telefono.valid">{{'Formato de teléfono incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="email" #email="ngModel" [(ngModel)]="muestrasFormModel.emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ingrese su e-mail">
-				<span class="input-span" *ngIf="email.touched && !email.valid">Formato de email incorrecto</span>
+				<input class="input-box" type="text" name="email" #email="ngModel" [(ngModel)]="muestrasFormModel.emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="{{'Ingrese su e-mail' | translate}}">
+				<span class="input-span" *ngIf="email.touched && !email.valid">{{'Formato de email incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="direccion" #direccion="ngModel" [(ngModel)]="muestrasFormModel.direccionForm" placeholder="Dirección">
-				<span class="input-span" *ngIf="direccion.touched && !direccion.valid">Formato de dirección incorrecto</span>
+				<input class="input-box" type="text" name="direccion" #direccion="ngModel" [(ngModel)]="muestrasFormModel.direccionForm" placeholder="{{'Dirección' | translate}}">
+				<span class="input-span" *ngIf="direccion.touched && !direccion.valid">{{'Formato de dirección incorrecto' | translate}}</span>
 			</div>
 		</div>
 
 		<div class="content-outer-clientes-form form-cont2 col-xs-12 col-sm-6">
 			<div class="content-outer-clientes-form-tit uppercase bold t17 tcolor-3">{{'datos de las muestras' | translate}}</div>
 			<div>
-				<input class="input-box" type="text" name="paquetes" #paquetes="ngModel" [(ngModel)]="muestrasFormModel.paquetesForm" required pattern="[0-9]+" placeholder="Cantidad de paquetes">
-				<span class="input-span" *ngIf="paquetes.touched && !paquetes.valid">Formato de paquetes incorrecto</span>
+				<input class="input-box" type="text" name="paquetes" #paquetes="ngModel" [(ngModel)]="muestrasFormModel.paquetesForm" required pattern="[0-9]+" placeholder="{{'Cantidad de paquetes' | translate}}">
+				<span class="input-span" *ngIf="paquetes.touched && !paquetes.valid">{{'Formato de paquetes incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="transporte" #transporte="ngModel" [(ngModel)]="muestrasFormModel.transporteForm" required pattern="[.]+" placeholder="Empresa de transporte">
-				<span class="input-span" *ngIf="transporte.touched && !transporte.valid">Formato de transporte incorrecto</span>
+				<input class="input-box" type="text" name="transporte" #transporte="ngModel" [(ngModel)]="muestrasFormModel.transporteForm" required pattern="[.]+" placeholder="{{'Empresa de transporte' | translate}}">
+				<span class="input-span" *ngIf="transporte.touched && !transporte.valid">{{'Formato de transporte incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="nroEnvio" #nroEnvio="ngModel" [(ngModel)]="muestrasFormModel.nroEnvioForm" required pattern="[0-9]+" placeholder="Nro. de envío">
-				<span class="input-span" *ngIf="nroEnvio.touched && !nroEnvio.valid">Formato de Nro. de Envío incorrecto</span>
+				<input class="input-box" type="text" name="nroEnvio" #nroEnvio="ngModel" [(ngModel)]="muestrasFormModel.nroEnvioForm" required pattern="[0-9]+" placeholder="{{'Nro. de envío' | translate}}">
+				<span class="input-span" *ngIf="nroEnvio.touched && !nroEnvio.valid">{{'Formato de Nro. de Envío incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="nroVuelo" #nroVuelo="ngModel" [(ngModel)]="muestrasFormModel.nroVueloForm" required pattern="[0-9]+" placeholder="Nro. de vuelo">
-				<span class="input-span" *ngIf="nroVuelo.touched && !nroVuelo.valid">Formato de nro. de vuelo incorrecto</span>
+				<input class="input-box" type="text" name="nroVuelo" #nroVuelo="ngModel" [(ngModel)]="muestrasFormModel.nroVueloForm" required pattern="[0-9]+" placeholder="{{'Nro. de vuelo' | translate}}">
+				<span class="input-span" *ngIf="nroVuelo.touched && !nroVuelo.valid">{{'Formato de nro. de vuelo incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<input class="input-box" type="text" name="fechaEnvio" #fechaEnvio="ngModel" [(ngModel)]="muestrasFormModel.fechaEnvioForm" required pattern="^[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="Fecha de envío">
-				<span class="input-span" *ngIf="fechaEnvio.touched && !fechaEnvio.valid">Formato de fecha de envío incorrecto ( dd/mm/aaaa )</span>
+				<input class="input-box" type="text" name="fechaEnvio" #fechaEnvio="ngModel" [(ngModel)]="muestrasFormModel.fechaEnvioForm" required pattern="^[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="{{'Fecha de envío' | translate}}">
+				<span class="input-span" *ngIf="fechaEnvio.touched && !fechaEnvio.valid">{{'Formato de fecha de envío incorrecto ( dd/mm/aaaa )' | translate}}</span>
 			</div>
 			<div>
-				<textarea class="input-box" name="aclaraciones" #aclaraciones="ngModel" [(ngModel)]="muestrasFormModel.aclaracionesForm" placeholder="Aclaraciones"></textarea>
-				<span class="input-span" *ngIf="aclaraciones.touched && !aclaraciones.valid">Formato de aclaraciones incorrecto</span>
+				<textarea class="input-box" name="aclaraciones" #aclaraciones="ngModel" [(ngModel)]="muestrasFormModel.aclaracionesForm" placeholder="{{'Aclaraciones' | translate}}"></textarea>
+				<span class="input-span" *ngIf="aclaraciones.touched && !aclaraciones.valid">{{'Formato de aclaraciones incorrecto' | translate}}</span>
 			</div>
 		</div>
 
 		<div class="content-outer-clientes-form form-cont2 col-xs-12">
-			<input [disabled]="!formMuestras.valid" class="button pull-right" type="submit" value="ENVIAR">
+			<input [disabled]="!formMuestras.valid" class="button pull-right uppercase" type="submit" value="enviar">
 		</div>
 
 	</form>

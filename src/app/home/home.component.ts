@@ -40,12 +40,14 @@ export class HomeComponent{
 
 		particlesJS.load("particles-js", "../assets/particlesjs.json");
 		// ANIMACIÓN ARROW
-		var nombreAnimacion = new TweenMax.to(".texto-inicial .arrow-down", 1, {y: 20, yoyo: true, repeat: -1, ease: Power2.easeIn});
+		setTimeout(function(){
+			var nombreAnimacion = new TweenMax.to(".texto-inicial2 .arrow-down", 1, {y: 20, yoyo: true, repeat: -1, ease: Power2.easeIn});
+		},3000);
 
 		this.peticionesService.get_noticias().subscribe(
 			data => this.noticias = data, 
 			(err) => console.log(err), 
-			() => setTimeout(()=>{this.incializarSlidersliderHome3();},100)
+			() => setTimeout(()=>{this.incializarSlidersliderHome3(); console.log(this.noticias)},100)
 		);
 
 
@@ -154,7 +156,15 @@ export class HomeComponent{
 			posicion = 0;
 		}
 		//new TweenMax.to($("#sliderHome3 .sliderContainer"), 1, {marginLeft: this.sliderHome3Slides[posicion].margin, ease: Power2.easeOut});
-		$("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin})
+		$("#sliderHome3 .sliderContainer .texto1, #sliderHome3 .sliderContainer .titulo1, #sliderHome3 .sliderContainer .button-big").css({"opacity":0});
+		$("#sliderHome3 .sliderContainer .sliderItem").eq(posicion).find(".thumb-img-background2").css({"background": $("#sliderHome3 .sliderContainer .sliderItem").eq(this.sliderHome3Actual).find(".thumb-img-background").css("background")});
+		// $("#sliderHome3 .sliderContainer .thumb-img-background2").css({"background-image":$("#sliderHome3 .sliderContainer .sliderItem").eq(this.sliderHome3Actual).find(".thumb-img-background2").css("background-image")});
+		// alert($("#sliderHome3 .sliderContainer .sliderItem").eq(this.sliderHome3Actual).find(".thumb-img-background2").css("background"));
+		$("#sliderHome3 .sliderContainer .thumb-img-background").css({"width":0});
+			$("#sliderHome3 .sliderContainer .texto1, #sliderHome3 .sliderContainer .titulo1, #sliderHome3 .sliderContainer .button-big").stop().animate({"opacity":1},1000);
+			$("#sliderHome3 .sliderContainer .thumb-img-background").stop().animate({"width":"95%"},500);
+		// $("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin});
+		$("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin});
 		this.sliderHome3Actual = posicion;
 	}
 

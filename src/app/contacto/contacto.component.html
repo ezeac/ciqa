@@ -32,29 +32,28 @@
 						<form #formContacto1="ngForm" (ngSubmit)="onSubmit($event)">
 							<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-4">
 								<div class="content-outer-bloques-content-item-cont-item">	
-									<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto1.nombreForm" required pattern="[a-z]+" placeholder="Nombre">
-									<span *ngIf="nombre.touched && !nombre.valid">Formato de nombre incorrecto</span>
+									<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto1.nombreForm" required pattern="[a-z]+" placeholder="{{'Nombre' | translate}}">
+									<span *ngIf="nombre.touched && !nombre.valid">{{'Formato de nombre incorrecto' | translate}}</span>
 								</div>
 								<div class="content-outer-bloques-content-item-cont-item">
-									<input type="text" name="dni" #dni="ngModel" [(ngModel)]="contacto1.dniForm" required pattern="[0-9]+" placeholder="Cuil/Cuit">
-									<span *ngIf="dni.touched && !dni.valid">Formato de dni incorrecto</span>
+									<input type="text" name="dni" #dni="ngModel" [(ngModel)]="contacto1.dniForm" required pattern="[0-9]+" placeholder="{{'Cuil/Cuit' | translate}}">
+									<span *ngIf="dni.touched && !dni.valid">{{'Formato de dni incorrecto' | translate}}</span>
 								</div>
 								<div class="content-outer-bloques-content-item-cont-item">
-									<input type="text" name="email" #email="ngModel" [(ngModel)]="contacto1.emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-Mail">
-									<span *ngIf="email.touched && !email.valid">Formato de email incorrecto</span>
+									<input type="text" name="email" #email="ngModel" [(ngModel)]="contacto1.emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="{{'E-Mail' | translate}}">
+									<span *ngIf="email.touched && !email.valid">{{'Formato de email incorrecto' | translate}}</span>
 								</div>
 								<div class="content-outer-bloques-content-item-cont-item">
-									<input type="text" name="empresa" #empresa="ngModel" [(ngModel)]="contacto1.empresaForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Empresa">
-									<span *ngIf="empresa.touched && !empresa.valid">Ingrese el nombre de su empresa</span>
+									<input type="text" name="empresa" #empresa="ngModel" [(ngModel)]="contacto1.empresaForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="{{'Empresa' | translate}}">
+									<span *ngIf="empresa.touched && !empresa.valid">{{'Ingrese el nombre de su empresa' | translate}}</span>
 								</div>
 							</div>
 							<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-5">
 								<div class="content-outer-bloques-content-item-cont-item textarea">
-									<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto1.mensajeForm" placeholder="Consultas, quejas, sugerencias, agradecimientos"></textarea>
-									<span *ngIf="mensaje.touched && !mensaje.valid">Formato de email incorrecto</span>
+									<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto1.mensajeForm" placeholder="{{'Consultas, quejas, sugerencias, agradecimientos' | translate}}"></textarea>
 								</div>
 								<div class="content-outer-bloques-content-item-cont-item input">
-									<input [disabled]="!formContacto1.valid" class="button pull-left" type="submit" value="ENVIAR">
+									<input [disabled]="!formContacto1.valid" class="button pull-left uppercase" type="submit" value="{{'enviar' | translate}}">
 								</div>
 							</div>
 							<div class="hidden-xs col-sm-3">&nbsp;</div>
@@ -64,10 +63,10 @@
 			</div>
 			<div class="content-outer-bloques-content-item-cont container-fluid no-padding">
 				<div class="content-outer-bloques-content-item-cont-map col-xs-12 no-padding">
-					<agm-map [zoom]="13" [latitude]="51.678418" [longitude]="7.809007" [styles]=peticionesService.mapStyles style="height: 100%;">
-						<agm-marker [iconUrl]="'../assets/media/mapIcon.png'" [latitude]="51.678418" [longitude]="7.809007">
+					<agm-map [zoom]="13" [latitude]="-31.442118" [longitude]="-64.193128" [styles]=peticionesService.mapStyles style="height: 100%;">
+						<agm-marker [iconUrl]="'../assets/media/mapIcon.png'" [latitude]="-31.442118" [longitude]="-64.193128">
 							<agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
-								<ng-template><b>Cliente 1</b><br><br>Texto informativo número 1</ng-template>
+								<ng-template><b>Ciqa</b><br><br>Centro de Investigación & Transferencia en Ingeniería Química Ambiental</ng-template>
 							</agm-snazzy-info-window>
 						</agm-marker>
 					</agm-map>

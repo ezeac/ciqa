@@ -33,7 +33,7 @@ export class QuienesSomosComponent{
 		this.peticionesService.get_integrantes().subscribe(
 			data => this.investigador = data.filter(String), 
 			(err) => console.log(err), 
-			() => {},
+			() => {console.log(this.investigador)},
 		);
 	}
 

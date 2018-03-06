@@ -51,21 +51,24 @@ footer .footer-cont-cont2-redes li { }
 .bcolor-1 { background: #09A5E4; /*lightBlue*/ color: white; }
 .bcolor-2 { background: #19289B;/*darkBlue*/ color: white; }
 .bcolor-3 { background: #EBF0F5;/*almostWhite*/ color: #9696A0; }
-.button { padding: 10px 20px; cursor: pointer; background: #00a5e6; border: none; color: white; }
+.button {padding: 10px 25px;cursor: pointer;background: #00a5e6;border: none;color: white;}
 .button-big { padding: 12px 30px; cursor: pointer; background: #00a5e6; border: none; color: white; }
 .uppercase { text-transform: uppercase; }
 .capitalize { text-transform: capitalize; }
 .no-padding,
 .no-padding-childs > div { padding-left: 0px; padding-right: 0px; }
+.space-tiny { float: left; height: 20px; width: 100%; }
+.space { float: left; height: 40px; width: 100%; }
+.space-big { float: left; height: 60px; width: 100%; }
 ::selection { background: none; }
 ::-moz-selection { background: none; }
 ::-webkit-selection { background: none; }
 .claseLinkActivo { font-weight: bold; color: white; }
 .claseLinkActivo.claseLinkActivo:before { width: 35px; }
 input[type=file]::-webkit-file-upload-button { background: #ebf0f5; border: 1px solid black; border-radius: 5px; cursor: pointer; color: black; }
-.component-container { float: left; width: 100%; color: #969696; margin-top: -80px; position: relative; }
+.component-container {float: left;width: 100%;color: #969696;margin-top: -100px;position: relative;}
 .background-outer { width: 100%; background: #00A5E6; float: left; height: calc(100% + 450px); position: absolute; }
-.background-outer .background-imagen-top { max-height: 100vh; overflow: hidden; height: 60vh; background: #00183E; }
+.background-outer .background-imagen-top {overflow: hidden;height: 101vh;background: #00183E;}
 .background-outer .background-color { }
 .background-outer .background-imagen-top,
 .background-outer .background-color { z-index: 0; width: 100%; position: relative; }
@@ -77,6 +80,11 @@ input[type=file]::-webkit-file-upload-button { background: #ebf0f5; border: 1px 
 .navigation-menu .navlogo { }
 .navigation-menu .nav-links { width: 100%; text-align: right; }
 .navigation-menu .nav-links a { margin-right: 5%; }
+
+.navigation-menu .nav-links a:hover {
+    color: white;
+    font-weight: bold;
+}
 a:hover {/* color: #01a5e7; */ }
 a:focus { color: white; }
 .navigation-menu select,
@@ -84,7 +92,7 @@ footer .footer-cont-cont2-links li select { background: none; border: none; outl
 .navigation-menu select option,
 footer .footer-cont-cont2-links li select option { color: black; background: white; }
 .navigation-menu .nav-links a:last-child { margin-right: 0px; }
-.navigation-menu { display: flex; align-items: center; margin: 20px 5% 0px; }
+.navigation-menu {display: flex;align-items: center;margin: 40px 5% 0px;}
 .content-outer { margin-top: 300px; background: white; min-height: 500px; position: relative; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4); }
 .content-outer .tituloOffset { font-family: "Nunito Sans"; font-weight: 600; font-size: 32px; color: white; position: relative; margin-top: -100px; padding-bottom: 70px; line-height: 0px; text-transform: uppercase; }
 footer.container { float: left; background: #00132B; position: relative; display: flex; align-items: flex-start; justify-content: center; margin-left: 50%; transform: translateX(-50%); padding: 50px 0px 30px; }
@@ -222,15 +230,15 @@ clientes form label { margin-bottom: 20px; }
 clientes .content-outer-bloques-content-item-item1-content { padding-top: 20px; border-top: 1px solid lightgrey; }
 .content-outer-clientes form { display: unset; margin: 0px; }
 .content-outer-clientes form .input-box { width: 100%; height: 45px; border: none; background: #EBF0F5; padding: 10px; }
-.popup { position: fixed; top: 0px; left: 0px; width: 60vw; min-width: 300px; margin-left: 20vw; margin-top: 15vh; min-height: 30vh; background: white; z-index: 999; box-shadow: 0px 0px 0px 10000px #0000006b; display: none; padding: 3% 4%; }
+.popup,.popup2 { position: fixed; top: 0px; left: 0px; width: 60vw; min-width: 300px; margin-left: 20vw; margin-top: 15vh; min-height: 30vh; background: white; z-index: 999; box-shadow: 0px 0px 0px 10000px #0000006b; display: none; padding: 3% 4%; }
 .popup-close i { float: right; padding: 0px; cursor: pointer; font-weight: bold; color: lightgrey; font-size: 25px; transition: all .3s; }
 .popup-close i:hover { color: black; }
 .popup-close { float: left; width: 100%; }
 .popup-content { float: left; width: 100%; }
-.popup .input-box { width: 100%; border: none; margin-top: 0px; border-bottom: 2px solid lightgrey; margin-bottom: 20px; }
-.popup input[type=submit] { margin-top: 40px; text-transform: uppercase; font-size: 11px; }
-.popup form > div { position: relative; width: 100%; float: left; }
-.popup label { margin-top: 10px; margin-bottom: 0p; }
+.popup .input-box, .popup2 .input-box { width: 100%; border: none; margin-top: 0px; border-bottom: 2px solid lightgrey; margin-bottom: 20px; }
+.popup input[type=submit], .popup2 input[type=submit] { margin-top: 40px; text-transform: uppercase; font-size: 11px; }
+.popup form > div, .popup2 form > div { position: relative; width: 100%; float: left; }
+.popup label, .popup2 label { margin-top: 10px; margin-bottom: 0p; }
 clientesenviodemuestras .input-span {left: 15px;bottom: initial;top: initial;margin-top: -18px;}
 .content-outer-clientes-item-info { position: relative; background: #EBF0F5; height: 110px; display: flex; align-items: center; }
 .content-outer-clientes-item-info i { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; }
@@ -267,3 +275,14 @@ clientesmensajes .content-outer-clientes-item-msjs-msj-text textarea::placeholde
 
 /* clientes comprobantes */
 clientescomprobantes .content-outer-clientes-text a:focus { color: inherit; }
+
+
+.thumb-img > div {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.thumb-img {
+    height: 400px;
+}

@@ -11,102 +11,106 @@
 	
 	<!-- tab1 -->
 	<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
-		<div class="content-outer-bloques-content-item-tit tcolor-3 t26 bold col-xs-12" [innerHtml]="'titulo_intro_auditorias' | translate"></div><br><br>
-		<div class="hidden-xs col-sm-1"></div>
-		<div class="content-outer-bloques-content-item-item1 col-xs-12 col-sm-11" [innerHtml]="'texto_intro_auditorias' | translate"></div>
+		<div class="hidden-xs col-sm-1">&nbsp;</div>
+		<div class="col-xs-12 col-sm-11">
+			<div class="content-outer-bloques-content-item-tit tcolor-3 t26 bold" [innerHtml]="'titulo_intro_auditorias' | translate"></div>
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_intro_auditorias' | translate"></div>
+		</div>
 	</div>
 
 	<!-- tab2 -->
 	<div class="content-outer-bloques-content-item" data-content="content2">
-		
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías Técnicas (Resoluciones SE 785/05 y 1102/04)' | translate}}</div>
-			<!-- <div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+		<div class="hidden-xs col-sm-1">&nbsp;</div>
+		<div class="col-xs-12 col-sm-11">
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías Técnicas (Resoluciones SE 785/05 y 1102/04)' | translate}}</div>
+				<!-- <div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div>
 					</div>
-				</div>
-			</div> -->
-		</div>
+				</div> -->
+			</div>
 
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías de Seguridad (Resolución SE 1102/04)' | translate}}</div>
-			<!-- <div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías de Seguridad (Resolución SE 1102/04)' | translate}}</div>
+				<!-- <div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div>
 					</div>
-				</div>
-			</div> -->
-		</div>
+				</div> -->
+			</div>
 
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías de Seguridad (Ley 13660 – Decreto 10877) – Grandes Plantas' | translate}}</div>
-			<!-- <div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías de Seguridad (Ley 13660 – Decreto 10877) – Grandes Plantas' | translate}}</div>
+				<!-- <div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div>
 					</div>
-				</div>
-			</div> -->
-		</div>
+				</div> -->
+			</div>
 
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías de Seguridad (Resolución SE 1102/04 – Disposición SSC 76/97 y modificatorias Disposición  143/98 y 298/98)' | translate}}</div>
-			<!-- <div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías de Seguridad (Resolución SE 1102/04 – Disposición SSC 76/97 y modificatorias Disposición  143/98 y 298/98)' | translate}}</div>
+				<!-- <div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div>
 					</div>
-				</div>
-			</div> -->
-		</div>
+				</div> -->
+			</div>
 
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Otros métodos USEPA - 40 CFR PART 60 ofrecidos' | translate}}</div>
-			<!-- <div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Otros métodos USEPA - 40 CFR PART 60 ofrecidos' | translate}}</div>
+				<!-- <div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div>
 					</div>
-				</div>
-			</div> -->
-		</div>
+				</div> -->
+			</div>
 
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías Ambientales (Resolución SE 785/05), con capacidad de prestaciones' | translate}}</div>
-			<!-- <div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-						<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías Ambientales (Resolución SE 785/05), con capacidad de prestaciones' | translate}}</div>
+				<!-- <div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="../assets/media/example1.jpg" alt="Prof. Ing. Esp. Héctor R. Macaño - Director"></div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+							<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3"><b>Prof. Ing. Esp. Héctor R. Macaño - Director</b></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>josefonseca@ciqa.com.ar</span></div>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>351 659 8999</span></div>
+						</div>
 					</div>
-				</div>
-			</div> -->
+				</div> -->
+			</div>
 		</div>
 
 	</div>
@@ -114,9 +118,12 @@
 
 	<!-- tab3 -->
 	<div class="content-outer-bloques-content-item" data-content="content3">
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto1_integrantes_auditorias' | translate"></div>
-		<br><br><div class="content-outer-bloques-content-item-item2 tcolor-3 t18 bold uppercase">{{'integrantes' | translate}}</div><br><br>
-		<div class="content-outer-bloques-content-item-item3" [innerHtml]="'texto2_integrantes_auditorias' | translate"></div>
+		<div class="hidden-xs col-sm-1">&nbsp;</div>
+		<div class="col-xs-12 col-sm-11">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto1_integrantes_auditorias' | translate"></div>
+			<br><br><div class="content-outer-bloques-content-item-item2 tcolor-3 t18 bold uppercase">{{'integrantes' | translate}}</div><br><br>
+			<div class="content-outer-bloques-content-item-item3" [innerHtml]="'texto2_integrantes_auditorias' | translate"></div>
+		</div>
 	</div>
 
 

@@ -8,7 +8,7 @@
 		<a [routerLink]="['/investigacion']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'investigación y docencia' | translate }}</a>
 		<a [routerLink]="['/contacto']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'contacto' | translate }}</a>
 		
-		<a *ngIf="peticionesService.getCookie('inicio_sesion') == false" (click)="peticionesService.show_popup()" class="font1 t14 bcolor-1 button">{{ 'ingresar' | translate }}</a>
+		<a *ngIf="peticionesService.getCookie('inicio_sesion') == false" (click)="peticionesService.show_popup()" class="font1 t12 bcolor-1 button uppercase">{{ 'ingresar' | translate }}</a>
 		<a *ngIf="peticionesService.getCookie('inicio_sesion') != false" [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 capitalize">{{ peticionesService.getCookie('inicio_sesion') }}</a>
 		
 		<select class="font1 t14 tcolor-1" name="translate" id="translate-selector" (change)="actualizar_idioma()">
@@ -70,20 +70,44 @@
 
 
 <div class="popup">
-	<div class="popup-close"><i class="material-icons" onclick="$('.popup').fadeOut(); $('app-root > *:not(.popup):not(header)').removeClass('blur');">close</i></div>
+	<div class="popup-close"><i class="material-icons" onclick="$('.popup').fadeOut(); $('app-root > *:not(.popup,.popup2):not(header)').removeClass('blur');">close</i></div>
 	<div class="popup-content">		
 		<form #formLogin="ngForm" (ngSubmit)="peticionesService.login(formLoginModel);">
 			<div>
-				<label for="usuario">Usuario:</label><br>
+				<label for="usuario capitalize">{{'usuario' | translate}}:</label><br>
 				<input class="input-box col-xs-12" type="text" name="usuario" #usuario="ngModel" [(ngModel)]="formLoginModel.usuario" required pattern="[a-z|A-Z|0-9]{4,}" placeholder="{{'Ingrese su usuario' | translate}}">
-				<span class="input-span" *ngIf="usuario.touched && !usuario.valid">Formato de usuario incorrecto</span>
+				<span class="input-span" *ngIf="usuario.touched && !usuario.valid">{{'Formato de usuario incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<label for="password">Password:</label><br>
+				<label for="password capitalize">{{'password' | translate}}:</label><br>
 				<input class="input-box col-xs-12" type="password" name="password" #password="ngModel" [(ngModel)]="formLoginModel.password" required pattern="(.){4,}" placeholder="{{'Ingrese su password' | translate}}">
-				<span class="input-span" *ngIf="password.touched && !password.valid">Formato de password incorrecto</span>
+				<span class="input-span" *ngIf="password.touched && !password.valid">{{'La contraseña debe tener al menos 4 caracteres' | translate}}</span>
 			</div>
 			<input class="button" [disabled]="!formLogin.valid" type="submit" value="{{'Iniciar Sesión' | translate}}">
+		</form>
+	</div>
+</div>
+
+<div class="popup2">
+	<div class="popup-close"><i class="material-icons" onclick="$('.popup2').fadeOut(); $('app-root > *:not(.popup,.popup2):not(header)').removeClass('blur');">close</i></div>
+	<div class="popup-content">		
+		<form #formLogin2="ngForm" (ngSubmit)="peticionesService.login(formLoginModel);">
+			<div>
+				<label for="usuario capitalize">usuario:</label><br>
+				<input class="input-box col-xs-12" type="text" name="usuario" #usuario="ngModel" [(ngModel)]="formLoginModel.usuario" required pattern="[a-z|A-Z|0-9]{4,}" placeholder="{{'Ingrese su usuario' | translate}}">
+				<span class="input-span" *ngIf="usuario.touched && !usuario.valid">{{'Formato de usuario incorrecto' | translate}}</span>
+			</div>
+			<div>
+				<label for="password capitalize">nuevo password:</label><br>
+				<input class="input-box col-xs-12" type="password" name="password" #password="ngModel" [(ngModel)]="formLoginModel.password" required pattern="(.){4,}" placeholder="{{'Ingrese su password' | translate}}">
+				<span class="input-span" *ngIf="password.touched && !password.valid">La contraseña debe tener al menos 4 caracteres</span>
+			</div>
+			<div>
+				<label for="password2 capitalize">reingrese password:</label><br>
+				<input class="input-box col-xs-12" type="password" name="password2" #password2="ngModel" [(ngModel)]="formLoginModel.password2" required pattern="(.){4,}" placeholder="{{'Reingrese su password' | translate}}">
+				<span class="input-span" *ngIf="password2.touched && password2.value != password.value">Las contraseñas no coinciden</span>
+			</div>
+			<input class="button capitalize" [disabled]="!formLogin.valid" type="submit" value="{{'iniciar sesión' | translate}}">
 		</form>
 	</div>
 </div>

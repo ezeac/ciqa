@@ -96,8 +96,8 @@ export class IngenieriaAmbientalComponent{
 	}
 
 	actualizar_info_item(number){
-		$(".texto-info-item-slider > texto-info-item-slider-thums").stop().fadeOut(0);
-		$(".texto-info-item-slider > texto-info-item-slider-thums").eq(number).stop().fadeIn();
+		$(".texto-info-item-slider > .texto-info-item-slider-thums").stop().fadeOut(0);
+		$(".texto-info-item-slider > .texto-info-item-slider-thums").eq(number).stop().fadeIn();
 	}
 
 	mostrar_info_completa_equipamiento(){
