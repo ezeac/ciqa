@@ -16,6 +16,7 @@ declare var $:any;
 export class ServiciosComponent{
 	public titulo = "SERVICIOS";
 	public parametro;
+	public service_search_result; public service_search;
 	//Luego se llama al parametro1 desde el html: <servicios [parametro1]="valor"></servicios>
 	@Input() parametro1:string;
 
@@ -30,6 +31,14 @@ export class ServiciosComponent{
 			this.parametro = params['page'];
 		})
 		this.peticionesService.animate_scroll("html", 0);
+	}
+
+	buscarServicio(search) {
+		this.peticionesService.service_search(search).subscribe(
+			data => this.service_search_result = data, 
+			(err) => console.log(err), 
+			() => setTimeout(()=>{console.log(this.service_search_result)},100)
+		);
 	}
 
 }

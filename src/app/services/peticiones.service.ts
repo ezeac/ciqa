@@ -127,4 +127,10 @@ export class PeticionesService {
 		);
 		return this.respuesta;
 	}
+
+	service_search(string) {
+		this.url = window.location.origin + "/search.php?search_string=" + string;
+		this.respuesta = this._http.get(this.url).map(res => res.json());
+		return this.respuesta;
+	}
 }
