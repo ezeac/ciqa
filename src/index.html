@@ -44,11 +44,11 @@
 </head>
 
 <body>
-	<div class="load-bar" style="position: fixed; top: 0px; left: 0px; height: 10px; width: 5%; transition: width .5s ease-out; background: #00183E;"></div>
+	<div class="load-bar" style="position: fixed; top: 0px; left: 0px; height: 10px; width: 5%; transition: width 3s; background: #00183E;"></div>
 	<div class="loader"></div>
 	<style>.loader { border: 7px solid transparent; border-top: 7px solid #00183E; border-bottom: 7px solid #00183E; border-radius: 50%; width: 80px; height: 80px; animation: spin 1s linear infinite; margin-left: 50%; margin-top: 40vh; transform: translate(-50%, -50%); }@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+	<app-root style="opacity: 0">
 	</app-root>
-	<app-root>
 </body>
 <!-- INCLUDE SCROLLMAGIC + GSAP -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
@@ -59,14 +59,13 @@
 <script>
 //ANIMAR LOADING PAGE
 //script para pantalla de carga y primer animación
-$("app-root, header").css({"opacity":0});
-$(document).ready(function(){
-
+$("header").css({"opacity":0});
 var load_bar = 0;
 
+//on complete version
 var init_web = setInterval(function(){
-	if (document.readyState == "interactive" && load_bar < 50) {
-		load_bar = 45;
+	if (document.readyState == "interactive" && load_bar < 30) {
+		load_bar = 25;
 	}
 	if (document.readyState == "complete") {
 		load_bar = 100;
@@ -74,7 +73,8 @@ var init_web = setInterval(function(){
 		clearInterval(init_web);
 		setTimeout(function(){
 			$("app-root, header").css({"opacity":1});
-			TweenMax.fromTo($("html"), 1, {position: "absolute", clip: "rect(0px, 10000vw, 10px, 0px)"},{overflow: "hidden", clip: "rect(0px, 10000px, 3000px, 0px)", ease: Power3.easeIn});
+			$("html, body").scrollTop(0);
+			TweenMax.fromTo($("html"), 1, {overflow: "hidden", position: "absolute", clip: "rect(0px, 10000vw, 10px, 0px)"},{clip: "rect(0px, 10000px, 3000px, 0px)", ease: Power3.easeIn});
 			TweenMax.staggerFromTo($(".texto-inicial2, .texto-inicial .titulo, .texto-inicial .texto"), 1, {opacity:0, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:1}, 0.3);
 			TweenMax.fromTo($(".navigation-menu"), 1, {opacity:0.5, y:-100},{y: 10, opacity: 1, ease: Power3.easeOut, delay:2.2});
 			TweenMax.fromTo($(".content-outer.container.no-padding"), 1, {opacity:0.5, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:2.2});
@@ -84,13 +84,35 @@ var init_web = setInterval(function(){
 		},5000);
 	}
 	if (load_bar < 100) {
-		load_bar += 15;
+		load_bar += Math.floor((Math.random() * 10) + 1);
 	}
 	$(".load-bar").css({"width":load_bar+"%"});
-	$("html, body").scrollTop(0);
-},500)
+},3000)
 
-});
+//on interactive version
+// var init_web = setInterval(function(){
+// 	if (document.readyState == "interactive") {
+// 		load_bar = 100;
+// 		$(".loader, .load_bar").fadeOut();
+// 		clearInterval(init_web);
+// 		setTimeout(function(){
+// 			$("app-root, header").css({"opacity":1});
+// 			$("html, body").scrollTop(0);
+// 			TweenMax.fromTo($("html"), 1, {overflow: "hidden", position: "absolute", clip: "rect(0px, 10000vw, 10px, 0px)"},{clip: "rect(0px, 10000px, 3000px, 0px)", ease: Power3.easeIn});
+// 			TweenMax.staggerFromTo($(".texto-inicial2, .texto-inicial .titulo, .texto-inicial .texto"), 1, {opacity:0, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:1}, 0.3);
+// 			TweenMax.fromTo($(".navigation-menu"), 1, {opacity:0.5, y:-100},{y: 10, opacity: 1, ease: Power3.easeOut, delay:2.2});
+// 			TweenMax.fromTo($(".content-outer.container.no-padding"), 1, {opacity:0.5, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:2.2});
+// 		},2000);
+// 		setTimeout(function(){
+// 			$("html").removeAttr("style");
+// 		},5000);
+// 	}
+// 	if (load_bar < 100) {
+// 		load_bar += Math.floor((Math.random() * 20) + 1);
+// 	}
+// 	$(".load-bar").css({"width":load_bar+"%"});
+// },2000)
+
 
 //INICIALIZAR CONTROLLER
 var scrollMagicController = new ScrollMagic.Controller();
