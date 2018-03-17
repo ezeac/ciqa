@@ -30,6 +30,7 @@ const appRoutes: Routes = [
 		children: [
 			{ path: '', redirectTo: 'ingenieriaAmbiental', pathMatch: 'full' },
 			{ path: 'ingenieriaAmbiental', component: IngenieriaAmbientalComponent },
+			{ path: 'ingenieriaAmbiental/:action', component: IngenieriaAmbientalComponent },
 			{ path: 'ingenieriaDeProcesos', component: IngenieriaDeProcesosComponent },
 			{ path: 'capacitaciones', component: CapacitacionesComponent },
 			{ path: 'auditoriaDeTanques', component: AuditoriaDeTanquesComponent }
@@ -47,7 +48,7 @@ const appRoutes: Routes = [
 			{ path: 'clientesComprobantes', component: ClientesComprobantesComponent }
 		]
 	},
-	{path: '**', component:HomeComponent},
+	{path: '*', component:HomeComponent},
 ];
 
 //Se crea el nav html de esta forma: <a [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']"></a>

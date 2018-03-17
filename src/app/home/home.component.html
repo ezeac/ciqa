@@ -28,17 +28,20 @@
 				<div class="sliderMarco fadeInNormal">
 					<div class="sliderContainer">
 						<div class="sliderItem noticia-item no-padding" *ngFor="let noticia of noticias; let i = index">
-							<div class="col-xs-12 col-sm-5">
-								<div class="titulo1 t25"><b>{{noticia.title.rendered}}</b></div>
-								<!-- <div class="texto1 t15" [innerHtml]='noticia.content.rendered'></div> -->
-								<div class="texto1 t15">{{noticia.resumen}} [...]</div>
-								<div class="button-big t12">› LEER MÁS </div>
-							</div>
-							<div class="hidden-xs col-sm-1">&nbsp;</div>
-							<div class="col-xs-12 col-sm-6">
-								<div class="thumb-img">
-									<div class="thumb-img-background2"></div>
-									<div class="thumb-img-background" [ngStyle]="{'background': 'url(' + noticia.imagen.guid + ') no-repeat center center / cover'}"></div>
+							<div id="noticia-{{noticia.id}}">
+								<div class="col-xs-12 col-sm-5">
+									<div class="titulo1 t25 noticia-titulo"><b>{{noticia.title.rendered}}</b></div>
+									<div class="texto1 t15 noticia-content hidden" [innerHtml]='noticia.content.rendered'></div>
+									<div class="texto1 t15 noticia-resumen">{{noticia.resumen}} [...]</div>
+									<div class="button-big t12" (click)="toggle_mostrar_noticia(noticia.id)">› LEER MÁS </div>
+								</div>
+								<div class="hidden-xs col-sm-1">&nbsp;</div>
+								<div class="col-xs-12 col-sm-6">
+									<div class="thumb-img noticia-img">
+										<div class="thumb-img-background2"></div>
+										<div class="thumb-img-background" [ngStyle]="{'background': 'url(' + noticia.imagen.guid + ') no-repeat center center / cover'}"></div>
+										<div class="noticia-imagen hidden"><img src="{{noticia.imagen.guid}}" alt="{{noticia.title.rendered}}"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -50,6 +53,7 @@
 			<div class="scroll-nav navigation-items">
 				<div class="next" (click)="moverSliderHome3(sliderHome3Actual+1)" style="cursor: pointer"><span class="glyphicon glyphicon-menu-right"></span></div>
 				<div class="prev" (click)="moverSliderHome3(sliderHome3Actual-1)" style="cursor: pointer"><span class="glyphicon glyphicon-menu-left"></span></div>
+				<div class="items-count"><b>{{sliderHome3Actual+1}}</b>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;{{noticia_total}}</div>
 			</div>
 
 		</div>
@@ -127,6 +131,18 @@
 			</div>
 		</div>
 		
+		<div class="content-outer-bloques col-xs-12 no-padding noticia_expanded" style="display: none;">
+			<div class="hidden-xs col-sm-2"></div>
+			<div class="col-xs-12 col-sm-10">
+				<div class="noticia-img"></div>
+				<div class="noticia-titulo bold t32 tcolor-3"></div>
+				<div class="noticia-extract t16"></div>
+				<div class="text-separator-line"></div>
+				<div class="noticia-content t15"></div>
+				<div class="noticia-close button pull-left clearfix" (click)="toggle_mostrar_noticia()">&lsaquo; Volver</div>
+			</div>
+		</div>
 		<!-- <footer></footer> -->
 	</div>
+
 </div>

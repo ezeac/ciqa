@@ -44,10 +44,11 @@
 </head>
 
 <body>
-	<app-root>
-		<div class="loader"></div>
-		<style>.loader { border: 7px solid #d3d3d36e; border-top: 7px solid #3498db; border-radius: 50%; width: 80px; height: 80px; animation: spin 2s linear infinite; margin-left: 50%; margin-top: 40vh; transform: translate(-50%, -50%); }@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+	<div class="load-bar" style="position: fixed; top: 0px; left: 0px; height: 10px; width: 5%; transition: width .5s ease-out; background: #00183E;"></div>
+	<div class="loader"></div>
+	<style>.loader { border: 7px solid transparent; border-top: 7px solid #00183E; border-bottom: 7px solid #00183E; border-radius: 50%; width: 80px; height: 80px; animation: spin 1s linear infinite; margin-left: 50%; margin-top: 40vh; transform: translate(-50%, -50%); }@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
 	</app-root>
+	<app-root>
 </body>
 <!-- INCLUDE SCROLLMAGIC + GSAP -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
@@ -56,6 +57,41 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 <!-- FIN INCLUDE -->
 <script>
+//ANIMAR LOADING PAGE
+//script para pantalla de carga y primer animación
+$("app-root, header").css({"opacity":0});
+$(document).ready(function(){
+
+var load_bar = 0;
+
+var init_web = setInterval(function(){
+	if (document.readyState == "interactive" && load_bar < 50) {
+		load_bar = 45;
+	}
+	if (document.readyState == "complete") {
+		load_bar = 100;
+		$(".loader, .load_bar").fadeOut();
+		clearInterval(init_web);
+		setTimeout(function(){
+			$("app-root, header").css({"opacity":1});
+			TweenMax.fromTo($("html"), 1, {position: "absolute", clip: "rect(0px, 10000vw, 10px, 0px)"},{overflow: "hidden", clip: "rect(0px, 10000px, 3000px, 0px)", ease: Power3.easeIn});
+			TweenMax.staggerFromTo($(".texto-inicial2, .texto-inicial .titulo, .texto-inicial .texto"), 1, {opacity:0, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:1}, 0.3);
+			TweenMax.fromTo($(".navigation-menu"), 1, {opacity:0.5, y:-100},{y: 10, opacity: 1, ease: Power3.easeOut, delay:2.2});
+			TweenMax.fromTo($(".content-outer.container.no-padding"), 1, {opacity:0.5, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:2.2});
+		},2000);
+		setTimeout(function(){
+			$("html").removeAttr("style");
+		},5000);
+	}
+	if (load_bar < 100) {
+		load_bar += 15;
+	}
+	$(".load-bar").css({"width":load_bar+"%"});
+	$("html, body").scrollTop(0);
+},500)
+
+});
+
 //INICIALIZAR CONTROLLER
 var scrollMagicController = new ScrollMagic.Controller();
     
@@ -72,13 +108,14 @@ $(".fadeInNormal").each(function(index,element){
     // CREANDO ANIMACIÓN
     var nombreAnimacion = new TweenMax.fromTo(element, 0.5, {opacity:0, y:50},{y: 0, opacity: 1, delay: i});
     //ASIGNANDO TRIGGERS
-    var scenenombreAnimacion = new ScrollMagic.Scene({triggerElement: element, offset: -250, duration: 400}).setTween(nombreAnimacion).addTo(scrollMagicController);
+    var scenenombreAnimacion = new ScrollMagic.Scene({triggerElement: element, offset: -250}).setTween(nombreAnimacion).addTo(scrollMagicController);
 })
 
-
-// CREANDO ANIMACIÓN
-var fadeInAuto = new TweenMax.staggerFromTo($(".fadeInAuto"), 1, {opacity:0, y:50},{y: 0, opacity: 1, delay: 2}, 0.2);
-//ASIGNANDO TRIGGERS
-var scenefadeInAuto = new ScrollMagic.Scene({triggerElement: element, offset: -1050}).setTween(fadeInAuto).addTo(scrollMagicController);
+$(".fadeInAuto").each(function(index,element){
+	// CREANDO ANIMACIÓN
+	var fadeInAuto = new TweenMax.staggerFromTo(element, 1, {opacity:0, y:50},{y: 0, opacity: 1, delay: 2}, 0.2);
+	//ASIGNANDO TRIGGERS
+	var scenefadeInAuto = new ScrollMagic.Scene({triggerElement: element, offset: -1050}).setTween(fadeInAuto).addTo(scrollMagicController);
+});
 </script>
 </html>

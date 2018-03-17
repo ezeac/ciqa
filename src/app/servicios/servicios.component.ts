@@ -41,4 +41,19 @@ export class ServiciosComponent{
 		);
 	}
 
+	console(str) {
+		console.log(str);
+	}
+
+	go_to(e) {
+		if ($.type(e) == "string") {
+			this.service_search_result = null;
+			this._router.navigate([e]);
+		} else if (e == true) {
+			$('#service-search > span').fadeIn();
+		} else {
+			$('#service-search > span').fadeOut();
+		}
+	}
+
 }

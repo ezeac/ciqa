@@ -1,1 +1,5 @@
-aire:estudio~/servicios/ingenieriaAmbiental#aire
+estudio,calidad,aire:estudio~/servicios/ingenieriaAmbiental/aire~Calidad del aire
+estudio,calidad,agua:estudio~/servicios/ingenieriaAmbiental/agua~Calidad de aguas
+estudio,calidad,suelo:estudio~/servicios/ingenieriaAmbiental/suelos~Calidad de suelos
+equipo,equipamiento:estudio~/servicios/ingenieriaAmbiental/equipamiento~Equipamiento
+estudio,calidad,impacto,ambiental:estudio~/servicios/ingenieriaAmbiental/impacto~Impacto Ambiental

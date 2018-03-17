@@ -25,6 +25,7 @@ canvas { display: block; vertical-align: bottom; }
 .texto-inicial .arrow-down i:hover { opacity: .6; }
 
 /*.ultimas-noticias { padding: 5%; background: #19289B; }*/
+.navigation-items .items-count { background: none; border: none; color: white; float: right; width: 100px; height: 35px; line-height: 35px; text-align: center; padding: 0px; }
 .ultimas-noticias { padding: 5%; background: linear-gradient(#19289B 80%, white 50%); }
 .ultimas-noticias .scroll-nav { position: absolute; right: calc(5% + 15px); top: 50px; }
 .ultimas-noticias > div .titulo { padding-bottom: 50px; }

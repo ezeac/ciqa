@@ -7,7 +7,14 @@
 	</div>
 	<div class="content-outer container no-padding">
 		<div class="tituloOffset uppercase">{{'servicios' | translate}}</div>
-		<div class="tituloOffset uppercase"><input [(ngModel)]="service_search" type="text" name="buscar"><i (click)="buscarServicio(service_search)">BUSCAR</i></div>
+		<div class="tituloOffset uppercase">
+			<form (focusin)="go_to(true)" (focusout)="go_to(false)" id="service-search" #form_service_search="ngForm">
+				<input #service_search_model="ngModel" (keyup)="buscarServicio(service_search)" [(ngModel)]="service_search" type="search" name="buscar" placeholder="{{'Buscar' | translate}} {{'servicios' | translate}}...">
+				<span *ngIf="this.service_search_result && service_search_model.model != ''">
+					<span *ngFor="let item of this.service_search_result; let i = index"><a class="item_search_result" (click)="go_to(item.resultado)" href="javascript:0">{{item.titulo}}</a></span>
+				</span>
+			</form>
+		</div>
 		<div class="content-outer-bloques col-xs-12 no-padding">
 			<div class="content-outer-bloques-cont col-xs-12 col-sm-10 no-padding">
 				<div class="content-outer-bloques-cont-item col-xs-12 col-sm-6 no-padding">

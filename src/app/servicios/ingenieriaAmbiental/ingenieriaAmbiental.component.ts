@@ -27,10 +27,35 @@ export class IngenieriaAmbientalComponent{
 		private _router: Router
 	){}
 
-	ngOnInit(){
-		this._route.params.forEach((params: Params) =>{
-			this.parametro = params['page'];
-		})
+	ngOnInit() {
+		this._route.params.subscribe(
+			params => {
+				this.parametro = params['action'];
+				if (this.parametro) {
+					switch (this.parametro) {
+						case "aire":
+							$(".content-outer-bloques-nav-item:nth-child(1)").trigger("click");
+							break;
+						case "agua":
+							$(".content-outer-bloques-nav-item:nth-child(2)").trigger("click");
+							break;
+						case "suelos":
+							$(".content-outer-bloques-nav-item:nth-child(3)").trigger("click");
+							break;
+						case "equipamiento":
+							$(".content-outer-bloques-nav-item:nth-child(4)").trigger("click");
+							break;
+						case "impacto":
+							$(".content-outer-bloques-nav-item:nth-child(5)").trigger("click");
+							break;
+					}
+					$("html, body").animate({"scrollTop":$(".nav-style-2.content-outer-bloques-nav").offset().top},1000);
+				}
+			}
+		);
+		// this._route.params.forEach((params: Params) =>{
+		// 	this.parametro = params['action'];
+		// })
 		$(document).ready(function(){
 			$('.owl-carousel').owlCarousel({
 				thumbs: true,

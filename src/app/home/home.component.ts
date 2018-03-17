@@ -20,6 +20,7 @@ export class HomeComponent{
 	public sliderHome2Slides = [{margin: 0}]; public sliderHome2Actual = 0;
 	public sliderHome3Slides = [{margin: 0}]; public sliderHome3Actual = 0;
 	public noticias:string = "";
+	public noticia_actual = "1"; public noticia_total = "";
 	
 	//Luego se llama al parametro1 desde el html: <home [parametro1]="valor"></home>
 	@Input() parametro1:string;
@@ -31,7 +32,6 @@ export class HomeComponent{
 		){}
 
 	ngOnInit(){
-
 		this._route.params.forEach((params: Params) =>{
 			this.parametro = params['page'];
 		});
@@ -113,6 +113,7 @@ export class HomeComponent{
 		if ($(window).width() < 768) {
 			itemPorPantalla = 1;
 		}
+		this.noticia_total = totalItems;
 		var widthCoeficiente = totalItems / itemPorPantalla;
 		var widthActual = $("#sliderHome3 .sliderContainer").outerWidth();
 		$("#sliderHome3 .sliderContainer").width(widthActual * widthCoeficiente);
@@ -166,6 +167,23 @@ export class HomeComponent{
 		// $("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin});
 		$("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin});
 		this.sliderHome3Actual = posicion;
+	}
+
+
+	toggle_mostrar_noticia(id = "") {
+		if ($(".noticia_expanded").css("display") != "none") {
+			$(".content-outer > .noticia_expanded").stop().fadeOut(0);
+			$(".content-outer > div:not(.noticia_expanded)").stop().fadeIn();
+		} else {
+			$(".noticia_expanded .noticia-titulo").html($("#noticia-"+id+" .noticia-titulo").html());
+			$(".noticia_expanded .noticia-content").html($("#noticia-"+id+" .noticia-content").html());
+			$(".noticia_expanded .noticia-extract").html($("#noticia-"+id+" .noticia-resumen").html());
+			$(".noticia_expanded .noticia-img").html($("#noticia-"+id+" .noticia-imagen").html());
+
+			$(".content-outer > div:not(.noticia_expanded)").stop().fadeOut(0);
+			$(".content-outer > .noticia_expanded").stop().fadeIn();
+		}
+		$("html, body").animate({"scrollTop":$(".content-outer").offset().top-150},500);
 	}
 
 }

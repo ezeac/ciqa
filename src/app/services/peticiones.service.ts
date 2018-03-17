@@ -96,8 +96,12 @@ export class PeticionesService {
 	}
 
 
-	get_noticias(){
-		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/noticia?fields=id,title.rendered,content.rendered,resumen,imagen.guid";
+	get_noticias(id = ""){
+		if (id == "") {
+			this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/noticia?fields=id,title.rendered,content.rendered,resumen,imagen.guid";
+		} else {
+			this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/noticia?fields=id,title.rendered,content.rendered,resumen,imagen.guid&filter=id:"+id;
+		}
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}
@@ -129,7 +133,7 @@ export class PeticionesService {
 	}
 
 	service_search(string) {
-		this.url = window.location.origin + "/search.php?search_string=" + string;
+		this.url = window.location.origin + "/assets/search.php?search_string=" + string;
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}

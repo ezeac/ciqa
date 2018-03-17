@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 import {TranslateModule} from 'ng2-translate';
 import { AgmCoreModule } from '@agm/core';
@@ -57,7 +58,10 @@ import { ServiciosComponent } from './servicios/servicios.component';
 		}),
     	AgmSnazzyInfoWindowModule
 	],
-	providers: [appRoutingProviders],
+	providers: [
+		appRoutingProviders,
+		{provide: LocationStrategy, useClass: HashLocationStrategy}
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
