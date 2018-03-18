@@ -163,7 +163,7 @@ export class HomeComponent{
 		// alert($("#sliderHome3 .sliderContainer .sliderItem").eq(this.sliderHome3Actual).find(".thumb-img-background2").css("background"));
 		$("#sliderHome3 .sliderContainer .thumb-img-background").css({"width":0});
 			$("#sliderHome3 .sliderContainer .texto1, #sliderHome3 .sliderContainer .titulo1, #sliderHome3 .sliderContainer .button-big").stop().animate({"opacity":1},1000);
-			$("#sliderHome3 .sliderContainer .thumb-img-background").stop().animate({"width":"95%"},500);
+			$("#sliderHome3 .sliderContainer .thumb-img-background").stop().animate({"width":"101%"},500);
 		// $("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin});
 		$("#sliderHome3 .sliderContainer").css({"marginLeft":this.sliderHome3Slides[posicion].margin});
 		this.sliderHome3Actual = posicion;

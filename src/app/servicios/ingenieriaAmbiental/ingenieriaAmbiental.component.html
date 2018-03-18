@@ -1,13 +1,13 @@
 <div class="content-outer-bloques-nav nav-style-2">
 	<div class="col-xs-12 col-sm-5 no-padding"><!-- navTabs -->
-		<div class="content-outer-bloques-nav-item active-tab-nav" (click)="peticionesService.show_animated_tab('aire', $event); actualizarImgNav($event, 'aire.jpg');">{{'Calidad&nbsp;del&nbsp;aire' | translate}}</div>
-		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('agua', $event); actualizarImgNav($event, 'agua.jpg');">{{'Calidad&nbsp;de&nbsp;aguas&nbsp;y&nbsp;afluentes' | translate}}</div>
-		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('suelos', $event); actualizarImgNav($event, 'suelos.jpg');">{{'Calidad&nbsp;de&nbsp;suelos&nbsp;y&nbsp;residuos&nbsp;peligrosos' | translate}}</div>
-		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('equipamiento', $event); actualizarImgNav($event, 'equipamiento.jpg');">{{'Equipamiento' | translate}}</div>
-		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('impacto', $event); actualizarImgNav($event, 'impacto.jpg');">{{'Impacto&nbsp;Ambiental' | translate}}</div>
+		<div class="content-outer-bloques-nav-item active-tab-nav" (click)="peticionesService.show_animated_tab('aire', $event); actualizarImgNav($event, 'aire.jpg');" [innerHtml]="'Calidad del aire' | translate"></div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('agua', $event); actualizarImgNav($event, 'agua.jpg');" [innerHtml]="'Calidad de aguas y afluentes' | translate"></div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('suelos', $event); actualizarImgNav($event, 'suelos.jpg');" [innerHtml]="'Calidad de suelos y residuos peligrosos' | translate"></div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('equipamiento', $event); actualizarImgNav($event, 'equipamiento.jpg');" [innerHtml]="'Equipamiento' | translate"></div>
+		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('impacto', $event); actualizarImgNav($event, 'impacto.jpg');" [innerHtml]="'Impacto Ambiental' | translate"></div>
 	</div>
 	<div class="content-outer-bloques-nav-img no-padding col-xs-12 col-sm-7">
-		<div class="content-outer-bloques-nav-img-text">{{"Calidad del aire" | translate}}</div>
+		<div class="content-outer-bloques-nav-img-text" [innerHtml]="'Calidad del aire' | translate"></div>
 		<img src="../assets/media/ingAmbientalNav/aire.jpg" alt="aire.jpg">
 	</div>
 </div>

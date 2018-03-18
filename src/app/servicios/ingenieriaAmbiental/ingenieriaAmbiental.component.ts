@@ -73,7 +73,7 @@ export class IngenieriaAmbientalComponent{
 	actualizarImgNav(event, nombre){
 		function animIn(){
 			$(".content-outer-bloques-nav-img > img").attr("src","../assets/media/ingAmbientalNav/"+nombre);
-			$(".content-outer-bloques-nav-img-text").html(event.target.innerHTML);
+			$(".content-outer-bloques-nav-img-text").html($(event.target).html());
 			var tween = TweenMax.to($(".content-outer-bloques-nav-img"), .5, {opacity: 1, ease:Power3.easeOut});		
 		}
 		var tween = TweenMax.to($(".content-outer-bloques-nav-img"), .3, {opacity: 0.2, ease:Power3.easeIn, onComplete: animIn});
