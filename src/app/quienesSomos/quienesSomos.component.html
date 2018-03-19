@@ -16,24 +16,29 @@
 			</div>
 			<div class="content-outer-bloques-content">
 				<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
-					<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
-					<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+					<div class="hidden-xs col-sm-2">&nbsp;</div>
+						<div class="col-xs-12 col-sm-9">
+						<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_institucional' | translate"></div>
+						<div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div>
+					</div>
 				</div>
 				<div class="content-outer-bloques-content-item" data-content="content2">
-
-					<div *ngFor="let item of investigador" class="content-outer-bloques-content-item-item1 col-sm-12 col-lg-12">
-						<div class="content-outer-bloques-content-item-item1-title col-xs-12 t12 capitalize" (click)="peticionesService.show_animated_slide($event)">{{item.title.rendered}}</div>
-						<div class="content-outer-bloques-content-item-item1-content">
-							<div>
-								<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="{{item.foto.guid}}" alt="{{item.title.rendered}}"></div>
-								<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
-									<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3 capitalize">{{item.title.rendered}}<br><b>{{item.cargo}}</b></div>
-									<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>{{item.email}}</span></div>
-									<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>{{item.telefono}}</span></div>
+					<div class="hidden-xs col-sm-2">&nbsp;</div>
+					<div class="col-xs-12 col-sm-9">
+						<div *ngFor="let item of investigador" class="content-outer-bloques-content-item-item1 col-sm-12 col-lg-12">
+							<div class="content-outer-bloques-content-item-item1-title col-xs-12 t12 capitalize" (click)="peticionesService.show_animated_slide($event)">{{item.title.rendered}}</div>
+							<div class="content-outer-bloques-content-item-item1-content">
+								<div>
+									<div class="content-outer-bloques-content-item-item1-content-img col-xs-3"><img style="max-width: 100%" src="{{item.foto.guid}}" alt="{{item.title.rendered}}"></div>
+									<div class="content-outer-bloques-content-item-item1-content-info col-xs-9">
+										<div class="content-outer-bloques-content-item-item1-content-info-titulo t12 tcolor-3 capitalize">{{item.title.rendered}}<br><b>{{item.cargo}}</b></div>
+										<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">mail_outline</i><span>{{item.email}}</span></div>
+										<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t10"><i class="material-icons tcolor-4">phone</i><span>{{item.telefono}}</span></div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>	
+						</div>	
+					</div>
 
 				</div>
 			</div>

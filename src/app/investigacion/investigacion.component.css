@@ -2,7 +2,7 @@
 .content-outer-bloques-content-item-cont *::selection { color: #00a5e6; background: black; }
 .content-outer-bloques-content-item-cont { display: flex; padding-top: 20px; padding-bottom: 20px; min-height: 200px;}
 .content-outer-bloques-content-item-cont-img img { width: 150%; max-height: 150%; }
-.content-outer-bloques-content-item-cont-img { border-radius: 150px; height: 100px; width: 100px; margin: 20px; padding: 0px; margin-left: 30px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.content-outer-bloques-content-item-cont-img { border-radius: 150px; height: 100px; width: 111px; margin: 20px; padding: 0px; margin-left: 30px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .content-outer-bloques-content-item-cont-info { display: flex; flex-direction: column; justify-content: center; }
 .content-outer-bloques-content-item-cont-info-cont2-row:last-child { margin-top: 5px; }
 .content-outer-bloques-content-item-cont-info-row-logo i { font-size: 21px; line-height: 15px; margin-right: 8px; }

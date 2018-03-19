@@ -75,11 +75,11 @@ footer .footer-cont-cont2-redes li { }
     width: 50px;
     border-top: 1.5px solid #00a5e6;
 }
-.claseLinkActivo { font-weight: bold; color: white; }
+.claseLinkActivo {/* font-weight: bold; */color: white;}
 .claseLinkActivo.claseLinkActivo:before {width: 35px;}
 input[type=file]::-webkit-file-upload-button { background: #ebf0f5; border: 1px solid black; border-radius: 5px; cursor: pointer; color: black; }
-.component-container { float: left; width: 100%; color: #969696; margin-top: -100px; position: relative; }
-.background-outer { width: 100%; background: #00A5E6; float: left; height: calc(100% + 450px); position: absolute; }
+.component-container {float: left;width: 100%;color: #969696;margin-top: -100px;position: relative;}
+.background-outer {width: 100%;background: #00A5E6;float: left;height: calc(100% + 450px);position: absolute;}
 .background-outer .background-imagen-top { overflow: hidden; height: 101vh; background: #00183E; }
 .background-outer .background-imagen-top,
 .background-outer .background-color { z-index: 0; width: 100%; position: relative; }
@@ -110,7 +110,7 @@ footer .footer-cont-cont2-links li select { background: none; border: none; outl
 footer .footer-cont-cont2-links li select option { color: black; background: white; }
 .navigation-menu .nav-links a:last-child { margin-right: 0px; }
 .navigation-menu {display: flex;align-items: center;margin: 40px 5% 0px;z-index: 9;position: relative;}
-.content-outer { margin-top: 300px; background: white; min-height: 500px; position: relative; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4); }
+.content-outer {margin-top: 300px;background: white;min-height: 500px;position: relative;box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);}
 .content-outer .tituloOffset { font-family: "Nunito Sans"; font-weight: 600; font-size: 32px; color: white; position: relative; margin-top: -100px; padding-bottom: 70px; line-height: 0px; text-transform: uppercase; }
 footer.container { float: left; background: #00132B; position: relative; display: flex; align-items: flex-start; justify-content: center; margin-left: 50%; transform: translateX(-50%); padding: 50px 0px 30px; }
 footer .footer-cont-cont2-redes { display: flex; justify-content: flex-start; }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="overflow: hidden;">
 <head>
 	<meta charset="utf-8">
 	<title>CIQA</title>
@@ -66,14 +66,15 @@ var init_web = setInterval(function(){
 	if (document.readyState == "interactive" && load_bar < 30) {
 		load_bar = 25;
 	}
-	if (document.readyState == "complete") {
+	if (document.readyState) {
+	// if (document.readyState == "complete") {
 		load_bar = 100;
 		$(".loader, .load_bar").fadeOut();
 		clearInterval(init_web);
 		setTimeout(function(){
 			$("app-root, header").css({"opacity":1});
 			$("html, body").scrollTop(0);
-			TweenMax.fromTo($("html"), 1, {overflow: "hidden", position: "absolute", clip: "rect(0px, 10000vw, 10px, 0px)"},{clip: "rect(0px, 10000px, 3000px, 0px)", ease: Power3.easeIn});
+			TweenMax.fromTo($("html"), 1, {position: "absolute", clip: "rect(0px, 10000vw, 10px, 0px)"},{clip: "rect(0px, 10000px, 3000px, 0px)", ease: Power3.easeIn});
 			TweenMax.staggerFromTo($(".texto-inicial2, .texto-inicial .titulo, .texto-inicial .texto"), 1, {opacity:0, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:1}, 0.3);
 			
 			if (location.hash == "#/" || location.hash == "#/home") {
@@ -84,9 +85,16 @@ var init_web = setInterval(function(){
 				TweenMax.fromTo($(".content-outer.container.no-padding"), 1, {opacity:0.5, y:50},{y: 10, opacity: 1, ease: Power3.easeOut, delay:.5});
 			}
 		},2000);
-		setTimeout(function(){
-			$("html").removeAttr("style");
-		},5000);
+		if (location.hash == "#/" || location.hash == "#/home") {
+			setTimeout(function(){
+				$("html").removeAttr("style");
+			},4000);
+		} else {
+			setTimeout(function(){
+				$("html").removeAttr("style");
+			},3000);
+		}
+		
 	}
 	if (load_bar < 100) {
 		load_bar += Math.floor((Math.random() * 10) + 1);
@@ -115,7 +123,7 @@ var init_web = setInterval(function(){
 // 		},2000);
 // 		setTimeout(function(){
 // 			$("html").removeAttr("style");
-// 		},5000);
+// 		},4000);
 // 	}
 // 	if (load_bar < 100) {
 // 		load_bar += Math.floor((Math.random() * 20) + 1);

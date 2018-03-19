@@ -17,7 +17,7 @@ canvas { display: block; vertical-align: bottom; }
 .background-outer .background-imagen-top { height: 101vh; }
 .content-outer { margin-top: 96vh; }
 .texto-inicial { top: 0px; left: 0px; width: 100%; height: 100vh; z-index: -1; position: absolute; }
-.texto-inicial .cont-textos { position: absolute; top: 30vh; left: 10%; }
+.texto-inicial .cont-textos { position: absolute; top: 30vh; left: 10%; width: 450px; }
 .texto-inicial .cont-textos .titulo { margin-bottom: 30px; }
 .texto-inicial .cont-textos .texto { text-align: left; line-height: 180%; }
 .texto-inicial .arrow-down { margin-top: 50px; }
@@ -32,7 +32,7 @@ canvas { display: block; vertical-align: bottom; }
 .ultimas-noticias .noticia-item .titulo1 { margin-bottom: 40px; }
 .ultimas-noticias .noticia-item .thumb-img img { width: 100%; }
 .ultimas-noticias .noticia-item .texto1 { line-height: 180%; }
-.ultimas-noticias .noticia-item .button-big { border: 1px solid white; float: left; clear: both; margin-top: 40px; border-radius: 50px; background: none; }
+.ultimas-noticias .noticia-item .button-big { float: left; clear: both; margin-top: 40px; }
 .content-outer .content-outer-bloques { padding: 0px 5%; }
 .content-outer .content-outer-bloques .sliderContainer { transition: all .3s; }
 .content-outer-bloques-cont-info-texto { line-height: 170%; }
@@ -55,8 +55,8 @@ canvas { display: block; vertical-align: bottom; }
 .thumb-img .thumb-img-background { position: absolute; right: -1px; width: 101%; height: 101%; z-index: 0; top: -1px; }
 .thumb-img { height: 400px; overflow: hidden; position: relative; margin-bottom: 20px; box-shadow: 0px 0px 15px 0px black; }
 .texto-inicial2 { top: 0px; left: 0px; z-index: 1; position: absolute; }
-.texto-inicial2 .cont-textos { left: calc(10% - 20px); top: calc(30vh + 300px); }
-.texto-inicial2 .cont-textos .arrow-down { cursor: pointer; float: left; padding: 20px; margin-left: calc(10vw - 20px); }
+.texto-inicial2 .cont-textos { top: calc(30vh + 300px); padding: 0px;}
+.texto-inicial2 .cont-textos .arrow-down { cursor: pointer; float: left; padding: 20px 20px 20px 0px; margin-left: calc(10vw - 5px); }
 #sliderHome2 .sliderItem > div, #sliderHome .sliderItem > div {
     width: 100%;
     height: 100%;

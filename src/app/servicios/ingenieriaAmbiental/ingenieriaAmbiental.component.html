@@ -15,358 +15,364 @@
 	
 	<!-- tab1 aire -->
 	<div class="content-outer-bloques-content-item active-tab-content" data-content="aire">
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_aire' | translate"></div>
+			<div class="content-outer-bloques-content-item-img"><img src='../assets/media/ingAmbientalNav/agua_img1.jpg' alt='ciqa calidad del aire'></div>
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_aire2' | translate"></div>
+			<br><br>
 
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_aire' | translate"></div>
-		<div class="content-outer-bloques-content-item-img"><img src='../assets/media/ingAmbientalNav/agua_img1.jpg' alt='ciqa calidad del aire'></div>
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_aire2' | translate"></div>
-		<br><br>
-
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'USEPA (United States Environmental Protection Agency) - 40 CFR PART 60- App. A' | translate}}</div>
-			<div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
-						<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireUsepa.JPG" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'ISO (International Organization for Standardization)' | translate}}</div>
-			<div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
-						<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireIso.JPG" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'JIS (Japanese Industrial Standard)' | translate}}</div>
-			<div class="content-outer-bloques-content-item-item1-content">
-<!-- 				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9"><br>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t13">
-							<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación del caudal volumétrico de gas emitido</div>
-							› JIS K 0095: Methods for sampling of flue gas.<br>
-							<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación de la concentración de los respectivos contaminantes</div>
-							Material Particulado (muestreo isocinético)<br>
-							› JIS Z 8808: Methods of measuring dust concentration in flue gas<br>
-							<br>
-							Óxidos de Nitrógenos (NOx)<br>
-							› JIS B 7982: Automated measuring systems and analyzers for nitrogen oxides in flue gas.<br>
-							<br>
-							Dióxido de Azufre (SO2)<br>
-							› JIS K 0103: Methods for determination of sulfur oxides in flue gas.<br>
-							› JIS B 7981: Automated measuring systems and analyzers for sulfur dioxide in flue gas.<br>
-							<br>
-							Metales pesados<br>
-							› JIS K 0083: Method for determination of metals in flue gas.<br>
-							<br>
-							Fenoles<br>
-							› JIS K 0086: Methods for determination of phenols in flue gas.<br>
-							<br>
-							Cloro<br>
-							› JIS K 0106: Methods for determination of chlorine in flue gas.<br>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'USEPA (United States Environmental Protection Agency) - 40 CFR PART 60- App. A' | translate}}</div>
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+							<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireUsepa.JPG" alt="">
 						</div>
 					</div>
-				</div> -->
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
-						<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireJis.JPG" alt="">
-					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'IRAM (Instituto Argentino de Normalización y Certificación)' | translate}}</div>
-			<div class="content-outer-bloques-content-item-item1-content">
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
-						<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireIram.JPG" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- slidedown -->
-		<div class="content-outer-bloques-content-item-item1 col-sm-12">
-			<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'Otros métodos USEPA - 40 CFR PART 60 ofrecidos' | translate}}</div>
-			<div class="content-outer-bloques-content-item-item1-content">
-<!-- 				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-9"><br>
-						<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t13">
-							<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación del caudal volumétrico de gas emitido</div>
-							› JIS K 0095: Methods for sampling of flue gas.<br>
-							<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación de la concentración de los respectivos contaminantes</div>
-							Material Particulado (muestreo isocinético)<br>
-							› JIS Z 8808: Methods of measuring dust concentration in flue gas<br>
-							<br>
-							Óxidos de Nitrógenos (NOx)<br>
-							› JIS B 7982: Automated measuring systems and analyzers for nitrogen oxides in flue gas.<br>
-							<br>
-							Dióxido de Azufre (SO2)<br>
-							› JIS K 0103: Methods for determination of sulfur oxides in flue gas.<br>
-							› JIS B 7981: Automated measuring systems and analyzers for sulfur dioxide in flue gas.<br>
-							<br>
-							Metales pesados<br>
-							› JIS K 0083: Method for determination of metals in flue gas.<br>
-							<br>
-							Fenoles<br>
-							› JIS K 0086: Methods for determination of phenols in flue gas.<br>
-							<br>
-							Cloro<br>
-							› JIS K 0106: Methods for determination of chlorine in flue gas.<br>
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'ISO (International Organization for Standardization)' | translate}}</div>
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+							<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireIso.JPG" alt="">
 						</div>
 					</div>
-				</div> -->
-				<div>
-					<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
-						<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireOtros.JPG" alt="">
+				</div>
+			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'JIS (Japanese Industrial Standard)' | translate}}</div>
+				<div class="content-outer-bloques-content-item-item1-content">
+	<!-- 				<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9"><br>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t13">
+								<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación del caudal volumétrico de gas emitido</div>
+								› JIS K 0095: Methods for sampling of flue gas.<br>
+								<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación de la concentración de los respectivos contaminantes</div>
+								Material Particulado (muestreo isocinético)<br>
+								› JIS Z 8808: Methods of measuring dust concentration in flue gas<br>
+								<br>
+								Óxidos de Nitrógenos (NOx)<br>
+								› JIS B 7982: Automated measuring systems and analyzers for nitrogen oxides in flue gas.<br>
+								<br>
+								Dióxido de Azufre (SO2)<br>
+								› JIS K 0103: Methods for determination of sulfur oxides in flue gas.<br>
+								› JIS B 7981: Automated measuring systems and analyzers for sulfur dioxide in flue gas.<br>
+								<br>
+								Metales pesados<br>
+								› JIS K 0083: Method for determination of metals in flue gas.<br>
+								<br>
+								Fenoles<br>
+								› JIS K 0086: Methods for determination of phenols in flue gas.<br>
+								<br>
+								Cloro<br>
+								› JIS K 0106: Methods for determination of chlorine in flue gas.<br>
+							</div>
+						</div>
+					</div> -->
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+							<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireJis.JPG" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'IRAM (Instituto Argentino de Normalización y Certificación)' | translate}}</div>
+				<div class="content-outer-bloques-content-item-item1-content">
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+							<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireIram.JPG" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- slidedown -->
+			<div class="content-outer-bloques-content-item-item1 col-sm-12">
+				<div class="content-outer-bloques-content-item-item1-title col-xs-12 bold t16" (click)="peticionesService.show_animated_slide($event)">{{'Otros métodos USEPA - 40 CFR PART 60 ofrecidos' | translate}}</div>
+				<div class="content-outer-bloques-content-item-item1-content">
+	<!-- 				<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-9"><br>
+							<div class="content-outer-bloques-content-item-item1-content-info-texto tcolor-2 t13">
+								<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación del caudal volumétrico de gas emitido</div>
+								› JIS K 0095: Methods for sampling of flue gas.<br>
+								<div class="content-outer-bloques-content-item-item1-content-info-texto-titulo bold uppercase">Determinación de la concentración de los respectivos contaminantes</div>
+								Material Particulado (muestreo isocinético)<br>
+								› JIS Z 8808: Methods of measuring dust concentration in flue gas<br>
+								<br>
+								Óxidos de Nitrógenos (NOx)<br>
+								› JIS B 7982: Automated measuring systems and analyzers for nitrogen oxides in flue gas.<br>
+								<br>
+								Dióxido de Azufre (SO2)<br>
+								› JIS K 0103: Methods for determination of sulfur oxides in flue gas.<br>
+								› JIS B 7981: Automated measuring systems and analyzers for sulfur dioxide in flue gas.<br>
+								<br>
+								Metales pesados<br>
+								› JIS K 0083: Method for determination of metals in flue gas.<br>
+								<br>
+								Fenoles<br>
+								› JIS K 0086: Methods for determination of phenols in flue gas.<br>
+								<br>
+								Cloro<br>
+								› JIS K 0106: Methods for determination of chlorine in flue gas.<br>
+							</div>
+						</div>
+					</div> -->
+					<div>
+						<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+							<img src="../../../assets/media/ingAmbientalNav/calidadDeAire/aireOtros.JPG" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class=""></div>
-
 	</div>
 
 
 	<!-- tab2 agua -->
 	<div class="content-outer-bloques-content-item" data-content="agua">
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_agua' | translate"></div>
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_agua' | translate"></div>
 		<!-- <div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div> -->
+		</div>
 	</div>
-
 	<!-- tab3 suelos -->
 	<div class="content-outer-bloques-content-item" data-content="suelos">
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_suelos' | translate"></div>
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_calidad_suelos' | translate"></div>
 		<!-- <div class="content-outer-bloques-content-item-img"><img src='../assets/media/institucional.jpg' alt='ciqa institucional'></div> -->
+		</div>
 	</div>
-
 
 	<!-- tab4 equipamiento -->
 	<div class="content-outer-bloques-content-item content-outer-bloques-content-equipamiento" data-content="equipamiento">
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_equipamiento' | translate"></div>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-				<div class="item active"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 1.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 2.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector de masas y sistema de desorción térmica.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID con autosampler líquido y Headspace.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo iónico con autosampler.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo líquido con detector UV y MSMS.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafos gaseosos con detector de triple cuadrupolo, FID y TCD y autosampler de líquidos y Headspace.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Digestor de microondas.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Foto edificio laboratorio.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/ICP-OES con autosampler.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Sistema de SPE online acoplado a UPLC-MSMS.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua Subterránea pozo 3.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Cámara inspección comedor.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Entrada efluentes.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/LAGUNA ANAEROBIA.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo continuo de material particulado en aire ambiente.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Estación Meteorológica).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Ind. Química).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Crematorio).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Industria de Aridos).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de gases de combustión (Caldera).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de biogas en relleno sanitario.jpeg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de calidad de aire ambiental (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de Dioxinas y Furanos.jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Cementera).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Metalmecánica).jpg' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Análisis de vapores orgánicos en suelo.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de hidrocarburos en suelo.JPG' alt='ciqa equipamiento'></div>
-				<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de suelo.JPG' alt='ciqa equipamiento'></div>
-			</div>
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_equipamiento' | translate"></div>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 1.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 2.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector de masas y sistema de desorción térmica.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID con autosampler líquido y Headspace.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo iónico con autosampler.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo líquido con detector UV y MSMS.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafos gaseosos con detector de triple cuadrupolo, FID y TCD y autosampler de líquidos y Headspace.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Digestor de microondas.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Foto edificio laboratorio.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/ICP-OES con autosampler.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Sistema de SPE online acoplado a UPLC-MSMS.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua Subterránea pozo 3.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Cámara inspección comedor.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Entrada efluentes.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/LAGUNA ANAEROBIA.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo continuo de material particulado en aire ambiente.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Estación Meteorológica).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Ind. Química).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Crematorio).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Industria de Aridos).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de gases de combustión (Caldera).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de biogas en relleno sanitario.jpeg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de calidad de aire ambiental (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de Dioxinas y Furanos.jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Cementera).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Metalmecánica).jpg' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Análisis de vapores orgánicos en suelo.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de hidrocarburos en suelo.JPG' alt='ciqa equipamiento'></div>
+					<div class="item"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de suelo.JPG' alt='ciqa equipamiento'></div>
+				</div>
 
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				<span class="sr-only">Next</span>
-			</a>
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
 
-			<!-- Indicators -->
-			<div class="slider" id="thumb">
-				<div class="col-xs-1 slider-nav-nav">
-					<div class="thumbPrev" style="cursor: pointer" (click)="moverSliderthumb($event)"><span class="glyphicon glyphicon-menu-left"></span></div>
-				</div>
-				<div class="thumbMarco col-xs-10" style="overflow: hidden">
-					<div class="thumbContainer carousel-indicators">
-						<div data-target="#myCarousel" data-slide-to="0" (click)="actualizar_info_item(0)" class="active thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 1.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="1" (click)="actualizar_info_item(1)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 2.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="2" (click)="actualizar_info_item(2)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="3" (click)="actualizar_info_item(3)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector de masas y sistema de desorción térmica.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="4" (click)="actualizar_info_item(4)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID con autosampler líquido y Headspace.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="5" (click)="actualizar_info_item(5)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="6" (click)="actualizar_info_item(6)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo iónico con autosampler.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="7" (click)="actualizar_info_item(7)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo líquido con detector UV y MSMS.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="8" (click)="actualizar_info_item(8)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafos gaseosos con detector de triple cuadrupolo, FID y TCD y autosampler de líquidos y Headspace.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="9" (click)="actualizar_info_item(9)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Digestor de microondas.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="10" (click)="actualizar_info_item(10)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Foto edificio laboratorio.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="11" (click)="actualizar_info_item(11)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/ICP-OES con autosampler.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="12" (click)="actualizar_info_item(12)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Sistema de SPE online acoplado a UPLC-MSMS.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="13" (click)="actualizar_info_item(13)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua Subterránea pozo 3.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="14" (click)="actualizar_info_item(14)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="15" (click)="actualizar_info_item(15)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Cámara inspección comedor.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="16" (click)="actualizar_info_item(16)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Entrada efluentes.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="17" (click)="actualizar_info_item(17)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/LAGUNA ANAEROBIA.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="18" (click)="actualizar_info_item(18)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo continuo de material particulado en aire ambiente.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="19" (click)="actualizar_info_item(19)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Estación Meteorológica).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="20" (click)="actualizar_info_item(20)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="21" (click)="actualizar_info_item(21)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Ind. Química).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="22" (click)="actualizar_info_item(22)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Crematorio).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="23" (click)="actualizar_info_item(23)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Industria de Aridos).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="24" (click)="actualizar_info_item(24)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="25" (click)="actualizar_info_item(25)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de gases de combustión (Caldera).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="26" (click)="actualizar_info_item(26)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de biogas en relleno sanitario.jpeg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="27" (click)="actualizar_info_item(27)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de calidad de aire ambiental (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="28" (click)="actualizar_info_item(28)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de Dioxinas y Furanos.jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="29" (click)="actualizar_info_item(29)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Cementera).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="30" (click)="actualizar_info_item(30)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Metalmecánica).jpg' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="31" (click)="actualizar_info_item(31)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Análisis de vapores orgánicos en suelo.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="32" (click)="actualizar_info_item(32)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de hidrocarburos en suelo.JPG' alt='ciqa equipamiento'></div>
-						<div data-target="#myCarousel" data-slide-to="33" (click)="actualizar_info_item(33)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de suelo.JPG' alt='ciqa equipamiento'></div>
+				<!-- Indicators -->
+				<div class="slider" id="thumb">
+					<div class="col-xs-1 slider-nav-nav">
+						<div class="thumbPrev" style="cursor: pointer" (click)="moverSliderthumb($event)"><span class="glyphicon glyphicon-menu-left"></span></div>
 					</div>
+					<div class="thumbMarco col-xs-10" style="overflow: hidden">
+						<div class="thumbContainer carousel-indicators">
+							<div data-target="#myCarousel" data-slide-to="0" (click)="actualizar_info_item(0)" class="active thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 1.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="1" (click)="actualizar_info_item(1)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio 2.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="2" (click)="actualizar_info_item(2)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Artística del laboratorio.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="3" (click)="actualizar_info_item(3)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector de masas y sistema de desorción térmica.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="4" (click)="actualizar_info_item(4)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID con autosampler líquido y Headspace.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="5" (click)="actualizar_info_item(5)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo gaseoso con detector FID.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="6" (click)="actualizar_info_item(6)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo iónico con autosampler.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="7" (click)="actualizar_info_item(7)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafo líquido con detector UV y MSMS.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="8" (click)="actualizar_info_item(8)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Cromatógrafos gaseosos con detector de triple cuadrupolo, FID y TCD y autosampler de líquidos y Headspace.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="9" (click)="actualizar_info_item(9)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Digestor de microondas.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="10" (click)="actualizar_info_item(10)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Foto edificio laboratorio.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="11" (click)="actualizar_info_item(11)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/ICP-OES con autosampler.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="12" (click)="actualizar_info_item(12)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Sistema de SPE online acoplado a UPLC-MSMS.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="13" (click)="actualizar_info_item(13)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua Subterránea pozo 3.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="14" (click)="actualizar_info_item(14)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Agua.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="15" (click)="actualizar_info_item(15)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Cámara inspección comedor.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="16" (click)="actualizar_info_item(16)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/Entrada efluentes.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="17" (click)="actualizar_info_item(17)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Agua/LAGUNA ANAEROBIA.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="18" (click)="actualizar_info_item(18)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo continuo de material particulado en aire ambiente.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="19" (click)="actualizar_info_item(19)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Estación Meteorológica).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="20" (click)="actualizar_info_item(20)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="21" (click)="actualizar_info_item(21)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire (Ind. Química).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="22" (click)="actualizar_info_item(22)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Crematorio).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="23" (click)="actualizar_info_item(23)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental (Industria de Aridos).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="24" (click)="actualizar_info_item(24)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de calidad de aire ambiental.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="25" (click)="actualizar_info_item(25)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Monitoreo de gases de combustión (Caldera).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="26" (click)="actualizar_info_item(26)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de biogas en relleno sanitario.jpeg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="27" (click)="actualizar_info_item(27)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de calidad de aire ambiental (FTIR-OP).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="28" (click)="actualizar_info_item(28)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo de Dioxinas y Furanos.jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="29" (click)="actualizar_info_item(29)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Cementera).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="30" (click)="actualizar_info_item(30)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Aire/Muestreo Isocinetico (Industria Metalmecánica).jpg' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="31" (click)="actualizar_info_item(31)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Análisis de vapores orgánicos en suelo.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="32" (click)="actualizar_info_item(32)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de hidrocarburos en suelo.JPG' alt='ciqa equipamiento'></div>
+							<div data-target="#myCarousel" data-slide-to="33" (click)="actualizar_info_item(33)" class="thumbItem col-xs-12 col-sm-4"><img src='../assets/media/ingAmbientalNav/equipamiento/Suelo/Muestreo de suelo.JPG' alt='ciqa equipamiento'></div>
+						</div>
+					</div>
+					<div class="col-xs-1 slider-nav-nav">
+						<div class="thumbNext" style="cursor: pointer" (click)="moverSliderthumb($event)"><span class="glyphicon glyphicon-menu-right"></span></div>
+					</div>
+					<div id="thumbItemActual" data-to=0></div>
 				</div>
-				<div class="col-xs-1 slider-nav-nav">
-					<div class="thumbNext" style="cursor: pointer" (click)="moverSliderthumb($event)"><span class="glyphicon glyphicon-menu-right"></span></div>
-				</div>
-				<div id="thumbItemActual" data-to=0></div>
-			</div>
 
-			<div class="texto-info-item">
-				<div class="col-sm-2 hidden-xs">&nbsp;</div>
-				<div class="texto-info-item-slider col-xs-12 col-sm-8">
-					<div data-slide="0" class="texto-info-item-slider-thums active">
-						Artística del laboratorio 1
+				<div class="texto-info-item">
+					<div class="col-sm-2 hidden-xs">&nbsp;</div>
+					<div class="texto-info-item-slider col-xs-12 col-sm-8">
+						<div data-slide="0" class="texto-info-item-slider-thums active">
+							Artística del laboratorio 1
+						</div>
+						<div data-slide="1" class="texto-info-item-slider-thums">
+							Artística del laboratorio 2
+						</div>
+						<div data-slide="2" class="texto-info-item-slider-thums">
+							Artística del laboratorio
+						</div>
+						<div data-slide="3" class="texto-info-item-slider-thums">
+							Cromatógrafo gaseoso con detector de masas y sistema de desorción térmica
+						</div>
+						<div data-slide="4" class="texto-info-item-slider-thums">
+							Cromatógrafo gaseoso con detector FID con autosampler líquido y Headspace
+						</div>
+						<div data-slide="5" class="texto-info-item-slider-thums">
+							Cromatógrafo gaseoso con detector FID
+						</div>
+						<div data-slide="6" class="texto-info-item-slider-thums">
+							Cromatógrafo iónico con autosampler
+						</div>
+						<div data-slide="7" class="texto-info-item-slider-thums">
+							Cromatógrafo líquido con detector UV y MSMS
+						</div>
+						<div data-slide="8" class="texto-info-item-slider-thums">
+							Cromatógrafos gaseosos con detector de triple cuadrupolo, FID y TCD y autosampler de líquidos y Headspace
+						</div>
+						<div data-slide="9" class="texto-info-item-slider-thums">
+							Digestor de microondas
+						</div>
+						<div data-slide="10" class="texto-info-item-slider-thums">
+							Foto edificio laboratorio
+						</div>
+						<div data-slide="11" class="texto-info-item-slider-thums">
+							ICP-OES con autosampler
+						</div>
+						<div data-slide="12" class="texto-info-item-slider-thums">
+							Sistema de SPE online acoplado a UPLC-MSMS
+						</div>
+						<div data-slide="13" class="texto-info-item-slider-thums">
+							Agua/Agua Subterránea pozo 3
+						</div>
+						<div data-slide="14" class="texto-info-item-slider-thums">
+							Agua/Agua
+						</div>
+						<div data-slide="15" class="texto-info-item-slider-thums">
+							Agua/Cámara inspección comedor
+						</div>
+						<div data-slide="16" class="texto-info-item-slider-thums">
+							Agua/Entrada efluentes
+						</div>
+						<div data-slide="17" class="texto-info-item-slider-thums">
+							Agua/LAGUNA ANAEROBIA
+						</div>
+						<div data-slide="18" class="texto-info-item-slider-thums">
+							Aire/Monitoreo continuo de material particulado en aire ambiente
+						</div>
+						<div data-slide="19" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de calidad de aire (Estación Meteorológica)
+						</div>
+						<div data-slide="20" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de calidad de aire (FTIR-OP)
+						</div>
+						<div data-slide="21" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de calidad de aire (Ind. Química)
+						</div>
+						<div data-slide="22" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de calidad de aire ambiental (Crematorio)
+						</div>
+						<div data-slide="23" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de calidad de aire ambiental (Industria de Aridos)
+						</div>
+						<div data-slide="24" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de calidad de aire ambiental
+						</div>
+						<div data-slide="25" class="texto-info-item-slider-thums">
+							Aire/Monitoreo de gases de combustión (Caldera)
+						</div>
+						<div data-slide="26" class="texto-info-item-slider-thums">
+							Aire/Muestreo de biogas en relleno sanitario
+						</div>
+						<div data-slide="27" class="texto-info-item-slider-thums">
+							Aire/Muestreo de calidad de aire ambiental (FTIR-OP)
+						</div>
+						<div data-slide="28" class="texto-info-item-slider-thums">
+							Aire/Muestreo de Dioxinas y Furanos
+						</div>
+						<div data-slide="29" class="texto-info-item-slider-thums">
+							Aire/Muestreo Isocinetico (Industria Cementera)
+						</div>
+						<div data-slide="30" class="texto-info-item-slider-thums">
+							Aire/Muestreo Isocinetico (Industria Metalmecánica)
+						</div>
+						<div data-slide="31" class="texto-info-item-slider-thums">
+							../assets/media/ingAmbientalNav/equipamiento/Suelo/Análisis de vapores orgánicos en suelo
+						</div>
+						<div data-slide="32" class="texto-info-item-slider-thums">
+							Suelo/Muestreo de hidrocarburos en suelo
+						</div>
+						<div data-slide="33" class="texto-info-item-slider-thums">
+							Suelo/Muestreo de suelo
+						</div>
+						<div class="texto-info-item-slider-thums-button uppercase button-big bol t13 bcolor-1 pull-left" (click)="mostrar_info_completa_equipamiento()">{{'ver el listado completo' | translate}}</div>
 					</div>
-					<div data-slide="1" class="texto-info-item-slider-thums">
-						Artística del laboratorio 2
-					</div>
-					<div data-slide="2" class="texto-info-item-slider-thums">
-						Artística del laboratorio
-					</div>
-					<div data-slide="3" class="texto-info-item-slider-thums">
-						Cromatógrafo gaseoso con detector de masas y sistema de desorción térmica
-					</div>
-					<div data-slide="4" class="texto-info-item-slider-thums">
-						Cromatógrafo gaseoso con detector FID con autosampler líquido y Headspace
-					</div>
-					<div data-slide="5" class="texto-info-item-slider-thums">
-						Cromatógrafo gaseoso con detector FID
-					</div>
-					<div data-slide="6" class="texto-info-item-slider-thums">
-						Cromatógrafo iónico con autosampler
-					</div>
-					<div data-slide="7" class="texto-info-item-slider-thums">
-						Cromatógrafo líquido con detector UV y MSMS
-					</div>
-					<div data-slide="8" class="texto-info-item-slider-thums">
-						Cromatógrafos gaseosos con detector de triple cuadrupolo, FID y TCD y autosampler de líquidos y Headspace
-					</div>
-					<div data-slide="9" class="texto-info-item-slider-thums">
-						Digestor de microondas
-					</div>
-					<div data-slide="10" class="texto-info-item-slider-thums">
-						Foto edificio laboratorio
-					</div>
-					<div data-slide="11" class="texto-info-item-slider-thums">
-						ICP-OES con autosampler
-					</div>
-					<div data-slide="12" class="texto-info-item-slider-thums">
-						Sistema de SPE online acoplado a UPLC-MSMS
-					</div>
-					<div data-slide="13" class="texto-info-item-slider-thums">
-						Agua/Agua Subterránea pozo 3
-					</div>
-					<div data-slide="14" class="texto-info-item-slider-thums">
-						Agua/Agua
-					</div>
-					<div data-slide="15" class="texto-info-item-slider-thums">
-						Agua/Cámara inspección comedor
-					</div>
-					<div data-slide="16" class="texto-info-item-slider-thums">
-						Agua/Entrada efluentes
-					</div>
-					<div data-slide="17" class="texto-info-item-slider-thums">
-						Agua/LAGUNA ANAEROBIA
-					</div>
-					<div data-slide="18" class="texto-info-item-slider-thums">
-						Aire/Monitoreo continuo de material particulado en aire ambiente
-					</div>
-					<div data-slide="19" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de calidad de aire (Estación Meteorológica)
-					</div>
-					<div data-slide="20" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de calidad de aire (FTIR-OP)
-					</div>
-					<div data-slide="21" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de calidad de aire (Ind. Química)
-					</div>
-					<div data-slide="22" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de calidad de aire ambiental (Crematorio)
-					</div>
-					<div data-slide="23" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de calidad de aire ambiental (Industria de Aridos)
-					</div>
-					<div data-slide="24" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de calidad de aire ambiental
-					</div>
-					<div data-slide="25" class="texto-info-item-slider-thums">
-						Aire/Monitoreo de gases de combustión (Caldera)
-					</div>
-					<div data-slide="26" class="texto-info-item-slider-thums">
-						Aire/Muestreo de biogas en relleno sanitario
-					</div>
-					<div data-slide="27" class="texto-info-item-slider-thums">
-						Aire/Muestreo de calidad de aire ambiental (FTIR-OP)
-					</div>
-					<div data-slide="28" class="texto-info-item-slider-thums">
-						Aire/Muestreo de Dioxinas y Furanos
-					</div>
-					<div data-slide="29" class="texto-info-item-slider-thums">
-						Aire/Muestreo Isocinetico (Industria Cementera)
-					</div>
-					<div data-slide="30" class="texto-info-item-slider-thums">
-						Aire/Muestreo Isocinetico (Industria Metalmecánica)
-					</div>
-					<div data-slide="31" class="texto-info-item-slider-thums">
-						../assets/media/ingAmbientalNav/equipamiento/Suelo/Análisis de vapores orgánicos en suelo
-					</div>
-					<div data-slide="32" class="texto-info-item-slider-thums">
-						Suelo/Muestreo de hidrocarburos en suelo
-					</div>
-					<div data-slide="33" class="texto-info-item-slider-thums">
-						Suelo/Muestreo de suelo
-					</div>
-					<div class="texto-info-item-slider-thums-button uppercase button-big bol t13 bcolor-1 pull-left" (click)="mostrar_info_completa_equipamiento()">{{'ver el listado completo' | translate}}</div>
+					<div class="col-sm-2 hidden-xs">&nbsp;</div>
 				</div>
-				<div class="col-sm-2 hidden-xs">&nbsp;</div>
 			</div>
-		</div>
-		<div class="info-completo-texto-equipamiento">
-			<div class="info-completo-texto-equipamiento-text" [innerHtml]="'texto_equipamiento_completo' | translate"></div>
-			<br><br><div class="button-volver button bcolor-1 pull-left t16 bold uppercase" (click)="mostrar_info_completa_equipamiento()">{{'Atrás' | translate}}</div>
+			<div class="info-completo-texto-equipamiento">
+				<div class="info-completo-texto-equipamiento-text" [innerHtml]="'texto_equipamiento_completo' | translate"></div>
+				<br><br><div class="button-volver button bcolor-1 pull-left t16 bold uppercase" (click)="mostrar_info_completa_equipamiento()">{{'Atrás' | translate}}</div>
+			</div>
 		</div>
 	</div>
 
@@ -374,8 +380,11 @@
 
 	<!-- tab5 impacto ambiental -->
 	<div class="content-outer-bloques-content-item" data-content="impacto">
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_impacto_ambiental' | translate"></div>
-		<div class="content-outer-bloques-content-item-img"><img src='../assets/media/ingAmbientalNav/impactoAmbiental/impacto.jpg' alt='ciqa impacto ambiental'></div>
-		<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_impacto_ambiental2' | translate"></div>
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_impacto_ambiental' | translate"></div>
+			<div class="content-outer-bloques-content-item-img"><img src='../assets/media/ingAmbientalNav/impactoAmbiental/impacto.jpg' alt='ciqa impacto ambiental'></div>
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_impacto_ambiental2' | translate"></div>
+		</div>
 	</div>
 </div>

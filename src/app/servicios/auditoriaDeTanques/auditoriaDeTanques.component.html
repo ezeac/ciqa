@@ -12,16 +12,17 @@
 	<!-- tab1 -->
 	<div class="content-outer-bloques-content-item active-tab-content" data-content="content1">
 		<div class="hidden-xs col-sm-1">&nbsp;</div>
-		<div class="col-xs-12 col-sm-11">
-			<div class="content-outer-bloques-content-item-tit tcolor-3 t26 bold" [innerHtml]="'titulo_intro_auditorias' | translate"></div>
+		<div class="content-outer-bloques-content-item-tit col-xs-11 tcolor-3 t26 bold" [innerHtml]="'titulo_intro_auditorias' | translate"></div>
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
 			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_intro_auditorias' | translate"></div>
 		</div>
 	</div>
 
 	<!-- tab2 -->
 	<div class="content-outer-bloques-content-item" data-content="content2">
-		<div class="hidden-xs col-sm-1">&nbsp;</div>
-		<div class="col-xs-12 col-sm-11">
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
 			<!-- slidedown -->
 			<div class="content-outer-bloques-content-item-item1 col-sm-12 no-padding no-padding-childs">
 				<div class="content-outer-bloques-content-item-item1-title col-xs-12 t14" (click)="peticionesService.show_animated_slide($event)">{{'Auditorías Técnicas (Resoluciones SE 785/05 y 1102/04)' | translate}}</div>
@@ -118,8 +119,8 @@
 
 	<!-- tab3 -->
 	<div class="content-outer-bloques-content-item" data-content="content3">
-		<div class="hidden-xs col-sm-1">&nbsp;</div>
-		<div class="col-xs-12 col-sm-11">
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
 			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto1_integrantes_auditorias' | translate"></div>
 			<br><br><div class="content-outer-bloques-content-item-item2 tcolor-3 t18 bold uppercase">{{'integrantes' | translate}}</div><br><br>
 			<div class="content-outer-bloques-content-item-item3" [innerHtml]="'texto2_integrantes_auditorias' | translate"></div>
@@ -129,8 +130,10 @@
 
 	<!-- tab4 -->
 	<div class="content-outer-bloques-content-item" data-content="content4">
-		<div class="hidden-xs col-sm-1">&nbsp;</div>
-		<div class="content-outer-bloques-content-item-item1 col-xs-12 col-sm-11" [innerHtml]="'texto_equipamiento_auditorias' | translate"></div>
+		<div class="hidden-xs col-sm-2">&nbsp;</div>
+		<div class="col-xs-12 col-sm-9">
+			<div class="content-outer-bloques-content-item-item1" [innerHtml]="'texto_equipamiento_auditorias' | translate"></div>
+		</div>
 	</div>
 
 
