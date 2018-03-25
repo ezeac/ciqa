@@ -48,11 +48,11 @@ export class InvestigacionComponent{
 
 	toggleFullContent(action, event = null){
 		if (action == 1) {
-			var parent = $(event.target).closest(".content-outer-bloques-content-item-cont");
+			var parent = $(event.target).parent().closest(".content-outer-bloques-content-item-cont");
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-fullpage-nav-tit").html(parent.find(".content-outer-bloques-content-item-cont-tit1").html());
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-img").html(parent.find(".content-outer-bloques-content-item-cont-img").html());
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit1").html(parent.find(".content-outer-bloques-content-item-cont-tit1").html());
-			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit2").html(parent.find(".content-outer-bloques-content-item-cont-tit2").html());
+			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-tit2").html(parent.find(".content-outer-bloques-content-item-cont-tit2-completo").html());
 			var contactInfo = parent.find(".content-outer-bloques-content-item-cont-info-row-text");
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-info-row-text").eq(0).html(contactInfo.eq(0).html());
 			$(".content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-cont-info-row-text").eq(1).html(contactInfo.eq(1).html());

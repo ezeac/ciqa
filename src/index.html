@@ -46,7 +46,13 @@
 <body>
 	<div class="load-bar" style="position: fixed; top: 0px; left: 0px; height: 10px; width: 5%; transition: width 3s; background: #00183E;"></div>
 	<div class="loader"></div>
-	<style>.loader { border: 7px solid transparent; border-top: 7px solid #00183E; border-bottom: 7px solid #00183E; border-radius: 50%; width: 80px; height: 80px; animation: spin 1s linear infinite; margin-left: 50%; margin-top: 40vh; transform: translate(-50%, -50%); }@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+	<style>
+		.loader { border: 7px solid transparent; border-top: 7px solid #00183E; border-bottom: 7px solid #00183E; border-radius: 50%; width: 80px; height: 80px; animation: spin 1s linear infinite; left: 50%; top: 40vh; transform: translate(-50%, -50%); position: fixed; }
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+    </style>
 	<app-root style="opacity: 0">
 	</app-root>
 </body>

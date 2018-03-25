@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 declare var jquery:any;
 declare var $:any;
-declare var TweenMax:any; declare var Power3:any; declare var animIn:any;
+declare var TweenMax:any; declare var Power3:any; declare var animIn:any; declare var fs:any;
 
 @Component({
 	selector: "ingenieriaAmbiental",

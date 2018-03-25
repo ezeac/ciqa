@@ -33,7 +33,7 @@
 									<div class="titulo1 t25 noticia-titulo"><b>{{noticia.title.rendered}}</b></div>
 									<div class="texto1 t15 noticia-content hidden" [innerHtml]='noticia.content.rendered'></div>
 									<div class="texto1 t15 noticia-resumen">{{noticia.resumen}} [...]</div>
-									<div class="button-big t12" (click)="toggle_mostrar_noticia(noticia.id)">› LEER MÁS </div>
+									<div class="button-big t12" (click)="toggle_mostrar_noticia(noticia.id)">LEER MÁS </div>
 								</div>
 								<div class="hidden-xs col-sm-1">&nbsp;</div>
 								<div class="col-xs-12 col-sm-6">
@@ -134,6 +134,7 @@
 		<div class="content-outer-bloques col-xs-12 no-padding noticia_expanded" style="display: none;">
 			<div class="hidden-xs col-sm-2"></div>
 			<div class="col-xs-12 col-sm-10">
+				<div class="breadcumbs col-xs-12 t16"><a class="pull-left capitalize" href="javascript:0" (click)="toggle_mostrar_noticia()">{{'home' | translate}} ›&nbsp;</a><div class="breadcumbs-item"></div></div>
 				<div class="noticia-img"></div>
 				<div class="noticia-titulo bold t32 tcolor-3"></div>
 				<div class="noticia-extract t16"></div>

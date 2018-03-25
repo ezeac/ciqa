@@ -1,4 +1,5 @@
 export class Contacto1 {
+	public tipoDeContactoForm:string;
 	public nombreForm:string;
 	public dniForm:string;
 	public emailForm:string;

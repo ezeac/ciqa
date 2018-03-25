@@ -175,6 +175,7 @@ export class HomeComponent{
 			$(".content-outer > .noticia_expanded").stop().fadeOut(0);
 			$(".content-outer > div:not(.noticia_expanded)").stop().fadeIn();
 		} else {
+			$(".noticia_expanded .breadcumbs-item").html($("#noticia-"+id+" .noticia-titulo").html());
 			$(".noticia_expanded .noticia-titulo").html($("#noticia-"+id+" .noticia-titulo").html());
 			$(".noticia_expanded .noticia-content").html($("#noticia-"+id+" .noticia-content").html());
 			$(".noticia_expanded .noticia-extract").html($("#noticia-"+id+" .noticia-resumen").html());
