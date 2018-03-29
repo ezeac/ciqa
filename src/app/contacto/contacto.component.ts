@@ -34,6 +34,7 @@ export class ContactoComponent{
 		this._route.params.forEach((params: Params) =>{
 			this.parametro = params['page'];
 		})
+		this.contacto1.tipoDeContactoForm = "0";
 	}
 
 	redirigir(){

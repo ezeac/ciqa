@@ -120,13 +120,13 @@ footer .footer-cont-cont2-cont3-contacto { margin: 25px 0px; }
 app-root > *:not(.popup):not(header) { transition: filter 1s; }
 
 /* nav-tabs */
-.content-outer-bloques-nav .content-outer-bloques-nav-item { float: left; padding: 20px; color: white; cursor: pointer; transition: all .2s ease; }
+.content-outer-bloques-nav .content-outer-bloques-nav-item {float: left;padding: 20px;color: white;cursor: pointer;/* transition: all .2s ease; */}
 .content-outer-bloques-nav .content-outer-bloques-nav-item.active-tab-nav { background: white; color: #09A5E4; box-shadow: 0px -15px 15px 0px rgba(0, 0, 0, 0); font-weight: 700; }
 .content-outer-bloques-nav .content-outer-bloques-nav-item:hover { color: #a2d4e8; }
 .content-outer-bloques-nav { clear: both; float: left; width: 100%; background: linear-gradient(#09A5E4 90%, #09A5E4 120%); overflow: hidden; }
 
 /* nav-slide-down */
-.content-outer-bloques-content .content-outer-bloques-content-item {height: auto;overflow: hidden;transition: max-height 2s ease-in;max-height: 0px;float: left;font-size: 16px;width: 100%;}
+.content-outer-bloques-content .content-outer-bloques-content-item {height: auto;overflow: hidden;transition: max-height 3s ease-in;max-height: 0px;float: left;font-size: 16px;width: 100%;}
 .content-outer-bloques-content .content-outer-bloques-content-item.active-tab-content {max-height: 5000px;}
 .content-outer-bloques-content { float: left; position: relative; width: 100%; padding: 5% 10%; min-height: 90vh; }
 .content-outer-bloques-content-item-item1-content { display: none; width: 100%; overflow: hidden; }
@@ -224,7 +224,6 @@ app-root > *:not(.popup):not(header) { transition: filter 1s; }
 /* investigación y docencia */
 .content-outer-bloques-content-item-fullpage .content-outer-bloques-content-item-fullpage-cont-content img { display: block; text-align: center; margin: 30px auto; }
 investigacion .content-outer-bloques-content-item[data-content='cursos'] {
-    line-height: 1.2;
 }
 
 /* capacitaciones */
@@ -242,7 +241,7 @@ clientes form { display: flex; flex-direction: column; align-items: center; just
 clientes form input[type="submit"] { margin-top: 20px; width: 200px; height: 40px; transition: all .2s; }
 clientes form input[type="submit"]:disabled { opacity: .5; cursor: not-allowed; }
 clientes form label { margin-bottom: 20px; }
-.content-outer-bloques-nav1 a { padding: 30px; color: white; float: left; clear: both; width: 100%; transition: all .2s; display: flex; align-items: center; justify-content: flex-start; padding-left: 20%; }
+.content-outer-bloques-nav1 a {padding: 30px;color: white;float: left;clear: both;width: 100%;transition: background .2s, color .2s;display: flex;align-items: center;justify-content: flex-start;padding-left: 20%;}
 .content-outer-bloques-nav1 svg { width: 20px; float: left; margin-right: 10px; transform: translateY(0%); height: 20px; }
 .content-outer-bloques-nav1 svg * { transition: all .5s; }
 .content-outer-bloques-nav1 a:hover { background: #ffffff; color: #19299b; }

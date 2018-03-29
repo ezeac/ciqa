@@ -33,15 +33,18 @@
 						<div class="content-outer-bloques-content-item-cont">
 							<form #formContacto1="ngForm" (ngSubmit)="onSubmit($event)">
 								<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-4">
-									<div class="content-outer-bloques-content-item-cont-item">
+									<!-- <div class="content-outer-bloques-content-item-cont-item">
 										<input type="text" name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="contacto1.tipoDeContactoForm" placeholder="{{'Tipo de contacto' | translate}}">
 										<span *ngIf="tipoDeContacto.touched && !tipoDeContacto.valid">{{'Formato de tipoDeContacto incorrecto' | translate}}</span>
-									</div>
-									<!-- <div class="content-outer-bloques-content-item-cont-item">
-										<select name="" id="">
-											<option value=""></option>
-										</select>
 									</div> -->
+									<div class="content-outer-bloques-content-item-cont-item">
+										<select name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="contacto1.tipoDeContactoForm">
+											<option disabled value="0" selected>Tipo de contacto</option>
+											<option value="consulta">Consulta</option>
+											<option value="queja">Queja</option>
+											<option value="agradecimiento">Agradecimiento</option>
+										</select>
+									</div>
 									<!-- <div class="content-outer-bloques-content-item-cont-item">
 										<input type="text" name="dni" #dni="ngModel" [(ngModel)]="contacto1.dniForm" required pattern="[0-9]+" placeholder="{{'Cuil/Cuit' | translate}}">
 										<span *ngIf="dni.touched && !dni.valid">{{'Formato de dni incorrecto' | translate}}</span>

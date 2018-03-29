@@ -2,8 +2,7 @@ import { Component, Input } from "@angular/core";
 import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-declare var jquery:any;
-declare var $:any;
+declare var $:any, jquery:any, TweenMax:any, Power2:any;
 
 @Component({
 	selector: "servicios",
@@ -31,6 +30,12 @@ export class ServiciosComponent{
 			this.parametro = params['page'];
 		})
 		this.peticionesService.animate_scroll("html", 0);
+
+		$(document).ready(function(){
+			$('.content-outer-bloques-cont-item > a').click(function(){
+				TweenMax.staggerFromTo('.content-outer-bloques-nav-item, .content-outer-bloques-content-item-item1, .content-outer-bloques-content-item-img', 0.5, {opacity:0, y:50},{y: 0, opacity: 1, ease: Power2.easeOut}, 0.1);
+			})
+		});
 	}
 
 	buscarServicio(search) {

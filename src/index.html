@@ -155,7 +155,7 @@ $(".fadeInNormal").each(function(index,element){
     var nombreAnimacion = new TweenMax.fromTo(element, 0.5, {opacity:0, y:50},{y: 0, opacity: 1, delay: i});
     //ASIGNANDO TRIGGERS
     var scenenombreAnimacion = new ScrollMagic.Scene({triggerElement: element, offset: -250}).setTween(nombreAnimacion).addTo(scrollMagicController);
-})
+});
 
 $(".fadeInAuto").each(function(index,element){
 	// CREANDO ANIMACIÓN

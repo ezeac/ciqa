@@ -1,9 +1,13 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Injectable } from "@angular/core";
 import { PeticionesService } from '../../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+//import { Observable } from "rxjs";
+import { Http } from '@angular/http';
 
 declare var jquery:any;
 declare var $:any;
+
+@Injectable()
 
 @Component({
 	selector: "clientesComprobantes",
@@ -22,7 +26,9 @@ export class ClientesComprobantesComponent{
 	constructor(
 		private peticionesService:PeticionesService,
 		private _route: ActivatedRoute,
-		private _router: Router
+		private _router: Router,
+		private http: Http
+
 	){}
 
 	ngOnInit(){
@@ -33,6 +39,22 @@ export class ClientesComprobantesComponent{
 
 	redirigir(){
 		this._router.navigate(['/clientesComprobantes','valorPage']);
+	}
+
+	fileChange(event) {
+		let fileList: FileList = event.target.files;
+
+		if(fileList.length > 0) {
+			
+			let formData:FormData = new FormData();
+			for(var i = 0; i < fileList.length; i++){
+	            formData.append(fileList[i].name, fileList[i]);
+	            console.log(fileList[i]);
+	        }
+
+			console.log(formData);
+	        this.http.post('../../../assets/fileUpload.php', formData).subscribe();
+		}
 	}
 
 }

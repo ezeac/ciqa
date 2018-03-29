@@ -3,8 +3,7 @@ import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Login } from './loginModel';
 
-declare var jquery:any;
-declare var $:any;
+declare var $:any, jquery:any, TweenMax: any, Power2:any;
 
 @Component({
 	selector: "clientes",
@@ -30,6 +29,15 @@ export class ClientesComponent{
 			this.parametro = params['page'];
 		})
 		this.animate_scroll("html");
+
+
+		$(document).ready(function(){
+			$('.content-outer-bloques-nav1 > a').click(function(){
+				console.log("e");
+				TweenMax.staggerFromTo('.content-outer-clientes > div, .content-outer-clientes form > div > div', 0.5, {opacity:0, y:50},{y: 0, opacity: 1, ease: Power2.easeOut}, 0.1);
+			});
+		})
+
 	}
 
 	animate_scroll(element) {

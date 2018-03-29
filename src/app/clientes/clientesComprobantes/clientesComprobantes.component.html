@@ -2,7 +2,7 @@
 
 	<div class="info-tit bold tcolor-3 t24 capitalize bold t24">{{'comprobantes' | translate}}</div>
 
-	<div class="content-outer-clientes-text tcolor-4 uppercase bold t12" style="cursor: pointer"><a href="javascript:$('.inputfile').fadeToggle()"><b>› </b>{{'adjuntar nuevo comprobante' | translate}} (pdf)</a><input class="inputfile" style="display:none" type="file" name="pic" value="aquí" accept=".pdf"></div>
+	<div class="content-outer-clientes-text tcolor-4 uppercase bold t12" style="cursor: pointer"><a href="javascript:$('.inputfile').fadeToggle()"><b>› </b>{{'adjuntar nuevo comprobante' | translate}} (pdf)</a><input (change)="fileChange($event)" class="inputfile" style="display:none" type="file" name="pic" value="aquí" accept=".pdf"></div>
 	
 	<br><div class="content-outer-clientes-info">{{'Aún no hay comprobantes adjuntados' | translate}}</div>
 

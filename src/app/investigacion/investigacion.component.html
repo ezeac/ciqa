@@ -58,7 +58,7 @@
 							<div class="hidden-xs col-sm-1">&nbsp;</div>
 							<div class="col-xs-12 col-sm-11">
 								<!-- Items Investigadores -->
-								<div *ngFor="let item of investigador" class="content-outer-bloques-content-item-cont col-xs-12 col-sm-6">
+								<div *ngFor="let item of investigador" class="content-outer-bloques-content-item-cont item-investigador col-xs-12 col-sm-6">
 									<div class="content-outer-bloques-content-item-cont-img col-xs-4" style="cursor: pointer" (click)="toggleFullContent(1, $event)"><img src="{{item.foto.guid}}" alt="{{item.title.rendered}}"></div>
 									<div class="content-outer-bloques-content-item-cont-info col-xs-8">
 										<div class="content-outer-bloques-content-item-cont-tit1 bold t14 tcolor-3 capitalize">{{item.title.rendered}}</div>
@@ -116,6 +116,7 @@
 							<div class="content-outer-bloques-content-item-item1-content">
 								<div>
 									<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+										<div class="content-outer-bloques-content-item-item1-content-info-upperimg pull-left col-xs-12"><img src="../assets/media/investigacion/areas_de_interes/suelo.jpg" alt=""></div>
 										<div class="content-outer-bloques-content-item-item1-content-info-texto pull-left t16">
 											<b class='tcolor-4'>›</b> Metodologías innovadoras de caracterización de sitios contaminados<br><br>
 											<b class='tcolor-4'>›</b> Remediación empleando tecnología emergentes (ISCO, PRB, etc)<br><br>
@@ -132,6 +133,7 @@
 							<div class="content-outer-bloques-content-item-item1-content">
 								<div>
 									<div class="content-outer-bloques-content-item-item1-content-info col-xs-12">
+										<div class="content-outer-bloques-content-item-item1-content-info-upperimg pull-left col-xs-12"><img src="../assets/media/investigacion/areas_de_interes/agua.jpg" alt=""></div>
 										<div class="content-outer-bloques-content-item-item1-content-info-texto pull-left t16">
 											<b class='tcolor-4'>›</b> Caracterización de sustancias odoríficas del agua<br><br>
 											<b class='tcolor-4'>›</b> Organismos acuáticos y sus toxinas<br><br>

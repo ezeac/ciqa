@@ -79,7 +79,7 @@ export class PeticionesService {
 
 
 	animate_scroll(element, duration = 0) {
-		$('html, body').animate({'scrollTop':$(element).offset().top-100},1000);
+		$('html, body').animate({'scrollTop':$(element).offset().top-100},0);
 	}
 
 	show_animated_tab(selector, event) {

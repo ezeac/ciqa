@@ -53,7 +53,7 @@ canvas { display: block; vertical-align: bottom; }
 .navigation-items > div:hover { opacity: .7; }
 .thumb-img .thumb-img-background2,
 .thumb-img .thumb-img-background { position: absolute; right: -1px; width: 101%; height: 101%; z-index: 0; top: -1px; }
-.thumb-img { height: 400px; overflow: hidden; position: relative; margin-bottom: 20px; box-shadow: 0px 0px 15px 0px black; }
+.thumb-img { height: 400px; overflow: hidden; position: relative; margin-bottom: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6); }
 .texto-inicial2 { top: 0px; left: 0px; z-index: 1; position: absolute; }
 .texto-inicial2 .cont-textos { top: calc(30vh + 300px); padding: 0px;}
 .texto-inicial2 .cont-textos .arrow-down { cursor: pointer; float: left; padding: 20px 20px 20px 0px; margin-left: calc(10vw - 5px); }

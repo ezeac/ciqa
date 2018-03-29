@@ -3,7 +3,7 @@ import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 
-declare var jquery:any; declare var $:any; declare var particlesJS:any; declare var TweenMax:any; declare var Power2:any; declare var TweenMax:any;	declare var Power2:any;
+declare var jquery:any, $:any, particlesJS:any, TweenMax:any, Power2:any;
 
 @Component({
 	selector: "home",
