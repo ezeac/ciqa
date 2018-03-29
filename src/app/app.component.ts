@@ -24,11 +24,9 @@ export class AppComponent {
 			$(this).removeClass("navigation-menu-mouse-in");
 		})
 		$('.nav-links').click(function(){
-			TweenMax.killAll();
 			TweenMax.staggerFromTo('.content-outer-bloques-nav-item, .item-investigador, .content-outer-bloques-cont-item, .content-outer-bloques-content-item-cont-redes-svg, .cont-textos > div, .texto-inicial2 > div, .content-outer-bloques-content-item-cont-info-text, .content-outer-bloques-content-item-cont-item, .content-outer-bloques-content-item-item1, .content-outer-bloques-content-item-img, .content-outer-bloques-content-item-cont-map, .content-outer-bloques-nav1 > a, .content-outer-clientes > div', 0.5, {opacity:0, y:50},{y: 0, opacity: 1, ease: Power2.easeOut}, 0.1);
 		});
 		$('.navlogo').click(function(){
-			TweenMax.killAll();
 			TweenMax.staggerFromTo('.cont-textos > div, .texto-inicial2 > div', 0.5, {opacity:0, y:50},{y: 0, opacity: 1, ease: Power2.easeOut}, 0.1);
 		})
 	}
