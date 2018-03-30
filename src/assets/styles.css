@@ -5,7 +5,7 @@
 html { animation: clip 2s; }
 footer .footer-cont-cont2-redes svg { height: 25px; width: 25px; margin: 0px 15px; }
 footer .footer-cont-cont2-redes li:first-child svg { margin-left: 0px; }
-footer .footer-cont-cont2-redes li { }
+footer .footer-cont-cont2-redes li:hover * {fill: #00a5e6;cursor: pointer;}
 .font1 { font-family: 'Nunito Sans'; }
 .t1 { font-size: 1px; }
 .t2 { font-size: 2px; }

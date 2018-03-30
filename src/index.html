@@ -75,6 +75,7 @@ var init_web = setInterval(function(){
 	if (document.readyState) {
 	// if (document.readyState == "complete") {
 		load_bar = 100;
+		$("html, body").scrollTop(0);
 		$(".loader, .load_bar").fadeOut();
 		clearInterval(init_web);
 		setTimeout(function(){
@@ -152,9 +153,9 @@ $(".fadeInNormal").each(function(index,element){
     }
     offsetAnterior = $(element).offset().top;
     // CREANDO ANIMACIÓN
-    var nombreAnimacion = new TweenMax.fromTo(element, 0.5, {opacity:0, y:50},{y: 0, opacity: 1, delay: i});
+    var nombreAnimacion = new TweenMax.fromTo(element, 1, {opacity:0, y:50},{opacity: 1, y:0, delay: i});
     //ASIGNANDO TRIGGERS
-    var scenenombreAnimacion = new ScrollMagic.Scene({triggerElement: element, offset: -200}).setTween(nombreAnimacion).addTo(scrollMagicController);
+    var scenenombreAnimacion = new ScrollMagic.Scene({triggerElement: element, offset: -50}).setTween(nombreAnimacion).addTo(scrollMagicController);
 });
 
 $(".fadeInAuto").each(function(index,element){
