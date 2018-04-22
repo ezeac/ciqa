@@ -31,7 +31,7 @@ export class QuienesSomosComponent{
 		this.peticionesService.animate_scroll("html", 0);
 
 		this.peticionesService.get_integrantes().subscribe(
-			data => this.investigador = data.filter(String), 
+			data => this.investigador = data.filter(String).sort(function(a, b){return a.menu_order-b.menu_order}), 
 			(err) => console.log(err), 
 			() => {console.log(this.investigador)},
 		);

@@ -32,7 +32,7 @@ export class InvestigacionComponent{
 		this.animate_scroll("html");
 
 		this.peticionesService.get_investigadores().subscribe(
-			data => this.investigador = data.filter(String), 
+			data => this.investigador = data.filter(String).sort(function(a, b){return a.menu_order-b.menu_order}), 
 			(err) => console.log(err), 
 			() => {},
 		);
