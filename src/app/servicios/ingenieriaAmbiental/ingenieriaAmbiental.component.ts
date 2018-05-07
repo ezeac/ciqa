@@ -64,6 +64,10 @@ export class IngenieriaAmbientalComponent{
 		});
 
 		this.incializarSliderthumb();
+
+		setInterval(()=>{
+			$(".carousel-indicators > div.active").next().trigger("click");
+		},7000);
 	}
 
 	redirigir(){

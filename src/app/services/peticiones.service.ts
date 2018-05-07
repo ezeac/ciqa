@@ -79,7 +79,7 @@ export class PeticionesService {
 
 
 	animate_scroll(element, duration = 0) {
-		$('html, body').animate({'scrollTop':$(element).offset().top-100},0);
+		$('html, body').animate({'scrollTop':$(element).offset().top-100},duration);
 	}
 
 	show_animated_tab(selector, event) {
@@ -107,13 +107,13 @@ export class PeticionesService {
 	}
 
 	get_integrantes(){
-		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,nombre_completo,cargo,email,telefono,foto.guid,contenido_investigador,menu_order";
+		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&per_page=100";
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}
 
 	get_investigadores(){
-		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,nombre_completo,cargo_acotado,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&filter=es_investigador:1";
+		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,cargo_acotado,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&filter=es_investigador:1&per_page=100";
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}

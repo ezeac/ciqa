@@ -10,7 +10,7 @@
 			</div>	
 			<div class="texto-inicial2 tcolor-1">
 				<div class="cont-textos col-xs-12 col-sm-4 col-xs-3 fadeInAuto">
-					<div class="arrow-down"><i class="material-icons" (click)="peticionesService.animate_scroll('.content-outer')">keyboard_arrow_down</i></div>
+					<div class="arrow-down" (click)="peticionesService.animate_scroll('.content-outer',700)"><i class="material-icons">keyboard_arrow_down</i></div>
 				</div>
 			</div>
 			<div id="particles-js">
@@ -128,7 +128,7 @@
 				<div class="content-outer-bloques-cont-info col-xs-12 col-sm-5 col-lg-4">
 					<div class="content-outer-bloques-cont-info-titulo t30 tcolor-3"><b>{{'Clientes que confían en nosotros' | translate}}</b></div>
 					<div class="content-outer-bloques-cont-info-texto t12 t-color-2">{{'Lo que se busca en CIQA es brindar un servicio con la responsabilidad y ética que nuestra Universidad y la comunidad nos exige, pero con la misma eficiencia que las más importantes empresas privadas del rubro poseen.' | translate}}</div>
-					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><a [routerLink]="['/contacto']"><b>› {{'leer más' | translate}}</b></a></div>
+					<div class="content-outer-bloques-cont-info-leermas uppercase t11 tcolor-4"><a [routerLink]="['/contacto']"><b>› {{'contáctenos' | translate}}</b></a></div>
 				</div>
 			</div>
 		</div>

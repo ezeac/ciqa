@@ -56,6 +56,12 @@ export class HomeComponent{
 		
 		this.peticionesService.animate_scroll("html", 0);
 
+		setInterval(()=>{
+			this.moverSliderHome3(this.sliderHome3Actual+1);
+			setTimeout(()=>{this.moverSlider(this.sliderHome3Actual+1)},1000);
+			setTimeout(()=>{this.moverSliderHome2(this.sliderHome3Actual+1)},2000);
+		},8000);
+
 	}
 
 	redirigir(){
