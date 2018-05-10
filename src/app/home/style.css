@@ -29,7 +29,7 @@ canvas { display: block; vertical-align: bottom; }
 .ultimas-noticias { padding: 5%; background: linear-gradient(#19289B 80%, white 50%); }
 .ultimas-noticias .scroll-nav { position: absolute; right: calc(5% + 15px); top: 50px; }
 .ultimas-noticias > div .titulo { padding-bottom: 50px; }
-.ultimas-noticias .noticia-item .titulo1 { margin-bottom: 40px; }
+.ultimas-noticias .noticia-item .titulo1 { text-align: left; margin-bottom: 40px; }
 .ultimas-noticias .noticia-item .thumb-img img { width: 100%; }
 .ultimas-noticias .noticia-item .texto1 { line-height: 180%; }
 .ultimas-noticias .noticia-item .button-big { float: left; clear: both; margin-top: 40px; }
@@ -37,7 +37,7 @@ canvas { display: block; vertical-align: bottom; }
 .content-outer .content-outer-bloques .sliderContainer { transition: all .3s; }
 .content-outer-bloques-cont-info-texto { line-height: 170%; }
 .content-outer-bloques-cont-info-leermas { margin-top: 20px; }
-.content-outer-bloques-cont-info-titulo { margin-bottom: 15px; padding-bottom: 15px; position: relative; }
+.content-outer-bloques-cont-info-titulo { text-align:left; margin-bottom: 15px; padding-bottom: 15px; position: relative; }
 .content-outer-bloques-cont-info-titulo:before { content: ''; position: absolute; width: 20%; bottom: 0px; left: 0px; border: 1px solid #09A5E4; }
 .slider .sliderItem { height: 300px; float: left; }
 .sliderContainer { float: left; width: 100%; /*transition: margin-left 1s ease;*/ }

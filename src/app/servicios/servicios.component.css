@@ -4,5 +4,5 @@
 .content-outer-bloques-cont-item-link:hover,
 .link-activo-servicios{opacity:1 !important;}
 .content-outer-bloques-cont-item-link-svg{width:100px;float:left;}
-.content-outer-bloques-cont-item-link-text{font-size:20px;color:white;}
+.content-outer-bloques-cont-item-link-text{ text-align: left; font-size:20px;color:white;}
 .content-outer-bloques-cont{background:#19289B;width:100%;float:left;padding: 20px 8%;}

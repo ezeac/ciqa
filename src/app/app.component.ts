@@ -28,13 +28,35 @@ export class AppComponent {
 		});
 		$('.navlogo').click(function(){
 			TweenMax.staggerFromTo('.cont-textos > div, .texto-inicial2 > div', 0.5, {opacity:0, y:50},{y: 0, opacity: 1, ease: Power2.easeOut}, 0.1);
-		})
+		});
+		setTimeout(()=>{this.generar_menu_movil()},1);
 	}
 	
 	constructor(private translate: TranslateService,private peticionesService:PeticionesService) {
 		translate.addLangs(["es","en"])
 		translate.setDefaultLang('es');
 		translate.use('es');
+	}
+
+	generar_menu_movil() {
+		var links = $(".navigation-menu .nav-links").clone().addClass("mobile");
+		$(".navigation-menu .nav-links").before("<div class='mobile-cont-menu visible-xs'><i class='material-icons'>menu</i><div class='cont'>"+links.html()+"</div></div>");
+
+		$(".navigation-menu .mobile-cont-menu .cont").append($(".navigation-menu .mobile-cont-menu .cont .button"));
+
+		$(".navigation-menu .mobile-cont-menu .cont").prepend('<a _ngcontent-c0="" class="font1 t14 tcolor-1" ng-reflect-router-link="/home" ng-reflect-router-link-active="claseLinkActivo" href="#/home">home</a>');
+
+		$(".navigation-menu .mobile-cont-menu > i").click(function(){
+			$(".navigation-menu .mobile-cont-menu > i").fadeOut(0);
+			if (parseFloat($(".navigation-menu .mobile-cont-menu .cont").css("right")) < 0) {
+		    	$(".navigation-menu .mobile-cont-menu .cont").css({"right":"0","opacity":"1"});
+				$(".navigation-menu .mobile-cont-menu > i").html("close");
+			} else {
+				$(".navigation-menu .mobile-cont-menu .cont").css({"right":"-100vw","opacity":".3"});
+				$(".navigation-menu .mobile-cont-menu > i").html("menu");
+			}
+			$(".navigation-menu .mobile-cont-menu > i").fadeIn();
+		});
 	}
 
 	actualizar_idioma(select = "#translate-selector") {
