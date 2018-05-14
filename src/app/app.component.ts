@@ -44,7 +44,7 @@ export class AppComponent {
 
 		$(".navigation-menu .mobile-cont-menu .cont").append($(".navigation-menu .mobile-cont-menu .cont .button"));
 
-		$(".navigation-menu .mobile-cont-menu .cont").prepend('<a _ngcontent-c0="" class="font1 t14 tcolor-1" ng-reflect-router-link="/home" ng-reflect-router-link-active="claseLinkActivo" href="#/home">home</a>');
+		$(".navigation-menu .mobile-cont-menu .cont").prepend('<a class="font1 t14 tcolor-1" ng-reflect-router-link="/home" ng-reflect-router-link-active="claseLinkActivo" href="#/home">home</a>');
 
 		$(".navigation-menu .mobile-cont-menu > i").click(function(){
 			$(".navigation-menu .mobile-cont-menu > i").fadeOut(0);
@@ -56,6 +56,9 @@ export class AppComponent {
 				$(".navigation-menu .mobile-cont-menu > i").html("menu");
 			}
 			$(".navigation-menu .mobile-cont-menu > i").fadeIn();
+		});
+		$(".navigation-menu .mobile-cont-menu .cont a").click(function(){
+			setTimeout(()=>{$(".navigation-menu .mobile-cont-menu > i").trigger("click")},200);
 		});
 	}
 

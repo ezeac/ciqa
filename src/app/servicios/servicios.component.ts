@@ -36,6 +36,30 @@ export class ServiciosComponent{
 				TweenMax.staggerFromTo('.content-outer-bloques-nav-item, .content-outer-bloques-content-item-item1, .content-outer-bloques-content-item-img', 0.5, {opacity:0, y:50},{y: 0, opacity: 1, ease: Power2.easeOut}, 0.1);
 			})
 		});
+
+		$(".content-outer-bloques-cont > div").click(function(e){
+			if ($(window).width() < 768) {
+				e.stopPropagation();
+				if (parseInt($(".content-outer-bloques-cont").css("maxHeight")) > 100) {
+					$(".content-outer-bloques-cont").css("maxHeight",100);
+					$(".content-outer-bloques-cont").prepend($(this));
+				} else {
+					$(".content-outer-bloques-cont").css("maxHeight",400);
+				}
+			}
+		});
+
+		$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) > div").click(function(e){
+			if ($(window).width() < 768) {
+				e.stopPropagation();
+				if (parseInt($(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").css("maxHeight")) > 100) {
+					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").css("maxHeight",58);
+					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").prepend($(this));
+				} else {
+					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").css("maxHeight",300);
+				}
+			}
+		});
 	}
 
 	buscarServicio(search) {

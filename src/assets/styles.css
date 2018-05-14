@@ -141,7 +141,7 @@ app-root > *:not(.popup):not(header) { transition: filter 1s; }
 /* nav-slide-down */
 .content-outer-bloques-content .content-outer-bloques-content-item {height: auto;overflow: hidden;transition: max-height 3s ease-in;max-height: 0px;float: left;font-size: 16px;width: 100%;}
 .content-outer-bloques-content .content-outer-bloques-content-item.active-tab-content {max-height: 5000px;}
-.content-outer-bloques-content { float: left; position: relative; width: 100%; padding: 5% 10%; min-height: 90vh; }
+.content-outer-bloques-content {float: left;position: relative;width: 100%;padding: 5% 0;min-height: 90vh;}
 .content-outer-bloques-content-item-item1-content { display: none; width: 100%; overflow: hidden; }
 .content-outer-bloques-content-item-item1-title {padding-top: 20px;border-top: 1px solid;position: relative;color: black;cursor: pointer;font-weight: 600;padding-bottom: 20px;padding-left: 0px;padding-right: 30px !important;}
 .content-outer-bloques-content-item-item1-content > div { display: flex; align-items: center; padding-bottom: 20px; }
@@ -375,7 +375,8 @@ header.navigation-menu .navlogo img {
     right: 0px;
     width: 100%;
     display: inline-block;
-    overflow: hidden;
+    height: 80px;
+    overflow: visible;
 }
 
 .navigation-menu .mobile-cont-menu i {
@@ -501,7 +502,7 @@ home .ultimas-noticias {
 }
 
 .content-outer-bloques-cont .navigation-items {
-    display: none;
+    display: none !important;
 }
 
 home .footer .navigation-items {
@@ -586,5 +587,130 @@ footer .footer-cont .footer-cont-cont2:last-child {
 }
 
 .content-outer-bloques-cont-inversed .sliderMarco {
-    /* width: 100% !important; */
+    width: calc(100vw - 62px);
+}
+
+.content-outer-bloques-cont-inversed div {
+    text-align: left !important;
+}
+
+.claseLinkActivo.claseLinkActivo:before {
+    width: 0px;
+}
+
+.navigation-menu a:before {
+    left: 5px;
+    width: 0;
+}
+
+.navigation-menu.navigation-menu a:not(.button):not(.logoLink):hover:before {
+    width: 20%;
+}
+
+/* Servicios Móvil */
+.content-outer .tituloOffset {
+    padding-left: 5%;
+    margin-top: -120px;
+}
+
+.content-outer .tituloOffset:nth-child(2) {
+    float: left;
+    margin-top: -60px;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.content-outer .tituloOffset:nth-child(2) form {
+    width: 100%;
+}
+
+.content-outer .tituloOffset:nth-child(2) form input {
+    width: 100%;
+}
+
+.content-outer .tituloOffset:nth-child(2):before {
+    left: 20px;
+}
+
+.content-outer-bloques-cont-item-link-svg svg {
+    width: 50px;
+    padding: 0;
+}
+
+.content-outer-bloques-cont-item-link-svg {
+    width: auto !important;
+    float: left;
+}
+
+.content-outer-bloques-cont-item-link-text {
+    float: left;
+    width: auto;
+}
+
+.content-outer-bloques-cont-item-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-outer-bloques-cont-item {
+    height: 100px !important;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+servicios .content-outer-bloques-cont {
+    padding: 0 8% !important;
+    max-height: 100px;
+    overflow: hidden;
+    transition: all .3s ease-out;
+}
+
+servicios .content-outer-bloques-cont:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 7%;
+    width: 5px;
+    height: 5px;
+    border: 4px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-45deg);
+}
+
+servicios .nav-style-2 .content-outer-bloques-nav-img {
+    display: none !important;
+}
+
+.nav-style-2.content-outer-bloques-nav .content-outer-bloques-nav-item {
+    padding: 20px 10% !important;
+}
+
+.nav-style-2.content-outer-bloques-nav > div:nth-child(1) {
+    padding: 0 !important;
+    max-height: 58px;
+    transition: all .3s ease-out;
+}
+.nav-style-2.content-outer-bloques-nav > div:before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: 7%;
+    width: 5px;
+    height: 5px;
+    border: 4px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-45deg);
+}
+.content-outer {
+    margin-top: 250px;
+}
+.content-outer-bloques-cont-inversed div {
+    text-align: left !important;
+}
+
+.content-outer-bloques-content-item-item1-title {
+    font-size: 14px;
+    font-weight: normal !important;
 }
