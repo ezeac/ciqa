@@ -40,7 +40,7 @@ export class AppComponent {
 
 	generar_menu_movil() {
 		var links = $(".navigation-menu .nav-links").clone().addClass("mobile");
-		$(".navigation-menu .nav-links").before("<div class='mobile-cont-menu visible-xs'><i class='material-icons'>menu</i><div class='cont'>"+links.html()+"</div></div>");
+		$(".navigation-menu .nav-links").before("<div class='mobile-cont-menu visible-xs visible-sm'><i class='material-icons'>menu</i><div class='cont' style='display: none;'>"+links.html()+"</div></div>");
 
 		$(".navigation-menu .mobile-cont-menu .cont").append($(".navigation-menu .mobile-cont-menu .cont .button"));
 
@@ -49,10 +49,12 @@ export class AppComponent {
 		$(".navigation-menu .mobile-cont-menu > i").click(function(){
 			$(".navigation-menu .mobile-cont-menu > i").fadeOut(0);
 			if (parseFloat($(".navigation-menu .mobile-cont-menu .cont").css("right")) < 0) {
-		    	$(".navigation-menu .mobile-cont-menu .cont").css({"right":"0","opacity":"1"});
+		    	$(".navigation-menu .mobile-cont-menu .cont").css({"display":"flex"});
+		    	setTimeout(function(){$(".navigation-menu .mobile-cont-menu .cont").css({"right":"0","opacity":"1"})},0);
 				$(".navigation-menu .mobile-cont-menu > i").html("close");
 			} else {
 				$(".navigation-menu .mobile-cont-menu .cont").css({"right":"-100vw","opacity":".3"});
+				setTimeout(function(){$(".navigation-menu .mobile-cont-menu .cont").css({"display":"none"});},200);
 				$(".navigation-menu .mobile-cont-menu > i").html("menu");
 			}
 			$(".navigation-menu .mobile-cont-menu > i").fadeIn();

@@ -2,10 +2,11 @@
 <html style="overflow: hidden;">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CIQA</title>
 	<base href="/">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -44,10 +45,10 @@
 </head>
 
 <body>
-	<div class="load-bar" style="position: fixed; top: 0px; left: 0px; height: 10px; width: 5%; transition: width 1s; background: #00183E;"></div>
+	<div class="load-bar" style="position: fixed; top: 0px; left: 0px; height: 10px; width: 5vw; transition: width 1s; background: #00183E;"></div>
 	<div class="loader"></div>
 	<style>
-		.loader { border: 7px solid transparent; border-top: 7px solid #00183E; border-bottom: 7px solid #00183E; border-radius: 50%; width: 80px; height: 80px; animation: spin 1s linear infinite; left: calc(50% - 40px); top: 40vh; position: fixed; }
+		.loader { border: 7px solid transparent; border-top: 7px solid #00183E; border-bottom: 7px solid #00183E; border-radius: 50%; width: 80px; height: 80px; animation: spin 1s linear infinite; left: calc(50vw - 40px); top: 40vh; position: fixed; }
 		@keyframes spin {
 			0% { transform: rotate(0deg); }
 			100% { transform: rotate(360deg); }
@@ -106,7 +107,7 @@ var init_web = setInterval(function(){
 	if (load_bar < 100) {
 		load_bar += Math.floor((Math.random() * 10) + 1);
 	}
-	$(".load-bar").css({"width":load_bar+"%"});
+	$(".load-bar").css({"width":load_bar+"vw"});
 },500)
 
 //on interactive version

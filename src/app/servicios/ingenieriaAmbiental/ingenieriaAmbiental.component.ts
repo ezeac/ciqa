@@ -68,6 +68,23 @@ export class IngenieriaAmbientalComponent{
 		setInterval(()=>{
 			$(".carousel-indicators > div.active").next().trigger("click");
 		},7000);
+
+
+		$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) > div").click(function(e){
+			if ($(window).width() < 768) {
+				e.stopPropagation();
+				$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").fadeOut(0);
+				if (parseInt($(".nav-style-2.content-outer-bloques-nav").css("maxHeight")) > 58) {
+					$(".nav-style-2.content-outer-bloques-nav").css("maxHeight",58);
+					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").prepend($(this));
+					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").html("arrow_drop_down");
+				} else {
+					$(".nav-style-2.content-outer-bloques-nav").css("maxHeight",300);
+					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").html("close").css({"font-size":"20px","transform":"translateY(2px)"});
+				}
+				$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").fadeIn();
+			}
+		});
 	}
 
 	redirigir(){

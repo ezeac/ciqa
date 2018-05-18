@@ -40,26 +40,19 @@ export class ServiciosComponent{
 		$(".content-outer-bloques-cont > div").click(function(e){
 			if ($(window).width() < 768) {
 				e.stopPropagation();
+				$(".content-outer-bloques-cont i").fadeOut(0);
 				if (parseInt($(".content-outer-bloques-cont").css("maxHeight")) > 100) {
 					$(".content-outer-bloques-cont").css("maxHeight",100);
 					$(".content-outer-bloques-cont").prepend($(this));
+					$(".content-outer-bloques-cont i").html("arrow_drop_down");
 				} else {
+					$(".content-outer-bloques-cont i").html("close").css({"font-size":"20px","transform":"translateY(2px)"});
 					$(".content-outer-bloques-cont").css("maxHeight",400);
 				}
+				$(".content-outer-bloques-cont i").fadeIn();
 			}
 		});
 
-		$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) > div").click(function(e){
-			if ($(window).width() < 768) {
-				e.stopPropagation();
-				if (parseInt($(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").css("maxHeight")) > 100) {
-					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").css("maxHeight",58);
-					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").prepend($(this));
-				} else {
-					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").css("maxHeight",300);
-				}
-			}
-		});
 	}
 
 	buscarServicio(search) {

@@ -1,5 +1,6 @@
 <div class="content-outer-bloques-nav nav-style-2">
 	<div class="col-xs-12 col-sm-5 no-padding"><!-- navTabs -->
+		<div class='close-select'><i class="material-icons visible-xs visible-sm">arrow_drop_down</i></div>
 		<div class="content-outer-bloques-nav-item active-tab-nav" (click)="peticionesService.show_animated_tab('aire', $event); actualizarImgNav($event, 'aire.jpg');" [innerHtml]="'Calidad del aire' | translate"></div>
 		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('agua', $event); actualizarImgNav($event, 'agua.jpg');" [innerHtml]="'Calidad de aguas y afluentes' | translate"></div>
 		<div class="content-outer-bloques-nav-item" (click)="peticionesService.show_animated_tab('suelos', $event); actualizarImgNav($event, 'suelos.jpg');" [innerHtml]="'Calidad de suelos y residuos peligrosos' | translate"></div>
