@@ -47,7 +47,7 @@ export class ServiciosComponent{
 					$(".content-outer-bloques-cont i").html("arrow_drop_down");
 				} else {
 					$(".content-outer-bloques-cont i").html("close").css({"font-size":"20px","transform":"translateY(2px)"});
-					$(".content-outer-bloques-cont").css("maxHeight",400);
+					$(".content-outer-bloques-cont").css("maxHeight",600);
 				}
 				$(".content-outer-bloques-cont i").fadeIn();
 			}

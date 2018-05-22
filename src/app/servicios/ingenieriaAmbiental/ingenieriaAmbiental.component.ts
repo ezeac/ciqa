@@ -74,8 +74,8 @@ export class IngenieriaAmbientalComponent{
 			if ($(window).width() < 992) {
 				e.stopPropagation();
 				$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").fadeOut(0);
-				if (parseInt($(".nav-style-2.content-outer-bloques-nav").css("maxHeight")) > 58) {
-					$(".nav-style-2.content-outer-bloques-nav").css("maxHeight",58);
+				if (parseInt($(".nav-style-2.content-outer-bloques-nav").css("maxHeight")) > 80) {
+					$(".nav-style-2.content-outer-bloques-nav").css("maxHeight",80);
 					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1)").prepend($(this));
 					$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").html("arrow_drop_down");
 				} else {
