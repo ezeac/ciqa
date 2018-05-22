@@ -38,11 +38,11 @@ export class ServiciosComponent{
 		});
 
 		$(".content-outer-bloques-cont > div").click(function(e){
-			if ($(window).width() < 768) {
+			if ($(window).width() < 992) {
 				e.stopPropagation();
 				$(".content-outer-bloques-cont i").fadeOut(0);
-				if (parseInt($(".content-outer-bloques-cont").css("maxHeight")) > 100) {
-					$(".content-outer-bloques-cont").css("maxHeight",100);
+				if (parseInt($(".content-outer-bloques-cont").css("maxHeight")) > 120) {
+					$(".content-outer-bloques-cont").css("maxHeight",120);
 					$(".content-outer-bloques-cont").prepend($(this));
 					$(".content-outer-bloques-cont i").html("arrow_drop_down");
 				} else {

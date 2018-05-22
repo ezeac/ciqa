@@ -2,7 +2,29 @@
 	<div class="navlogo">
 		<a class="logoLink" [routerLink]="['/home']"><img src="../assets/media/logo.png" alt="CIQA HOME"></a>
 	</div>
-	<div class="nav-links">
+	<div class="nav-links mobile visible-xs visible-sm">
+		<div class='mobile-cont-menu'>
+			<i class='material-icons'>menu</i>
+			<div class='cont' style='display: none;'>
+				<div class="nav-links">
+					<a [routerLink]="['/home']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">home</a>
+					<a [routerLink]="['/servicios']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'servicios' | translate }}</a>
+					<a [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'quienes somos' | translate }}</a>
+					<a [routerLink]="['/investigacion']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'investigación y docencia' | translate }}</a>
+					<a [routerLink]="['/contacto']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'contacto' | translate }}</a>
+					
+					<a *ngIf="peticionesService.getCookie('inicio_sesion') == false" (click)="peticionesService.show_popup()" class="font1 t12 bcolor-1 button uppercase">{{ 'ingresar' | translate }}</a>
+					<a *ngIf="peticionesService.getCookie('inicio_sesion') != false" [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 capitalize">{{ peticionesService.getCookie('inicio_sesion') }}</a>
+					<a *ngIf="peticionesService.getCookie('inicio_sesion') != false" class="alert-icon font1 t14 tcolor-1" href="javascript:void(0)"><i class="material-icons">notifications</i></a>
+					
+					<select class="font1 t14 tcolor-1" name="translate" id="translate-selector" (change)="actualizar_idioma()">
+						<option *ngFor="let item of translate.getLangs(); let i = index" value="{{item}}">{{item}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav-links hidden-xs hidden-sm mobile">
 		<a [routerLink]="['/servicios']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'servicios' | translate }}</a>
 		<a [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'quienes somos' | translate }}</a>
 		<a [routerLink]="['/investigacion']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'investigación y docencia' | translate }}</a>

@@ -32,7 +32,7 @@ export class AuditoriaDeTanquesComponent{
 
 		//slideUp/Down Options
 		$(".content-outer-bloques-nav > div > div").click(function(e){
-			if ($(window).width() < 768) {
+			if ($(window).width() < 992) {
 				e.stopPropagation();
 				$(".content-outer-bloques-nav > div i").fadeOut(0);
 				if (parseInt($(".content-outer-bloques-nav").css("maxHeight")) > 80) {

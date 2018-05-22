@@ -71,7 +71,7 @@ export class IngenieriaAmbientalComponent{
 
 
 		$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) > div").click(function(e){
-			if ($(window).width() < 768) {
+			if ($(window).width() < 992) {
 				e.stopPropagation();
 				$(".nav-style-2.content-outer-bloques-nav > div:nth-child(1) i").fadeOut(0);
 				if (parseInt($(".nav-style-2.content-outer-bloques-nav").css("maxHeight")) > 58) {
