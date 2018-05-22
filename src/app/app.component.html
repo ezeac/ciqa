@@ -1,6 +1,6 @@
 <header class="navigation-menu" style="opacity: 0">
 	<div class="navlogo">
-		<a class="logoLink" [routerLink]="['/home']"><img src="../assets/media/logo.png" alt="CIQA HOME"></a>
+		<a class="logoLink" [routerLink]="['/home']"><img style="max-width: 200px;" src="../assets/media/logo.gif" alt="CIQA HOME"></a>
 	</div>
 	<div class="nav-links mobile visible-xs visible-sm">
 		<div class='mobile-cont-menu'>
@@ -24,7 +24,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="nav-links hidden-xs hidden-sm mobile">
+	<div class="nav-links hidden-xs hidden-sm">
 		<a [routerLink]="['/servicios']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'servicios' | translate }}</a>
 		<a [routerLink]="['/quienesSomos']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'quienes somos' | translate }}</a>
 		<a [routerLink]="['/investigacion']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 tcolor-1">{{ 'investigación y docencia' | translate }}</a>

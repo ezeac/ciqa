@@ -81,7 +81,7 @@ svg * { transition: fill .3s; }
 .claseLinkActivo {/* font-weight: bold; */color: white; }
 .claseLinkActivo.claseLinkActivo:before { width: 35px; }
 input[type=file]::-webkit-file-upload-button { background: #ebf0f5; border: 1px solid black; border-radius: 5px; cursor: pointer; color: black; }
-.component-container { float: left; width: 100%; color: #5F5F5F; margin-top: -100px; position: relative; }
+.component-container {float: left;width: 100%;color: #5F5F5F;margin-top: -105px;position: relative;}
 .background-outer { width: 100%; background: #00A5E6; float: left; height: calc(100% + 450px); position: absolute; }
 .background-outer .background-imagen-top { overflow: hidden; height: 101vh; background: #001741; }
 .background-outer .background-imagen-top,
@@ -373,13 +373,12 @@ header.navigation-menu {
 
 header.navigation-menu .navlogo {
     float: left;
-    margin-left: 10%;
+    margin-left: 3%;
 }
 
 header.navigation-menu .navlogo img {
     width: 150px;
     float: left;
-    margin-top: 20px;
 }
 
 .navigation-menu .nav-links {
@@ -1224,4 +1223,12 @@ clientesmensajes .create i {
     line-height: 58px;
     font-size: 30px;
     color: white;
+}
+
+contacto .content-outer-bloques-content .content-outer-bloques-content-item {
+    padding: 0;
+}
+
+contacto .content-outer-bloques-content .content-outer-bloques-content-item form > div {
+    padding: 0;
 }
