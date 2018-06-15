@@ -2,96 +2,47 @@
 
 	<div class="info-tit bold tcolor-3 t24 capitalize bold t24">{{'mensajes' | translate}}</div>
 
-	<div class="content-outer-clientes-text tcolor-4 uppercase bold t12" style="cursor: pointer"><b>› </b>{{'abrir un nuevo tema de consulta' | translate}}</div>
+	<div class="content-outer-clientes-text tcolor-4 uppercase bold t12" style="cursor: pointer">
+		<div onclick="javascript:$(this).next().fadeToggle()"><b>› </b>{{'abrir un nuevo tema de consulta' | translate}}</div>
+		<form #formNuevoTema="ngForm" (ngSubmit)="nuevoTema($event)" class="formNuevoTema" style="display: none;">
+			<label for="titulo">Título nuevo tema</label>
+			<input type="text" name="titulo" #formNuevoTema="ngModel" [(ngModel)]="formNuevoTemaTitulo" required pattern="(.){0,41}" placeholder="Ingrese el tema de la conversación">
+			<span *ngIf="titulo.touched && !titulo.valid">Formato de título inválido, máximo 40 caracteres.</span>
+		
+			<input [disabled]="!formNuevoTema.valid" class="button pull-left uppercase" type="submit" value="{{'crear' | translate}}">
+		</form>
+	</div>
 	
 	<div class="content-outer-clientes-extracont">
-		<div class="content-outer-clientes-item t14 bcolor-3" (click)="toggle_expanded_msj($event)">
+		<div class="content-outer-clientes-item t14 bcolor-3" (click)="toggle_expanded_msj($event, item.idconversacion)" *ngFor="let item of arrayDeTemas; let i = index">
 			<i class="material-icons tcolor-3">mail</i>
-			<div class="content-outer-clientes-item-tit">Consulta sobre muestras</div>
-			<div class="content-outer-clientes-item-date">11/12/2017</div>
-			<div class="content-outer-clientes-item-msjs hidden">
-				<div class="content-outer-clientes-item-msjs-msj bcolor-3">
-					<div class="msjs-msj-header">
-						<i class="material-icons tcolor-3">mail</i>
-						<div class="content-outer-clientes-item-msjs-msj-remitent">Diego</div>
-						<div class="content-outer-clientes-item-msjs-msj-date">11/12/2017&nbsp;-&nbsp;23:59</div>
-					</div>
-					<div class="content-outer-clientes-item-msjs-msj-text">Hola! Donec mattis sagittis leo, at hendrerit neque molestie et. Duis tincidunt eu neque eget finibus. Mauris vel volutpat nisl. Phasellus efficitur velit lacus, quis mattis ipsum vestibulum eu. Aenean et enim dignissim, pellentesque purus in, consectetur ligula. Aenean sollicitudin libero et tincidunt aliquam</div>
-				</div>
-				<div class="content-outer-clientes-item-msjs-msj bcolor-3" style="float: left; background: #B4D2E6; color: white;">
-					<div class="msjs-msj-header">
-						<i class="material-icons tcolor-3">mail</i>
-						<div class="content-outer-clientes-item-msjs-msj-remitent">Ciqa</div>
-						<div class="content-outer-clientes-item-msjs-msj-date">12/12/2017&nbsp;-&nbsp;11:09</div>
-					</div>
-					<div class="content-outer-clientes-item-msjs-msj-text">Hola Diego, gracias por tu consulta. Donec mattis sagittis leo, at hendrerit neque molestie et. Duis tincidunt eu neque eget finibus. Mauris vel volutpat nisl. Phasellus efficitur velit lacus, quis mattis ipsum vestibulum eu. Aenean et enim dignissim, pellentesque purus in, consectetur ligula. Aenean sollicitudin libero et tincidunt aliquam</div>
-				</div>
-			</div>
+			<div class="content-outer-clientes-item-tit">{{item.descriptema}}</div>
+			<div class="content-outer-clientes-item-date">{{item.fh_inicio}}</div>
 		</div>
-
-		<div class="content-outer-clientes-item t14 bcolor-3" (click)="toggle_expanded_msj($event)">
-			<i class="material-icons tcolor-3">mail</i>
-			<div class="content-outer-clientes-item-tit">Solicitud de presupuesto</div>
-			<div class="content-outer-clientes-item-date">11/12/2017</div>
-			<div class="content-outer-clientes-item-msjs hidden">
-				<div class="content-outer-clientes-item-msjs-msj bcolor-3">
-					<div class="msjs-msj-header">
-						<i class="material-icons tcolor-3">mail</i>
-						<div class="content-outer-clientes-item-msjs-msj-remitent">Diego</div>
-						<div class="content-outer-clientes-item-msjs-msj-date">11/12/2017&nbsp;-&nbsp;23:59</div>
-					</div>
-					<div class="content-outer-clientes-item-msjs-msj-text">Hola! Donec mattis sagittis leo, at hendrerit neque molestie et. Duis tincidunt eu neque eget finibus. Mauris vel volutpat nisl. Phasellus efficitur velit lacus, quis mattis ipsum vestibulum eu. Aenean et enim dignissim, pellentesque purus in, consectetur ligula. Aenean sollicitudin libero et tincidunt aliquam</div>
-				</div>
-				<div class="content-outer-clientes-item-msjs-msj bcolor-3" style="float: left; background: #B4D2E6; color: white;">
-					<div class="msjs-msj-header">
-						<i class="material-icons tcolor-3">mail</i>
-						<div class="content-outer-clientes-item-msjs-msj-remitent">Ciqa</div>
-						<div class="content-outer-clientes-item-msjs-msj-date">12/12/2017&nbsp;-&nbsp;11:09</div>
-					</div>
-					<div class="content-outer-clientes-item-msjs-msj-text">Hola Diego, gracias por tu consulta. Donec mattis sagittis leo, at hendrerit neque molestie et. Duis tincidunt eu neque eget finibus. Mauris vel volutpat nisl. Phasellus efficitur velit lacus, quis mattis ipsum vestibulum eu. Aenean et enim dignissim, pellentesque purus in, consectetur ligula. Aenean sollicitudin libero et tincidunt aliquam</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="content-outer-clientes-item t14 bcolor-3" (click)="toggle_expanded_msj($event)">
-			<i class="material-icons tcolor-3">mail</i>
-			<div class="content-outer-clientes-item-tit">Agradecimiento</div>
-			<div class="content-outer-clientes-item-date">11/12/2017</div>
-			<div class="content-outer-clientes-item-msjs hidden">
-				<div class="content-outer-clientes-item-msjs-msj bcolor-3">
-					<div class="msjs-msj-header">
-						<i class="material-icons tcolor-3">mail</i>
-						<div class="content-outer-clientes-item-msjs-msj-remitent">Diego</div>
-						<div class="content-outer-clientes-item-msjs-msj-date">11/12/2017&nbsp;-&nbsp;23:59</div>
-					</div>
-					<div class="content-outer-clientes-item-msjs-msj-text">Hola! Donec mattis sagittis leo, at hendrerit neque molestie et. Duis tincidunt eu neque eget finibus. Mauris vel volutpat nisl. Phasellus efficitur velit lacus, quis mattis ipsum vestibulum eu. Aenean et enim dignissim, pellentesque purus in, consectetur ligula. Aenean sollicitudin libero et tincidunt aliquam</div>
-				</div>
-				<div class="content-outer-clientes-item-msjs-msj bcolor-3" style="float: left; background: #B4D2E6; color: white;">
-					<div class="msjs-msj-header">
-						<i class="material-icons tcolor-3">mail</i>
-						<div class="content-outer-clientes-item-msjs-msj-remitent">Ciqa</div>
-						<div class="content-outer-clientes-item-msjs-msj-date">12/12/2017&nbsp;-&nbsp;11:09</div>
-					</div>
-					<div class="content-outer-clientes-item-msjs-msj-text">Hola Diego, gracias por tu consulta. Donec mattis sagittis leo, at hendrerit neque molestie et. Duis tincidunt eu neque eget finibus. Mauris vel volutpat nisl. Phasellus efficitur velit lacus, quis mattis ipsum vestibulum eu. Aenean et enim dignissim, pellentesque purus in, consectetur ligula. Aenean sollicitudin libero et tincidunt aliquam</div>
-				</div>
-			</div>
-		</div>
-
 	</div>
 
 	<div class="content-outer-clientes-msjexpanded" style="display: none">
-		<form action="javascript:0" #formNewMsj="ngForm" (ngSubmit)="enviar_mensaje($event)">
+		<form action="javascript:0" #formNewMsj="ngForm" (ngSubmit)="enviar_mensaje($event, conversacionActual)">
 			<div class="expanded-back tcolor-3" (click)="toggle_expanded_msj($event)" style="cursor: pointer"><i class="material-icons">keyboard_arrow_left</i> volver a mensajes</div><br>
-			<div class="expanded-content"></div>
+			<div class="expanded-content">
+				<div class="content-outer-clientes-item-msjs-msj expanded-new-msj bcolor-3" *ngFor="let item of detalleTema; let i = index">
+					<div class="msjs-msj-header">
+						<i class="material-icons tcolor-3">mail</i>
+						<div class="content-outer-clientes-item-msjs-msj-remitent">{{item.usuarioweb}}</div>
+						<div class="content-outer-clientes-item-msjs-msj-date">{{item.fh_generacion}}</div>
+					</div>
+					<div class="content-outer-clientes-item-msjs-msj-text">{{item.textomensaje}}</div>
+				</div>
+			</div>
 			<div class="content-outer-clientes-item-msjs-msj expanded-new-msj bcolor-3">
 				<div class="msjs-msj-header">
 					<i class="material-icons tcolor-3">mail</i>
-					<div class="content-outer-clientes-item-msjs-msj-remitent">Diego</div>
+					<div class="content-outer-clientes-item-msjs-msj-remitent">{{peticionesService.getCookie('inicio_sesion')}}</div>
 					<div class="content-outer-clientes-item-msjs-msj-date">Escribir&nbsp;nueva&nbsp;respuesta</div>
 				</div>
 				<div class="content-outer-clientes-item-msjs-msj-text">
-					<textarea type="text" name="mensaje" #mensaje="ngModel" [(ngModel)]="mensajeForm" placeholder="Escriba aquí su mensaje..." required></textarea>
-					<span *ngIf="mensaje.touched && !mensaje.valid" class="t11" style="color: red;">Debe ingresar un mensaje para enviar una respuesta</span>
+					<textarea type="text" name="mensaje" #mensaje="ngModel" [(ngModel)]="mensajeForm" placeholder="Escriba aquí su mensaje..." pattern="(.){0,150}" required></textarea>
+					<span *ngIf="mensaje.touched && !mensaje.valid" class="t11" style="color: red;">Debe ingresar un mensaje para enviar una respuesta. Caracteres especiales no permitidos.</span>
 				</div>
 			</div>
 			<div class="expanded-submit pull-right"><input [disabled]="!formNewMsj.valid" class="button bcolor-1 uppercase" type="submit" value="{{'enviar' | translate}}"></div>

@@ -2,7 +2,7 @@
 
 	<div class="info-tit bold tcolor-3 t24 capitalize">presupuestos</div>
 
-	<div class="content-outer-clientes-item col-xs-12 no-padding">
+	<!-- <div class="content-outer-clientes-item col-xs-12 no-padding">
 		<div class="content-outer-clientes-item-info col-xs-12 t18">
 			<div class="content-outer-clientes-item-info-text"><span class="t19 tcolor-3">Calidad del aire</span><br><span class="t13">ID: 6983574</span></div>
 			<a [routerLink]="['/clientes/clientesMensajes']" skipLocationChange><i class="material-icons tcolor-3">mail</i></a>
@@ -36,6 +36,23 @@
 		<div class="content-outer-clientes-item-info2 col-xs-12 no-padding" style="background: linear-gradient(to right, #9DDD5F 35%, #B3D1E4 35%)">
 			<div class="content-outer-clientes-item-info2-status col-xs-4 uppercase bold t11">finalizado</div>
 			<div class="content-outer-clientes-item-info2-text col-xs-8  t13">Ya se puede descargar el informe</div>
+		</div>
+	</div> -->
+
+	<div *ngFor="let item of arrayDePresupuestos; let i = index" class="content-outer-clientes-item col-xs-12 no-padding">
+		<div class="content-outer-clientes-item-info col-xs-12 t18">
+			<div class="content-outer-clientes-item-info-text"><span class="t19 tcolor-3">{{item.referencia}}</span><br><span class="t13">ID: {{item.idpresupuesto}}</span></div>
+			<a [routerLink]="['/clientes/clientesMensajes']" skipLocationChange><i class="material-icons tcolor-3">mail</i></a>
+			<a *ngIf="item.descargahabilitada == 'S'" href="../../../assets/test_file.txt" download="Informe de prueba.pdf"><i class="material-icons tcolor-3 download">file_download</i></a>
+			<i *ngIf="item.descargahabilitada == 'N'" class="material-icons download" style="cursor: not-allowed;">file_download</i>
+		</div>
+		<div *ngIf="item.descargahabilitada == 'S'" class="content-outer-clientes-item-info2 col-xs-12 no-padding" style="background: linear-gradient(to right, #9DDD5F 35%, #B3D1E4 35%)">
+			<div class="content-outer-clientes-item-info2-status col-xs-4 uppercase bold t11">finalizado</div>
+			<div class="content-outer-clientes-item-info2-text col-xs-8  t13">Ya se puede descargar el informe</div>
+		</div>
+		<div *ngIf="item.descargahabilitada == 'N'" class="content-outer-clientes-item-info2 col-xs-12 no-padding" style="background: linear-gradient(to right, #FFC83C 35%, #B3D1E4 35%)">
+			<div class="content-outer-clientes-item-info2-status col-xs-4 uppercase bold t11">informe realizado</div>
+			<div class="content-outer-clientes-item-info2-text col-xs-8  t13">Para descargar el informe, adjunte el comprobante de pago <a href="javascript:$('.inputfile').fadeToggle()">aquí</a><input class="inputfile" style="display:none" type="file" name="pic" value="aquí" accept="image/*"></div>
 		</div>
 	</div>
 

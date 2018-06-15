@@ -73,7 +73,7 @@ var init_web = setInterval(function(){
 	if (document.readyState == "interactive" && load_bar < 30) {
 		load_bar = 35;
 	}
-	if (document.readyState) {
+	if (document.readyState != "interactive") {
 	// if (document.readyState == "complete") {
 		load_bar = 100;
 		$("html, body").scrollTop(0);

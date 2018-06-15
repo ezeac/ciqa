@@ -40,9 +40,7 @@
 									<div class="content-outer-bloques-content-item-cont-item">
 										<select name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="contacto1.tipoDeContactoForm">
 											<option disabled value="0" selected>Tipo de contacto</option>
-											<option value="consulta">Consulta</option>
-											<option value="queja">Queja</option>
-											<option value="agradecimiento">Agradecimiento</option>
+											<option *ngFor="let item of feedbacks; let i = index" value="{{item['tipofeedback']}}">{{item['nomtipofeedback']}}</option>
 										</select>
 									</div>
 									<!-- <div class="content-outer-bloques-content-item-cont-item">

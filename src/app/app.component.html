@@ -121,14 +121,19 @@
 				<span class="input-span" *ngIf="usuario.touched && !usuario.valid">{{'Formato de usuario incorrecto' | translate}}</span>
 			</div>
 			<div>
-				<label for="password capitalize">nuevo password:</label><br>
+				<label for="password capitalize">{{'password' | translate}}:</label><br>
 				<input class="input-box col-xs-12" type="password" name="password" #password="ngModel" [(ngModel)]="formLoginModel.password" required pattern="(.){4,}" placeholder="{{'Ingrese su password' | translate}}">
-				<span class="input-span" *ngIf="password.touched && !password.valid">La contraseña debe tener al menos 4 caracteres</span>
+				<span class="input-span" *ngIf="password.touched && !password.valid">{{'La contraseña debe tener al menos 4 caracteres' | translate}}</span>
+			</div>
+			<div>
+				<label for="password capitalize">nuevo password:</label><br>
+				<input class="input-box col-xs-12" type="password2" name="password2" #password2="ngModel" [(ngModel)]="formLoginModel.password2" required pattern="(.){4,}" placeholder="{{'Ingrese su nuevo password' | translate}}">
+				<span class="input-span" *ngIf="password2.touched && !password2.valid">La contraseña debe tener al menos 4 caracteres</span>
 			</div>
 			<div>
 				<label for="password2 capitalize">reingrese password:</label><br>
-				<input class="input-box col-xs-12" type="password" name="password2" #password2="ngModel" [(ngModel)]="formLoginModel.password2" required pattern="(.){4,}" placeholder="{{'Reingrese su password' | translate}}">
-				<span class="input-span" *ngIf="password2.touched && password2.value != password.value">Las contraseñas no coinciden</span>
+				<input class="input-box col-xs-12" type="password" name="password3" #password3="ngModel" [(ngModel)]="formLoginModel.password3" required pattern="(.){4,}" placeholder="{{'Reingrese su password' | translate}}">
+				<span class="input-span" *ngIf="password3.touched && password3.value != password2.value">Las contraseñas no coinciden</span>
 			</div>
 			<input class="button capitalize" [disabled]="!formLogin.valid" type="submit" value="{{'iniciar sesión' | translate}}">
 		</form>

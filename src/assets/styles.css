@@ -314,7 +314,7 @@ clientesenviodemuestras .info-tit { padding-left: 15px; }
 
 /* clientes mensajes */
 clientesmensajes .content-outer-clientes-text { margin: 40px 0px; }
-clientesmensajes .content-outer-clientes-item { display: flex; height: 60px; align-items: center; margin-bottom: 15px; transition: all .2s; cursor: pointer; }
+clientesmensajes .content-outer-clientes-item {display: flex;height: 60px;align-items: center;margin-bottom: 15px;transition: all .2s;cursor: pointer;float: left;width: 100%;}
 clientesmensajes .content-outer-clientes-item > * { height: 100%; display: flex; align-items: center; }
 clientesmensajes .content-outer-clientes-item:hover { background: #B4D2E6; color: white; }
 clientesmensajes .content-outer-clientes-item .content-outer-clientes-item-tit { width: 100%; }
@@ -1233,6 +1233,19 @@ contacto .content-outer-bloques-content .content-outer-bloques-content-item form
     padding: 0;
 }
 
-.component-container {
-    margin-top: -115px;
+.component-container {margin-top: -100px;}
+
+}
+.content-outer-clientes .formNuevoTema {
+    width: 100%;
+    float: left;
+    margin: 20px 0;
+}
+
+.content-outer-clientes .formNuevoTema >  * {
+    width: 100%;
+    float: left;
+    height: 30px;
+    padding: 5px;
+    margin: 5px 0;
 }

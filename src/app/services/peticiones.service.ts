@@ -44,22 +44,67 @@ export class PeticionesService {
 
 	logout(){
 		this.setCookie('inicio_sesion','',0);
+		this.setCookie('usuarioId','',0);
 		this._router.navigate(['/','valorPage']);
 	}
 
 
 	login(loginModel:Login){
-		this.inicio_sesion = loginModel.usuario;
-		this.setCookie("inicio_sesion", loginModel.usuario, 2);
-		$("app-root > *:not(.popup,.popup2):not(header)").removeClass("blur");
-		$(".popup,.popup2").fadeOut();
-		if (loginModel.password.substr(0, 1) == "#") {
-			loginModel.password = "";
-			$(".popup2").fadeIn();
-			return;
+		var respuesta;
+		if (window.location.origin == "http://localhost:4200") {
+			this.inicio_sesion = "Ezequiel";
+			this.setCookie("inicio_sesion", "Ezequiel", 1);
+			this.setCookie("usuarioId", "422", 1);
+			$("app-root > *:not(.popup,.popup2):not(header)").removeClass("blur");
+			$(".popup,.popup2").fadeOut();
+			this._router.navigate(['/clientes']);
+		} else {
+			if (loginModel.password3) {
+				this.get_peticion("205", {"usuarioWEB":loginModel.usuario,"passWord":loginModel.password,"NuevoPassWord":loginModel.password3}).subscribe(
+					data => respuesta = data._parametro2, 
+					(err) => console.log(err), 
+					() => setTimeout(()=>{
+						if (respuesta.cliente == 0) {
+							alert(respuesta.statuspeticion);
+							return;
+						} else {
+							this.inicio_sesion = respuesta.nomcliente;
+							this.setCookie("inicio_sesion", respuesta.nomcliente, 1);
+							this.setCookie("usuarioId", respuesta.cliente, 1);
+							$("app-root > *:not(.popup,.popup2):not(header)").removeClass("blur");
+							$(".popup,.popup2").fadeOut();
+							if (respuesta.cambiarpass == "S") {
+								loginModel.password = "";
+								$(".popup2").fadeIn();
+								return;
+							}
+							this._router.navigate(['/clientes']);
+						}
+					},100));
+			} else {
+				this.get_peticion("204", {"usuarioWEB":loginModel.usuario,"passWord":loginModel.password}).subscribe(
+					data => respuesta = data._parametro2, 
+					(err) => console.log(err), 
+					() => setTimeout(()=>{
+						if (respuesta.cliente == 0) {
+							alert(respuesta.statuspeticion);
+							return;
+						} else {
+							this.inicio_sesion = respuesta.nomcliente;
+							this.setCookie("inicio_sesion", respuesta.nomcliente, 1);
+							this.setCookie("usuarioId", respuesta.cliente, 1);
+							$("app-root > *:not(.popup,.popup2):not(header)").removeClass("blur");
+							$(".popup,.popup2").fadeOut();
+							if (respuesta.cambiarpass == "S") {
+								loginModel.password = "";
+								$(".popup2").fadeIn();
+								return;
+							}
+							this._router.navigate(['/clientes']);
+						}
+					},100));
+			}
 		}
-		this._router.navigate(['/clientes']);
-
 	}
 
 
@@ -135,6 +180,36 @@ export class PeticionesService {
 	service_search(string) {
 		this.url = window.location.origin + "/assets/search.php?search_string=" + string;
 		this.respuesta = this._http.get(this.url).map(res => res.json());
+		return this.respuesta;
+	}
+
+	get_peticion(peticion, parametros = null) {
+		let params = "";
+		$.each(parametros, function(key, value){
+			params = params + "&" + key + "=" + encodeURIComponent(value);
+		});
+		this.url = window.location.origin + "/assets/peticiones.php?peticion=" + peticion + params;
+		this.respuesta = this._http.get(this.url).map(res => res.json());
+		return this.respuesta;
+	}
+
+	get_clientes_geo() {
+		let peticion = '202';
+		this.url = window.location.origin + "/assets/peticiones.php?peticion=" + peticion;
+		this.respuesta = this._http.get(this.url).map(res => res.json());
+		for (let i in this.respuesta._parametro2) {
+			var src = this.respuesta._parametro2[i].geolocalizacion.toString();
+			let lat = src.match(/(?<=\/@)(.)*?(?=,)/g);
+			let long = src.match(/(?<=,)(.)*?(?=,)/g)
+			this.respuesta._parametro2[i]['lat'] = '';
+			this.respuesta._parametro2[i]['long'] = '';
+			if (lat != null) {
+				this.respuesta._parametro2[i]['lat'] = lat[0];
+			}
+			if (long != null) {
+				this.respuesta._parametro2[i]['long'] = long[0];
+			}
+		}
 		return this.respuesta;
 	}
 }

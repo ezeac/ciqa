@@ -2,6 +2,7 @@ import { Component, Input } from "@angular/core";
 import { PeticionesService } from '../services/peticiones.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
+import { ClientesJson } from './clientes';
 
 declare var jquery:any, $:any, particlesJS:any, TweenMax:any, Power2:any;
 
@@ -21,7 +22,8 @@ export class HomeComponent{
 	public sliderHome3Slides = [{margin: 0}]; public sliderHome3Actual = 0;
 	public noticias:string = "";
 	public noticia_actual = "1"; public noticia_total = "";
-	
+	public clientes:ClientesJson = new ClientesJson;
+
 	//Luego se llama al parametro1 desde el html: <home [parametro1]="valor"></home>
 	@Input() parametro1:string;
 
@@ -61,7 +63,6 @@ export class HomeComponent{
 			setTimeout(()=>{this.moverSlider(this.sliderHome3Actual+1)},1000);
 			setTimeout(()=>{this.moverSliderHome2(this.sliderHome3Actual+1)},2000);
 		},8000);
-
 	}
 
 	redirigir(){

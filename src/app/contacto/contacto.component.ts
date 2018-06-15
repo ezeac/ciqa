@@ -19,6 +19,7 @@ declare var $:any;
 export class ContactoComponent{
 	public titulo = "Página contacto";
 	public parametro; 
+	public feedbacks;
 	public contacto1:Contacto1 = new Contacto1();
 
 	//Luego se llama al parametro1 desde el html: <contacto [parametro1]="valor"></contacto>
@@ -35,6 +36,11 @@ export class ContactoComponent{
 			this.parametro = params['page'];
 		})
 		this.contacto1.tipoDeContactoForm = "0";
+		//this.peticionesService.get_peticion("201", {"parametro1":"valor1","parametro2":"valor2"}).subscribe(
+		this.peticionesService.get_peticion("201").subscribe(
+			data => this.feedbacks = data._parametro2, 
+			(err) => console.log(err), 
+			() => setTimeout(()=>{},100));
 	}
 
 	redirigir(){
