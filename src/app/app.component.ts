@@ -65,10 +65,11 @@ export class AppComponent {
 	}
 
 	actualizar_idioma(select = "#translate-selector") {
-		$("#translate-selector").val($(select).val())
-		$("#translate-selector2").val($(select).val())
+		$("#translate-selector").val($(select).val());
+		$("#translate-selector2").val($(select).val());
+		$("#translate-selector3").val($(select).val());
 		this.translate.use($(select).val());
-		console.log("se cambio el idioma a " + this.translate.currentLang );
+		//console.log("Se cambio el idioma a " + this.translate.currentLang );
 	}
 
 }

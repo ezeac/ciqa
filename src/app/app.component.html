@@ -34,7 +34,7 @@
 		<a *ngIf="peticionesService.getCookie('inicio_sesion') != false" [routerLink]="['/clientes']" [routerLinkActive]="['claseLinkActivo']" class="font1 t14 capitalize">{{ peticionesService.getCookie('inicio_sesion') }}</a>
 		<a *ngIf="peticionesService.getCookie('inicio_sesion') != false" class="alert-icon font1 t14 tcolor-1" href="javascript:void(0)"><i class="material-icons">notifications</i></a>
 		
-		<select class="font1 t14 tcolor-1" name="translate" id="translate-selector" (change)="actualizar_idioma()">
+		<select class="font1 t14 tcolor-1" name="translate" id="translate-selector3" (change)="actualizar_idioma('#translate-selector3')">
 			<option *ngFor="let item of translate.getLangs(); let i = index" value="{{item}}">{{item}}</option>
 		</select>
 	</div>

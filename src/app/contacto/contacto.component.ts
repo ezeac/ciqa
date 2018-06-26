@@ -19,8 +19,8 @@ declare var $:any;
 export class ContactoComponent{
 	public titulo = "Página contacto";
 	public parametro; 
-	public feedbacks;
-	public contacto1:Contacto1 = new Contacto1();
+	public feedbacks; public result;
+	public tipoDeContactoForm; public nombreForm; public dniForm; public emailForm; public empresaForm; public mensajeForm; 	
 
 	//Luego se llama al parametro1 desde el html: <contacto [parametro1]="valor"></contacto>
 	@Input() parametro1:string;
@@ -35,7 +35,7 @@ export class ContactoComponent{
 		this._route.params.forEach((params: Params) =>{
 			this.parametro = params['page'];
 		})
-		this.contacto1.tipoDeContactoForm = "0";
+		this.tipoDeContactoForm = "0";
 		//this.peticionesService.get_peticion("201", {"parametro1":"valor1","parametro2":"valor2"}).subscribe(
 		this.peticionesService.get_peticion("201").subscribe(
 			data => this.feedbacks = data._parametro2, 
@@ -48,7 +48,15 @@ export class ContactoComponent{
 	}
 
 	onSubmit(event){
-		console.log(this.contacto1);
+		var params = {"TipoDeContacto": event.path["0"]["0"].value, "Empresa": event.path["0"]["1"].value, "Nombre": event.path["0"]["2"].value, "Email": event.path["0"]["3"].value, "Mensaje": event.path["0"]["4"].value};
+		console.log(params);
+		this.peticionesService.send_contacto(params).subscribe(
+			data => this.result = data, 
+			(err) => console.log(err), 
+			() => setTimeout(()=>{
+				alert(this.result.mensaje);
+				console.log(this.result.mensaje);
+			},100));
 	}
 
 }

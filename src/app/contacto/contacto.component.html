@@ -34,35 +34,35 @@
 							<form #formContacto1="ngForm" (ngSubmit)="onSubmit($event)">
 								<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-4">
 									<!-- <div class="content-outer-bloques-content-item-cont-item">
-										<input type="text" name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="contacto1.tipoDeContactoForm" placeholder="{{'Tipo de contacto' | translate}}">
+										<input type="text" name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="tipoDeContactoForm" placeholder="{{'Tipo de contacto' | translate}}">
 										<span *ngIf="tipoDeContacto.touched && !tipoDeContacto.valid">{{'Formato de tipoDeContacto incorrecto' | translate}}</span>
 									</div> -->
 									<div class="content-outer-bloques-content-item-cont-item">
-										<select name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="contacto1.tipoDeContactoForm">
+										<select name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="tipoDeContactoForm">
 											<option disabled value="0" selected>Tipo de contacto</option>
 											<option *ngFor="let item of feedbacks; let i = index" value="{{item['tipofeedback']}}">{{item['nomtipofeedback']}}</option>
 										</select>
 									</div>
 									<!-- <div class="content-outer-bloques-content-item-cont-item">
-										<input type="text" name="dni" #dni="ngModel" [(ngModel)]="contacto1.dniForm" required pattern="[0-9]+" placeholder="{{'Cuil/Cuit' | translate}}">
+										<input type="text" name="dni" #dni="ngModel" [(ngModel)]="dniForm" required pattern="[0-9]+" placeholder="{{'Cuil/Cuit' | translate}}">
 										<span *ngIf="dni.touched && !dni.valid">{{'Formato de dni incorrecto' | translate}}</span>
 									</div> -->
 									<div class="content-outer-bloques-content-item-cont-item">
-										<input type="text" name="empresa" #empresa="ngModel" [(ngModel)]="contacto1.empresaForm" required pattern="(.)*" placeholder="{{'Empresa' | translate}}">
+										<input type="text" name="empresa" #empresa="ngModel" [(ngModel)]="empresaForm" required pattern="(.)*" placeholder="{{'Empresa' | translate}}">
 										<span *ngIf="empresa.touched && !empresa.valid">{{'Ingrese el nombre de su empresa' | translate}}</span>
 									</div>
 									<div class="content-outer-bloques-content-item-cont-item">	
-										<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto1.nombreForm" required pattern="(.)*" placeholder="{{'Nombre' | translate}}">
+										<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="nombreForm" required pattern="(.)*" placeholder="{{'Nombre' | translate}}">
 										<span *ngIf="nombre.touched && !nombre.valid">{{'Formato de nombre incorrecto' | translate}}</span>
 									</div>
 									<div class="content-outer-bloques-content-item-cont-item">
-										<input type="text" name="email" #email="ngModel" [(ngModel)]="contacto1.emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="{{'E-Mail' | translate}}">
+										<input type="text" name="email" #email="ngModel" [(ngModel)]="emailForm" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="{{'E-Mail' | translate}}">
 										<span *ngIf="email.touched && !email.valid">{{'Formato de email incorrecto' | translate}}</span>
 									</div>
 								</div>
 								<div class="content-outer-bloques-content-item-cont-cont2 col-xs-12 col-sm-5">
 									<div class="content-outer-bloques-content-item-cont-item textarea">
-										<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto1.mensajeForm" placeholder="{{'Consultas, quejas, sugerencias, agradecimientos' | translate}}"></textarea>
+										<textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="mensajeForm" placeholder="{{'Consultas, quejas, sugerencias, agradecimientos' | translate}}"></textarea>
 									</div>
 									<div class="content-outer-bloques-content-item-cont-item input">
 										<input [disabled]="!formContacto1.valid" class="button pull-left uppercase" type="submit" value="{{'enviar' | translate}}">

@@ -194,22 +194,34 @@ export class PeticionesService {
 	}
 
 	get_clientes_geo() {
-		let peticion = '202';
-		this.url = window.location.origin + "/assets/peticiones.php?peticion=" + peticion;
+		// let peticion = '202';
+		// this.url = window.location.origin + "/assets/peticiones.php?peticion=" + peticion;
+		// this.respuesta = this._http.get(this.url).map(res => res.json());
+		// for (let i in this.respuesta._parametro2) {
+		// 	var src = this.respuesta._parametro2[i].geolocalizacion.toString();
+		// 	let lat = src.match(/(?<=\/@)(.)*?(?=,)/);
+		// 	let long = src.match(/(?<=,)(.)*?(?=,)/)
+		// 	this.respuesta._parametro2[i]['lat'] = '';
+		// 	this.respuesta._parametro2[i]['long'] = '';
+		// 	if (lat != null) {
+		// 		this.respuesta._parametro2[i]['lat'] = lat[0];
+		// 	}
+		// 	if (long != null) {
+		// 		this.respuesta._parametro2[i]['long'] = long[0];
+		// 	}
+		// }
+		// return this.respuesta;
+	}
+
+	send_contacto(parametros = null) {
+		let params = "";
+		console.log(parametros);
+		$.each(parametros, function(key, value){
+			params = params + "&" + key + "=" + encodeURIComponent(value);
+		});
+		this.url = window.location.origin + "/assets/enviarContacto.php?" + params;
+		console.log(this.url);
 		this.respuesta = this._http.get(this.url).map(res => res.json());
-		for (let i in this.respuesta._parametro2) {
-			var src = this.respuesta._parametro2[i].geolocalizacion.toString();
-			let lat = src.match(/(?<=\/@)(.)*?(?=,)/g);
-			let long = src.match(/(?<=,)(.)*?(?=,)/g)
-			this.respuesta._parametro2[i]['lat'] = '';
-			this.respuesta._parametro2[i]['long'] = '';
-			if (lat != null) {
-				this.respuesta._parametro2[i]['lat'] = lat[0];
-			}
-			if (long != null) {
-				this.respuesta._parametro2[i]['long'] = long[0];
-			}
-		}
 		return this.respuesta;
 	}
 }
