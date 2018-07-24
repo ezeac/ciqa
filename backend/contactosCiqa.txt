@@ -1,0 +1,6 @@
+<b>TipoDeContacto</b>: 0<br><b>Empresa</b>: empresa<br><b>Nombre</b>: Ezequiel Crosa<br><b>Email</b>: gezeac@gmail.com<br><b>Mensaje</b>: Consulta de prueba<br>
+
+<b>TipoDeContacto</b>: 0<br><b>Empresa</b>: empresa<br><b>Nombre</b>: Ezequiel Crosa<br><b>Email</b>: gezeac@gmail.com<br><b>Mensaje</b>: Consulta de prueba<br>
+
+<b>TipoDeContacto</b>: Sin especificar<br><b>Empresa</b>: empresa<br><b>Nombre</b>: Ezequiel Crosa<br><b>Email</b>: gezeac@gmail.com<br><b>Mensaje</b>: Consulta de prueba<br>
+

@@ -39,7 +39,7 @@
 									</div> -->
 									<div class="content-outer-bloques-content-item-cont-item">
 										<select name="tipoDeContacto" #tipoDeContacto="ngModel" [(ngModel)]="tipoDeContactoForm">
-											<option disabled value="0" selected>Tipo de contacto</option>
+											<option disabled value="0" selected>{{'Tipo de contacto' | translate}}</option>
 											<option *ngFor="let item of feedbacks; let i = index" value="{{item['tipofeedback']}}">{{item['nomtipofeedback']}}</option>
 										</select>
 									</div>

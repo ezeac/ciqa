@@ -122,7 +122,7 @@ footer .footer-cont-cont2-links li select option { color: black; background: whi
 .content-outer { margin-top: 300px; background: white; min-height: 500px; position: relative; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4); }
 .content-outer .tituloOffset { font-family: "Nunito Sans"; font-weight: 600; font-size: 32px; color: white; position: relative; margin-top: -100px; padding-bottom: 70px; line-height: 0px; text-transform: uppercase; }
 footer.container { float: left; background: #00132B; position: relative; display: flex; align-items: flex-start; justify-content: center; margin-left: 50%; transform: translateX(-50%); padding: 50px 0px 30px; }
-footer .footer-cont-cont2-redes { display: flex; justify-content: flex-start; }
+footer .footer-cont-cont2-redes { display: flex; justify-content: flex-start; display: none; }
 footer .footer-cont-cont2-links { margin-bottom: 50px; }
 footer .footer-cont-cont2-links li {margin: 10px 0px;text-align: left;}
 footer .footer-cont-cont2-links li:first-child { margin-top: 0px; }
@@ -338,7 +338,7 @@ clientescomprobantes .content-outer-clientes-text a:focus { color: inherit; }
 .thumb-img.noticia-img:hover > div { transform: scale(1.05); }
 
 /*home noticia*/
-.noticia_expanded img { display: block; margin: 20px auto; }
+.noticia_expanded img { display: block; margin: 20px auto; max-width: 100%; }
 .noticia_expanded .noticia-close.button { margin-top: 60px; margin-bottom: 40px; }
 .noticia_expanded .noticia-content,
 .noticia_expanded .noticia-extract { padding: 40px 0px; }
@@ -1249,3 +1249,4 @@ contacto .content-outer-bloques-content .content-outer-bloques-content-item form
     padding: 5px;
     margin: 5px 0;
 }
+

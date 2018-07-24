@@ -143,22 +143,22 @@ export class PeticionesService {
 
 	get_noticias(id = ""){
 		if (id == "") {
-			this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/noticia?fields=id,title.rendered,content.rendered,resumen,imagen.guid";
+			this.url = "http://www.ciqa.com.ar/backend/?rest_route=/wp/v2/noticia&fields=id,title.rendered,content.rendered,resumen,imagen.guid";
 		} else {
-			this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/noticia?fields=id,title.rendered,content.rendered,resumen,imagen.guid&filter=id:"+id;
+			this.url = "http://www.ciqa.com.ar/backend/?rest_route=/wp/v2/noticia&fields=id,title.rendered,content.rendered,resumen,imagen.guid&filter=id:"+id;
 		}
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}
 
 	get_integrantes(){
-		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&per_page=100";
+		this.url = "http://www.ciqa.com.ar/backend/?rest_route=/wp/v2/integrantes&fields=title.rendered,id,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&per_page=100";
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}
 
 	get_investigadores(){
-		this.url = "http://ciqabackend.diezweb.com.ar/wp-json/wp/v2/integrantes?fields=title.rendered,id,cargo_acotado,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&filter=es_investigador:1&per_page=100";
+		this.url = "http://www.ciqa.com.ar/backend/?rest_route=/wp/v2/integrantes&fields=title.rendered,id,cargo_acotado,cargo,email,telefono,foto.guid,contenido_investigador,menu_order&filter=es_investigador:1&per_page=100";
 		this.respuesta = this._http.get(this.url).map(res => res.json());
 		return this.respuesta;
 	}
